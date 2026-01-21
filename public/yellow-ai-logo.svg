@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Yellow Y icon -->
+  <path d="M8 8L20 28V42H28V28L40 8H31L24 22L17 8H8Z" fill="#F8D57E"/>
+  <path d="M24 22L31 8H40L28 28V42H20V28L8 8H17L24 22Z" fill="#E5C15C"/>
+  
+  <!-- yellow.ai text -->
+  <text x="50" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#1a1a1a">
+    yellow<tspan fill="#1a1a1a">.</tspan><tspan fill="#1a1a1a">ai</tspan>
+  </text>
+</svg>
