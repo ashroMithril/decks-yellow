@@ -64,6 +64,16 @@ import {
   Cloud,
   Store,
   Trophy,
+  FileText,
+  PhoneOutgoing,
+  Code,
+  Code2,
+  FileCode,
+  ArrowLeftRight,
+  Server,
+  Maximize2,
+  X,
+  ExternalLink,
   type LucideIcon,
 } from "lucide-react"
 
@@ -517,9 +527,9 @@ const VisionSlide = () => (
             <Award className="w-5 h-5 text-[#5A3BFE]" />
           </div>
           <div>
-            <h4 className="font-bold text-black text-base">Challenger Positioning</h4>
+            <h4 className="font-bold text-black text-base">Outcome-Based Positioning</h4>
             <p className="text-[#281C46]/70 text-sm leading-relaxed mt-1">
-              Forces the market to compete on <span className="font-semibold text-[#5A3BFE]">outcome-based autonomy</span> rather than feature parity.
+              Forces the market to compete on <span className="font-semibold text-[#5A3BFE]">measurable outcomes</span> rather than feature parity.
             </p>
           </div>
         </motion.div>
@@ -534,9 +544,9 @@ const VisionSlide = () => (
             <Zap className="w-5 h-5 text-[#5A3BFE]" />
           </div>
           <div>
-            <h4 className="font-bold text-black text-base">Redefining Latency Standards</h4>
+            <h4 className="font-bold text-black text-base">Voice-to-Voice LLM & Adaptation</h4>
             <p className="text-[#281C46]/70 text-sm leading-relaxed mt-1">
-              Proprietary <span className="font-semibold">"Voice-to-Voice" LLMs</span> bypass Speech-to-Text for <span className="font-semibold text-[#5A3BFE]">sub-second latency</span>.
+              <span className="font-semibold">"Voice-to-Voice" LLMs</span> deliver <span className="font-semibold text-[#5A3BFE]">sub-500ms latency</span> with real-time language adaptation.
             </p>
           </div>
         </motion.div>
@@ -545,15 +555,15 @@ const VisionSlide = () => (
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-5 shadow-sm flex items-start"
+          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md flex items-start"
         >
-          <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 mr-4">
-            <Rocket className="w-5 h-5 text-[#5A3BFE]" />
+          <div className="bg-[#281C46] rounded-xl p-2.5 mr-4">
+            <Sparkles className="w-5 h-5 text-[#F8D57E]" />
           </div>
           <div>
-            <h4 className="font-bold text-black text-base">Solving the Cold Start</h4>
-            <p className="text-[#281C46]/70 text-sm leading-relaxed mt-1">
-              <span className="font-semibold">"Agentic Discovery"</span> enables <span className="font-semibold text-[#5A3BFE]">zero-setup</span> with automated, data-driven agent generation.
+            <h4 className="font-bold text-[#281C46] text-base">Nexus: Universal Agentic Interface</h4>
+            <p className="text-[#281C46]/80 text-sm leading-relaxed mt-1">
+              The industry's first <span className="font-semibold">UAI</span> — a unified control plane with eyes to analyze, hands to build, and authority to execute.
             </p>
           </div>
         </motion.div>
@@ -613,11 +623,11 @@ const RoadmapSlide = () => (
         <ul className="text-white/90 text-sm space-y-2">
           <li className="flex items-start">
             <CheckCircle2 className="w-4 h-4 mr-2 mt-0.5 text-[#F8D57E] flex-shrink-0" />
-            <span><span className="font-semibold text-[#F8D57E]">Nexus</span> — Universal agentic interface to build, test, deploy & improve</span>
+            <span><span className="font-semibold text-[#F8D57E]">VoiceX Stability</span> — Sub-500ms latency with adaptation</span>
           </li>
           <li className="flex items-start">
             <CheckCircle2 className="w-4 h-4 mr-2 mt-0.5 text-[#F8D57E] flex-shrink-0" />
-            <span><span className="font-semibold text-[#F8D57E]">Agentic Discovery</span> — Zero-setup deployment</span>
+            <span><span className="font-semibold text-[#F8D57E]">Zero-Setup Automation</span> — Rapid deployment from existing data</span>
           </li>
         </ul>
         <div className="mt-3 pt-3 border-t border-white/20">
@@ -760,7 +770,7 @@ const InnovationSlide = () => (
         </div>
         <h2 className="text-4xl font-bold text-black">Innovation</h2>
       </div>
-      <p className="text-[#281C46] text-lg font-medium">Investing <span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">18% of Revenue</span> in R&D</p>
+      <p className="text-[#281C46] text-lg font-medium">Investing <span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">~27% of Revenue</span> in R&D</p>
       <p className="text-[#281C46]/60 text-sm mt-1">Building a Defensive Moat Through Proprietary AI</p>
     </motion.div>
 
@@ -782,7 +792,7 @@ const InnovationSlide = () => (
         </p>
         <div className="mt-4 pt-3 border-t border-white/20">
           <p className="text-white/70 text-xs">
-            Komodo: 7B parameter model for SE Asian languages
+            Komodo: 7B parameter model for Bahasa Indonesian
           </p>
         </div>
       </motion.div>
@@ -818,13 +828,13 @@ const InnovationSlide = () => (
         <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
           <Rocket className="w-6 h-6 text-[#5A3BFE]" />
         </div>
-        <h3 className="text-lg font-bold text-black mb-2">Agentic Discovery</h3>
+        <h3 className="text-lg font-bold text-black mb-2">Nexus (UAI)</h3>
         <p className="text-[#281C46]/80 leading-relaxed text-sm">
-          Autonomously ingests historical data to build agents — <span className="font-semibold text-[#5A3BFE]">solving the cold start problem</span>.
+          Universal Agentic Interface — <span className="font-semibold text-[#5A3BFE]">eyes to analyze, hands to build, authority to execute</span>.
         </p>
         <div className="mt-4 pt-3 border-t border-gray-100">
           <p className="text-[#281C46]/60 text-xs">
-            Zero-setup deployment from existing data
+            Reduces TCO by up to 60%
           </p>
         </div>
       </motion.div>
@@ -899,7 +909,6 @@ const PartnershipsSlide = () => (
         <h2 className="text-4xl font-bold text-black">Partnerships</h2>
       </div>
       <p className="text-[#281C46] text-lg font-medium">Strategic Pivot to <span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Partner-Led Growth</span></p>
-      <p className="text-[#281C46]/60 text-sm mt-1">Targeting 50-60% of New Revenue from Partners</p>
     </motion.div>
 
     {/* Partner Categories */}
@@ -939,16 +948,16 @@ const PartnershipsSlide = () => (
           <Cloud className="w-5 h-5 text-[#F8D57E]" />
         </div>
         <h3 className="text-lg font-bold text-[#281C46] mb-2">Technology Partners</h3>
-        <p className="text-[#281C46]/80 text-sm mb-3">Cloud & Enterprise Platforms</p>
+        <p className="text-[#281C46]/80 text-sm mb-3">Cloud, Enterprise & Telco</p>
         <div className="flex flex-wrap gap-2">
-          {["AWS", "Microsoft", "SAP", "Salesforce"].map((partner) => (
+          {["AWS", "Microsoft", "SAP", "Salesforce", "Telco Accelerators"].map((partner) => (
             <span key={partner} className="bg-[#281C46] text-white text-xs px-2.5 py-1 rounded-full font-medium">
               {partner}
             </span>
           ))}
         </div>
         <div className="mt-4 pt-3 border-t border-[#281C46]/20">
-          <p className="text-[#281C46]/70 text-xs italic">AWS Preferred Cloud Provider status</p>
+          <p className="text-[#281C46]/70 text-xs italic">Voice-to-Voice distribution via major telcos</p>
         </div>
       </motion.div>
 
@@ -962,17 +971,17 @@ const PartnershipsSlide = () => (
         <div className="bg-[#5A3BFE]/10 rounded-xl p-2 w-fit mb-3">
           <Store className="w-5 h-5 text-[#5A3BFE]" />
         </div>
-        <h3 className="text-lg font-bold text-black mb-2">Vertical & Resellers</h3>
-        <p className="text-[#281C46]/80 text-sm mb-3">Industry Specialization</p>
+        <h3 className="text-lg font-bold text-black mb-2">Vertical & Distribution</h3>
+        <p className="text-[#281C46]/80 text-sm mb-3">Industry & Channel Partners</p>
         <div className="flex flex-wrap gap-2">
-          {["Innovaccer (Healthcare)", "Simpplr (HR)"].map((partner) => (
+          {["Innovaccer", "Simpplr", "Avant", "TSDs"].map((partner) => (
             <span key={partner} className="bg-[#5A3BFE]/10 text-[#5A3BFE] text-xs px-2.5 py-1 rounded-full font-medium">
               {partner}
             </span>
           ))}
         </div>
         <div className="mt-4 pt-3 border-t border-gray-100">
-          <p className="text-[#281C46]/60 text-xs italic">Immediate compliance readiness in regulated sectors</p>
+          <p className="text-[#281C46]/60 text-xs italic">US distribution via Avant & TSDs for contact center reach</p>
         </div>
       </motion.div>
     </div>
@@ -1086,28 +1095,25 @@ const PricingSlide = () => (
         </div>
         <h2 className="text-4xl font-bold text-black">Pricing Flexibility</h2>
       </div>
-      <p className="text-[#281C46] text-lg font-medium">Hybrid Model: <span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Subscription</span> + <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">Usage-Based</span></p>
-      <p className="text-[#281C46]/60 text-sm mt-1">Pay for Resolutions, Not Just Conversations</p>
+      <p className="text-[#281C46] text-lg font-medium">Flexible: <span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Platform Fee</span> + <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">Usage or Outcome</span></p>
+      <p className="text-[#281C46]/60 text-sm mt-1">Choose Between Consumption-Based or Outcome-Based Pricing</p>
     </motion.div>
 
     {/* Pricing Models */}
-    <div className="grid grid-cols-2 gap-5 max-w-5xl mx-auto w-full mb-5">
-      {/* Subscription */}
+    <div className="grid grid-cols-3 gap-4 max-w-5xl mx-auto w-full mb-5">
+      {/* Platform Fee */}
       <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
       >
-        <div className="flex items-center justify-between mb-3">
-          <div className="bg-[#281C46] rounded-xl p-2">
-            <Calendar className="w-5 h-5 text-[#F8D57E]" />
-          </div>
-          <span className="bg-[#281C46] text-white text-sm px-3 py-1 rounded-full font-bold">~60% of Revenue</span>
+        <div className="bg-[#281C46] rounded-xl p-2 w-fit mb-3">
+          <Calendar className="w-5 h-5 text-[#F8D57E]" />
         </div>
-        <h3 className="text-xl font-bold text-[#281C46] mb-2">Subscription (Platform Fee)</h3>
+        <h3 className="text-lg font-bold text-[#281C46] mb-2">Base Platform Fee</h3>
         <p className="text-[#281C46]/80 text-sm leading-relaxed">
-          Recurring license for platform access with predictable costs and full feature availability.
+          Recurring license for platform access with predictable costs.
         </p>
         <div className="mt-4 pt-3 border-t border-[#281C46]/20">
           <div className="flex items-center text-[#281C46]/70 text-xs">
@@ -1119,23 +1125,42 @@ const PricingSlide = () => (
 
       {/* Usage-Based */}
       <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
       >
-        <div className="flex items-center justify-between mb-3">
-          <div className="bg-white/20 rounded-xl p-2">
-            <Activity className="w-5 h-5 text-white" />
-          </div>
-          <span className="bg-[#F8D57E] text-[#281C46] text-sm px-3 py-1 rounded-full font-bold">~33% of Revenue</span>
+        <div className="bg-white/20 rounded-xl p-2 w-fit mb-3">
+          <Activity className="w-5 h-5 text-white" />
         </div>
-        <h3 className="text-xl font-bold text-white mb-2">Usage-Based (Consumption)</h3>
+        <h3 className="text-lg font-bold text-white mb-2">Usage-Based</h3>
         <p className="text-white/80 text-sm leading-relaxed">
-          Fees based on <span className="font-semibold text-[#F8D57E]">"Resolutions"</span> — actual task completions, not just conversations or API calls.
+          Consumption-driven fees based on <span className="font-semibold text-[#F8D57E]">conversations</span> or interactions.
         </p>
         <div className="mt-4 pt-3 border-t border-white/20">
           <div className="flex items-center text-white/70 text-xs">
+            <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" />
+            <span>Scales with volume</span>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Outcome-Based */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2 w-fit mb-3">
+          <Target className="w-5 h-5 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-2">Outcome-Based</h3>
+        <p className="text-[#281C46]/80 text-sm leading-relaxed">
+          Pay for <span className="font-semibold text-[#5A3BFE]">resolutions</span> — actual task completions with due diligence.
+        </p>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <div className="flex items-center text-[#281C46]/60 text-xs">
             <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" />
             <span>Pay for value delivered</span>
           </div>
@@ -1188,6 +1213,14 @@ const PricingSlide = () => (
         <ul className="space-y-2 text-sm">
           <li className="flex items-start text-[#281C46]/80">
             <span className="text-green-500 mr-2">•</span>
+            <span><span className="font-medium text-black">PLG Self-Signup</span> — Self sign-up, upgrade & start using instantly</span>
+          </li>
+          <li className="flex items-start text-[#281C46]/80">
+            <span className="text-green-500 mr-2">•</span>
+            <span><span className="font-medium text-black">Base Tier</span> — <span className="font-semibold text-[#5A3BFE]">$450/month</span> + <span className="font-semibold text-[#5A3BFE]">$1/conversation</span></span>
+          </li>
+          <li className="flex items-start text-[#281C46]/80">
+            <span className="text-green-500 mr-2">•</span>
             <span><span className="font-medium text-black">Free Tier</span> available for evaluation</span>
           </li>
           <li className="flex items-start text-[#281C46]/80">
@@ -1197,10 +1230,6 @@ const PricingSlide = () => (
           <li className="flex items-start text-[#281C46]/80">
             <span className="text-green-500 mr-2">•</span>
             <span><span className="font-medium text-black">Geography-Based Rates</span> (e.g., India vs. ROW)</span>
-          </li>
-          <li className="flex items-start text-[#281C46]/80">
-            <span className="text-green-500 mr-2">•</span>
-            <span><span className="font-medium text-black">Renewal Flexibility</span> — re-negotiate based on actual utilization</span>
           </li>
         </ul>
       </motion.div>
@@ -1316,7 +1345,7 @@ const ServicesSlide = () => (
         <h3 className="text-base font-bold text-black mb-1">Timelines</h3>
         <div className="space-y-1">
           <p className="text-[#281C46]/80 text-sm"><span className="font-semibold text-[#5A3BFE]">&lt;1 week</span> — Simple deployments</p>
-          <p className="text-[#281C46]/80 text-sm"><span className="font-semibold text-[#5A3BFE]">4-8 weeks</span> — Complex enterprise</p>
+          <p className="text-[#281C46]/80 text-sm"><span className="font-semibold text-[#5A3BFE]">2-5 weeks</span> — Complex enterprise (with Nexus)</p>
         </div>
       </motion.div>
     </div>
@@ -1335,9 +1364,9 @@ const ServicesSlide = () => (
             <Handshake className="w-5 h-5 text-[#F8D57E] mr-2" />
             <h4 className="font-bold text-white text-sm">Partner Deployments</h4>
           </div>
-          <span className="bg-[#F8D57E] text-[#281C46] text-lg px-3 py-1 rounded-full font-bold">12%</span>
+          <span className="bg-[#F8D57E] text-[#281C46] text-sm px-3 py-1 rounded-full font-bold">Growing</span>
         </div>
-        <p className="text-white/70 text-xs mb-3">Current partner-executed deployments (expected to grow with GSI pipeline)</p>
+        <p className="text-white/70 text-xs mb-3">Accelerating with GSI pipeline — Yellow owns customer success relationship</p>
         <div className="grid grid-cols-3 gap-2">
           <div className="bg-white/10 rounded-lg p-2 text-center">
             <Layers className="w-4 h-4 text-[#F8D57E] mx-auto mb-1" />
@@ -1555,50 +1584,962 @@ const DemoSectionSlide = () => (
   </div>
 )
 
-// Slide 10: Section Title - Platform Architecture
-const PlatformArchitectureSectionSlide = () => (
-  <div className="flex flex-col items-center justify-center h-full text-center px-8 relative overflow-hidden">
+// Slide 10: Section Title - Customer Experience Demonstration
+const CustomerExperienceSectionSlide = () => (
+  <div className="flex flex-col items-center justify-center h-full text-center px-12 relative overflow-hidden">
     {/* Background decorative elements */}
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 0.08 }}
-      transition={{ duration: 1 }}
+      animate={{ opacity: 0.06 }}
+      transition={{ duration: 1.2 }}
       className="absolute inset-0 pointer-events-none"
     >
-      <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-[#5A3BFE] rounded-full blur-3xl" />
-      <div className="absolute bottom-1/3 right-1/3 w-[350px] h-[350px] bg-[#F8D57E] rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#F8D57E] rounded-full blur-[120px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#5A3BFE] rounded-full blur-[100px]" />
     </motion.div>
 
     {/* Section Badge */}
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
+      initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }}
-      className="mb-6"
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="mb-8"
     >
-      <div className="inline-flex items-center bg-[#5A3BFE]/10 text-[#5A3BFE] px-4 py-2 rounded-full">
-        <span className="text-sm font-semibold">Section 2.1</span>
+      <div className="inline-flex items-center bg-[#F8D57E]/20 text-[#281C46] px-5 py-2.5 rounded-full border border-[#F8D57E]/30">
+        <span className="text-sm font-semibold tracking-wide">Section 2.2</span>
       </div>
     </motion.div>
 
     {/* Icon */}
     <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+      className="mb-8"
+    >
+      <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#F8D57E] to-[#e5c060] rounded-2xl shadow-lg shadow-[#F8D57E]/25">
+        <Users className="w-10 h-10 text-[#281C46]" />
+      </div>
+    </motion.div>
+
+    {/* Section Title */}
+    <motion.h1
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight"
+    >
+      Customer Experience
+      <br />
+      <span className="text-[#5A3BFE]">Demonstration</span>
+    </motion.h1>
+
+    {/* Divider Line */}
+    <motion.div
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="w-20 h-1 bg-gradient-to-r from-[#5A3BFE] to-[#4530d4] rounded-full mt-8 mb-8"
+    />
+
+    {/* Time Badge */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.55 }}
+    >
+      <div className="inline-flex items-center bg-[#281C46] text-white px-6 py-3 rounded-full shadow-lg shadow-[#281C46]/20">
+        <Clock className="w-5 h-5 mr-2.5 text-[#F8D57E]" />
+        <span className="font-semibold tracking-wide">30 Minutes</span>
+      </div>
+    </motion.div>
+
+    {/* Key Topics */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.7 }}
+      className="mt-8 flex flex-wrap justify-center gap-3"
+    >
+      <div className="inline-flex items-center bg-[#5A3BFE]/10 text-[#5A3BFE] px-4 py-2 rounded-full">
+        <MessageSquare className="w-4 h-4 mr-2" />
+        <span className="font-medium text-sm">Multi-Modal Interactions</span>
+      </div>
+      <div className="inline-flex items-center bg-[#F8D57E]/30 text-[#281C46] px-4 py-2 rounded-full">
+        <Heart className="w-4 h-4 mr-2" />
+        <span className="font-medium text-sm">Personalized Experiences</span>
+      </div>
+      <div className="inline-flex items-center bg-[#281C46]/10 text-[#281C46] px-4 py-2 rounded-full">
+        <Globe className="w-4 h-4 mr-2" />
+        <span className="font-medium text-sm">Omnichannel Support</span>
+      </div>
+    </motion.div>
+
+    {/* Subtitle */}
+    <motion.p
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.85 }}
+      className="mt-6 text-lg text-[#281C46]/60 max-w-lg leading-relaxed"
+    >
+      Live demonstration of end-user facing AI experiences across channels
+    </motion.p>
+
+    {/* Decorative dots */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 1 }}
+      className="absolute bottom-10 flex gap-3"
+    >
+      <div className="w-2 h-2 rounded-full bg-[#F8D57E]" />
+      <div className="w-2 h-2 rounded-full bg-[#5A3BFE]" />
+      <div className="w-2 h-2 rounded-full bg-[#281C46]/40" />
+    </motion.div>
+  </div>
+)
+
+// HP Voice Assistant Demo - Multi-modal & Omnichannel
+const HPVoiceAssistantDemoSlide = () => {
+  const [isFullscreen, setIsFullscreen] = useState(false)
+
+  return (
+    <div className="flex flex-col h-full px-12 py-8">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center mb-6"
+      >
+        <div className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-xl p-3 mr-4">
+          <Mic className="w-8 h-8 text-white" />
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold text-black">Multi-Modal & Omnichannel Demo</h2>
+          <p className="text-[#281C46]/70 text-lg mt-1">HP Voice Assistant — Desktop Support Experience</p>
+        </div>
+      </motion.div>
+
+      {/* Video Container */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex-1 flex flex-col"
+      >
+        <div className="bg-[#281C46] rounded-2xl overflow-hidden shadow-2xl flex-1 flex flex-col">
+          {/* Video Header Bar */}
+          <div className="bg-gradient-to-r from-[#5A3BFE] to-[#281C46] px-6 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+              </div>
+              <span className="text-white/80 text-sm font-medium ml-2">Live Demo Recording</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#F8D57E]" />
+                <span className="text-white/80 text-sm">Voice + Visual Interface</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(true)}
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <Maximize2 className="w-4 h-4" />
+                <span className="text-sm font-medium">Fullscreen</span>
+              </button>
+              <a
+                href="https://drive.google.com/file/d/1JoEfN8eqX9T4aXttlZFEL_vIXm4OkKHF/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span className="text-sm font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+          
+          {/* Video Embed */}
+          <div className="flex-1 relative bg-black group">
+            <iframe
+              src="https://drive.google.com/file/d/1JoEfN8eqX9T4aXttlZFEL_vIXm4OkKHF/preview"
+              className="w-full h-full absolute inset-0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+            {/* Centered Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <a
+                href="https://drive.google.com/file/d/1JoEfN8eqX9T4aXttlZFEL_vIXm4OkKHF/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pointer-events-auto flex items-center gap-3 bg-black/70 hover:bg-black/90 text-white px-6 py-4 rounded-xl transition-all shadow-2xl backdrop-blur-sm border border-white/20 hover:scale-105"
+              >
+                <ExternalLink className="w-6 h-6" />
+                <span className="text-base font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Key Points Footer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mt-4 flex gap-4"
+      >
+        <div className="flex-1 bg-[#5A3BFE]/10 rounded-xl px-4 py-3 flex items-center">
+          <Mic className="w-5 h-5 text-[#5A3BFE] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Voice-first interaction with natural language understanding</span>
+        </div>
+        <div className="flex-1 bg-[#F8D57E]/20 rounded-xl px-4 py-3 flex items-center">
+          <Globe className="w-5 h-5 text-[#281C46] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Seamless channel switching with context preservation</span>
+        </div>
+        <div className="flex-1 bg-[#281C46]/10 rounded-xl px-4 py-3 flex items-center">
+          <Smartphone className="w-5 h-5 text-[#281C46] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Desktop support with visual guidance</span>
+        </div>
+      </motion.div>
+
+      {/* Fullscreen Modal */}
+      <AnimatePresence>
+        {isFullscreen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black flex flex-col"
+            onClick={() => setIsFullscreen(false)}
+          >
+            {/* Fullscreen Header */}
+            <div className="bg-gradient-to-r from-[#5A3BFE] to-[#281C46] px-6 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Mic className="w-5 h-5 text-white" />
+                <span className="text-white font-medium">Multi-Modal & Omnichannel Demo — HP Voice Assistant</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(false)}
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-colors"
+              >
+                <X className="w-5 h-5" />
+                <span className="font-medium">Close</span>
+              </button>
+            </div>
+            
+            {/* Fullscreen Video */}
+            <div className="flex-1 relative" onClick={(e) => e.stopPropagation()}>
+              <iframe
+                src="https://drive.google.com/file/d/1JoEfN8eqX9T4aXttlZFEL_vIXm4OkKHF/preview"
+                className="w-full h-full absolute inset-0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+// ITSM Use Case - 7-Zip Installation Demo
+const ITSMInstallationDemoSlide = () => {
+  const [isFullscreen, setIsFullscreen] = useState(false)
+
+  return (
+    <div className="flex flex-col h-full px-12 py-8">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center mb-6"
+      >
+        <div className="bg-gradient-to-br from-[#F8D57E] to-[#e5c060] rounded-xl p-3 mr-4">
+          <Workflow className="w-8 h-8 text-[#281C46]" />
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold text-black">ITSM Automation Demo</h2>
+          <p className="text-[#281C46]/70 text-lg mt-1">AI Assistant — Automated Software Installation (7-Zip)</p>
+        </div>
+      </motion.div>
+
+      {/* Video Container */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex-1 flex flex-col"
+      >
+        <div className="bg-[#281C46] rounded-2xl overflow-hidden shadow-2xl flex-1 flex flex-col">
+          {/* Video Header Bar */}
+          <div className="bg-gradient-to-r from-[#F8D57E] to-[#e5c060] px-6 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                <div className="w-3 h-3 rounded-full bg-green-500" />
+              </div>
+              <span className="text-[#281C46] text-sm font-medium ml-2">ITSM Automation Recording</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-[#281C46]" />
+                <span className="text-[#281C46] text-sm font-medium">Autonomous Execution</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(true)}
+                className="flex items-center gap-2 bg-[#281C46]/10 hover:bg-[#281C46]/20 text-[#281C46] px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <Maximize2 className="w-4 h-4" />
+                <span className="text-sm font-medium">Fullscreen</span>
+              </button>
+              <a
+                href="https://drive.google.com/file/d/1Ja9w653ygWTVKDqO6mASXait1KfvON-E/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-[#281C46]/10 hover:bg-[#281C46]/20 text-[#281C46] px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span className="text-sm font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+          
+          {/* Video Embed */}
+          <div className="flex-1 relative bg-black group">
+            <iframe
+              src="https://drive.google.com/file/d/1Ja9w653ygWTVKDqO6mASXait1KfvON-E/preview"
+              className="w-full h-full absolute inset-0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+            {/* Centered Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <a
+                href="https://drive.google.com/file/d/1Ja9w653ygWTVKDqO6mASXait1KfvON-E/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pointer-events-auto flex items-center gap-3 bg-black/70 hover:bg-black/90 text-white px-6 py-4 rounded-xl transition-all shadow-2xl backdrop-blur-sm border border-white/20 hover:scale-105"
+              >
+                <ExternalLink className="w-6 h-6" />
+                <span className="text-base font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Key Points Footer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mt-4 flex gap-4"
+      >
+        <div className="flex-1 bg-[#F8D57E]/20 rounded-xl px-4 py-3 flex items-center">
+          <Bot className="w-5 h-5 text-[#281C46] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Agentic AI executes installation autonomously</span>
+        </div>
+        <div className="flex-1 bg-[#5A3BFE]/10 rounded-xl px-4 py-3 flex items-center">
+          <Workflow className="w-5 h-5 text-[#5A3BFE] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">End-to-end ITSM workflow automation</span>
+        </div>
+        <div className="flex-1 bg-[#281C46]/10 rounded-xl px-4 py-3 flex items-center">
+          <CheckCircle2 className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Zero-touch resolution for common IT requests</span>
+        </div>
+      </motion.div>
+
+      {/* Fullscreen Modal */}
+      <AnimatePresence>
+        {isFullscreen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black flex flex-col"
+            onClick={() => setIsFullscreen(false)}
+          >
+            {/* Fullscreen Header */}
+            <div className="bg-gradient-to-r from-[#F8D57E] to-[#e5c060] px-6 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Workflow className="w-5 h-5 text-[#281C46]" />
+                <span className="text-[#281C46] font-medium">ITSM Automation Demo — 7-Zip Installation</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(false)}
+                className="flex items-center gap-2 bg-[#281C46]/10 hover:bg-[#281C46]/20 text-[#281C46] px-4 py-2 rounded-lg transition-colors"
+              >
+                <X className="w-5 h-5" />
+                <span className="font-medium">Close</span>
+              </button>
+            </div>
+            
+            {/* Fullscreen Video */}
+            <div className="flex-1 relative" onClick={(e) => e.stopPropagation()}>
+              <iframe
+                src="https://drive.google.com/file/d/1Ja9w653ygWTVKDqO6mASXait1KfvON-E/preview"
+                className="w-full h-full absolute inset-0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+// AI to Human Handoff Demo - Phone
+const AIHumanHandoffDemoSlide = () => {
+  const [isFullscreen, setIsFullscreen] = useState(false)
+
+  return (
+    <div className="flex flex-col h-full px-12 py-8">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center mb-6"
+      >
+        <div className="bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-xl p-3 mr-4">
+          <UserCheck className="w-8 h-8 text-white" />
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold text-black">AI to Human Handoff Demo</h2>
+          <p className="text-[#281C46]/70 text-lg mt-1">Seamless Agent Transfer Over Phone</p>
+        </div>
+      </motion.div>
+
+      {/* Video Container */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex-1 flex flex-col"
+      >
+        <div className="bg-[#281C46] rounded-2xl overflow-hidden shadow-2xl flex-1 flex flex-col">
+          {/* Video Header Bar */}
+          <div className="bg-gradient-to-r from-[#5A3BFE] to-[#4530d4] px-6 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+              </div>
+              <span className="text-white/80 text-sm font-medium ml-2">AI to Human Handoff Recording</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#F8D57E]" />
+                <span className="text-white/80 text-sm">Voice Channel Transfer</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(true)}
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <Maximize2 className="w-4 h-4" />
+                <span className="text-sm font-medium">Fullscreen</span>
+              </button>
+              <a
+                href="https://drive.google.com/file/d/1BH7bvJoISh4qoV5dTxpgMvKjsh5V46z9/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span className="text-sm font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+          
+          {/* Video Embed */}
+          <div className="flex-1 relative bg-black group">
+            <iframe
+              src="https://drive.google.com/file/d/1BH7bvJoISh4qoV5dTxpgMvKjsh5V46z9/preview"
+              className="w-full h-full absolute inset-0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+            {/* Centered Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <a
+                href="https://drive.google.com/file/d/1BH7bvJoISh4qoV5dTxpgMvKjsh5V46z9/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pointer-events-auto flex items-center gap-3 bg-black/70 hover:bg-black/90 text-white px-6 py-4 rounded-xl transition-all shadow-2xl backdrop-blur-sm border border-white/20 hover:scale-105"
+              >
+                <ExternalLink className="w-6 h-6" />
+                <span className="text-base font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Key Points Footer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mt-4 flex gap-4"
+      >
+        <div className="flex-1 bg-[#5A3BFE]/10 rounded-xl px-4 py-3 flex items-center">
+          <Bot className="w-5 h-5 text-[#5A3BFE] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">AI handles initial conversation and context gathering</span>
+        </div>
+        <div className="flex-1 bg-[#F8D57E]/20 rounded-xl px-4 py-3 flex items-center">
+          <UserCheck className="w-5 h-5 text-[#281C46] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Seamless transfer to human agent with full context</span>
+        </div>
+        <div className="flex-1 bg-[#281C46]/10 rounded-xl px-4 py-3 flex items-center">
+          <Phone className="w-5 h-5 text-[#281C46] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Voice channel continuity during handoff</span>
+        </div>
+      </motion.div>
+
+      {/* Fullscreen Modal */}
+      <AnimatePresence>
+        {isFullscreen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black flex flex-col"
+            onClick={() => setIsFullscreen(false)}
+          >
+            {/* Fullscreen Header */}
+            <div className="bg-gradient-to-r from-[#5A3BFE] to-[#4530d4] px-6 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <UserCheck className="w-5 h-5 text-white" />
+                <span className="text-white font-medium">AI to Human Handoff Demo — Phone Transfer</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(false)}
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-colors"
+              >
+                <X className="w-5 h-5" />
+                <span className="font-medium">Close</span>
+              </button>
+            </div>
+            
+            {/* Fullscreen Video */}
+            <div className="flex-1 relative" onClick={(e) => e.stopPropagation()}>
+              <iframe
+                src="https://drive.google.com/file/d/1BH7bvJoISh4qoV5dTxpgMvKjsh5V46z9/preview"
+                className="w-full h-full absolute inset-0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+// Agent Assist on 3rd Parties Demo
+const AgentAssist3rdPartyDemoSlide = () => {
+  const [isFullscreen, setIsFullscreen] = useState(false)
+
+  return (
+    <div className="flex flex-col h-full px-12 py-8">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center mb-6"
+      >
+        <div className="bg-gradient-to-br from-[#F8D57E] to-[#e5c060] rounded-xl p-3 mr-4">
+          <Headphones className="w-8 h-8 text-[#281C46]" />
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold text-black">Agent Assist Demo</h2>
+          <p className="text-[#281C46]/70 text-lg mt-1">AI-Powered Support on 3rd Party Platforms</p>
+        </div>
+      </motion.div>
+
+      {/* Video Container */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex-1 flex flex-col"
+      >
+        <div className="bg-[#281C46] rounded-2xl overflow-hidden shadow-2xl flex-1 flex flex-col">
+          {/* Video Header Bar */}
+          <div className="bg-gradient-to-r from-[#F8D57E] to-[#e5c060] px-6 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500" />
+                <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                <div className="w-3 h-3 rounded-full bg-green-500" />
+              </div>
+              <span className="text-[#281C46] text-sm font-medium ml-2">Agent Assist Recording</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Headphones className="w-4 h-4 text-[#281C46]" />
+                <span className="text-[#281C46] text-sm font-medium">3rd Party Integration</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(true)}
+                className="flex items-center gap-2 bg-[#281C46]/10 hover:bg-[#281C46]/20 text-[#281C46] px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <Maximize2 className="w-4 h-4" />
+                <span className="text-sm font-medium">Fullscreen</span>
+              </button>
+              <a
+                href="https://www.loom.com/share/03ab5a8dd4d04bedb5a82eb5ed97dfc7?sid=fc1e8712-3408-4f15-b69d-f9ebd153feff"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-[#281C46]/10 hover:bg-[#281C46]/20 text-[#281C46] px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span className="text-sm font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+          
+          {/* Video Embed */}
+          <div className="flex-1 relative bg-black group">
+            <iframe
+              src="https://www.loom.com/embed/03ab5a8dd4d04bedb5a82eb5ed97dfc7?sid=fc1e8712-3408-4f15-b69d-f9ebd153feff"
+              className="w-full h-full absolute inset-0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+            {/* Centered Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <a
+                href="https://www.loom.com/share/03ab5a8dd4d04bedb5a82eb5ed97dfc7?sid=fc1e8712-3408-4f15-b69d-f9ebd153feff"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pointer-events-auto flex items-center gap-3 bg-black/70 hover:bg-black/90 text-white px-6 py-4 rounded-xl transition-all shadow-2xl backdrop-blur-sm border border-white/20 hover:scale-105"
+              >
+                <ExternalLink className="w-6 h-6" />
+                <span className="text-base font-medium">Open in new window</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Key Points Footer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mt-4 flex gap-4"
+      >
+        <div className="flex-1 bg-[#F8D57E]/20 rounded-xl px-4 py-3 flex items-center">
+          <Headphones className="w-5 h-5 text-[#281C46] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Real-time AI assistance for human agents</span>
+        </div>
+        <div className="flex-1 bg-[#5A3BFE]/10 rounded-xl px-4 py-3 flex items-center">
+          <Network className="w-5 h-5 text-[#5A3BFE] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Seamless integration with 3rd party platforms</span>
+        </div>
+        <div className="flex-1 bg-[#281C46]/10 rounded-xl px-4 py-3 flex items-center">
+          <Zap className="w-5 h-5 text-[#281C46] mr-3 flex-shrink-0" />
+          <span className="text-sm text-[#281C46] font-medium">Instant suggestions and knowledge retrieval</span>
+        </div>
+      </motion.div>
+
+      {/* Fullscreen Modal */}
+      <AnimatePresence>
+        {isFullscreen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black flex flex-col"
+            onClick={() => setIsFullscreen(false)}
+          >
+            {/* Fullscreen Header */}
+            <div className="bg-gradient-to-r from-[#F8D57E] to-[#e5c060] px-6 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Headphones className="w-5 h-5 text-[#281C46]" />
+                <span className="text-[#281C46] font-medium">Agent Assist Demo — 3rd Party Integration</span>
+              </div>
+              <button
+                onClick={() => setIsFullscreen(false)}
+                className="flex items-center gap-2 bg-[#281C46]/10 hover:bg-[#281C46]/20 text-[#281C46] px-4 py-2 rounded-lg transition-colors"
+              >
+                <X className="w-5 h-5" />
+                <span className="font-medium">Close</span>
+              </button>
+            </div>
+            
+            {/* Fullscreen Video */}
+            <div className="flex-1 relative" onClick={(e) => e.stopPropagation()}>
+              <iframe
+                src="https://www.loom.com/embed/03ab5a8dd4d04bedb5a82eb5ed97dfc7?sid=fc1e8712-3408-4f15-b69d-f9ebd153feff"
+                className="w-full h-full absolute inset-0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+// Section Title - Administrator and Developer Experience
+const AdminDeveloperExperienceSectionSlide = () => (
+  <div className="flex flex-col items-center justify-center h-full text-center px-12 relative overflow-hidden">
+    {/* Background decorative elements */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.06 }}
+      transition={{ duration: 1.2 }}
+      className="absolute inset-0 pointer-events-none"
+    >
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#5A3BFE] rounded-full blur-[120px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#F8D57E] rounded-full blur-[100px]" />
+    </motion.div>
+
+    {/* Section Badge */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="mb-8"
+    >
+      <div className="inline-flex items-center bg-[#5A3BFE]/8 text-[#5A3BFE] px-5 py-2.5 rounded-full border border-[#5A3BFE]/15">
+        <span className="text-sm font-semibold tracking-wide">Scenario 2</span>
+      </div>
+    </motion.div>
+
+    {/* Icon */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+      className="mb-8"
+    >
+      <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-2xl shadow-lg shadow-[#5A3BFE]/25">
+        <Code className="w-10 h-10 text-white" />
+      </div>
+    </motion.div>
+
+    {/* Section Title */}
+    <motion.h1
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight"
+    >
+      Administrator & Developer
+      <br />
+      <span className="text-[#5A3BFE]">Experience</span>
+    </motion.h1>
+
+    {/* Divider Line */}
+    <motion.div
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="w-20 h-1 bg-gradient-to-r from-[#F8D57E] to-[#f5c84d] rounded-full mt-8 mb-8"
+    />
+
+    {/* Time Badge */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.55 }}
+    >
+      <div className="inline-flex items-center bg-[#281C46] text-white px-6 py-3 rounded-full shadow-lg shadow-[#281C46]/20">
+        <Clock className="w-5 h-5 mr-2.5 text-[#F8D57E]" />
+        <span className="font-semibold tracking-wide">1 Hour 30 Minutes</span>
+      </div>
+    </motion.div>
+
+    {/* Subtitle */}
+    <motion.p
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.7 }}
+      className="mt-8 text-lg text-[#281C46]/60 max-w-xl leading-relaxed"
+    >
+      Demonstrating how developer and administrator productivity is enhanced by the platform
+    </motion.p>
+
+    {/* Key Topics Preview */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.85 }}
+      className="mt-6 flex flex-wrap justify-center gap-2 max-w-3xl"
+    >
+      {[
+        "AI Model Management",
+        "Agentic Framework", 
+        "Application Testing",
+        "AI Observability",
+        "Guardrails & Security"
+      ].map((topic, index) => (
+        <div 
+          key={topic}
+          className="inline-flex items-center bg-[#5A3BFE]/10 text-[#5A3BFE] px-3 py-1.5 rounded-full text-sm font-medium"
+        >
+          {topic}
+        </div>
+      ))}
+      <div className="inline-flex items-center bg-[#F8D57E]/30 text-[#281C46] px-3 py-1.5 rounded-full text-sm font-medium">
+        +6 more criteria
+      </div>
+    </motion.div>
+  </div>
+)
+
+// Platform Demo Placeholder - Administrator and Developer Experience
+const AdminDeveloperDemoPlaceholderSlide = () => (
+  <div className="flex flex-col h-full px-12 py-8">
+    {/* Header */}
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex items-center mb-6"
+    >
+      <div className="bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-xl p-3 mr-4">
+        <Code className="w-8 h-8 text-white" />
+      </div>
+      <div>
+        <h2 className="text-3xl font-bold text-black">Platform Demo</h2>
+        <p className="text-[#281C46]/70 text-lg mt-1">Administrator & Developer Experience Demonstration</p>
+      </div>
+    </motion.div>
+
+    {/* Demo Criteria Grid */}
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="mb-6"
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="flex-1 grid grid-cols-3 gap-4"
     >
-      <div className="inline-flex items-center justify-center w-20 h-20 bg-[#5A3BFE] rounded-2xl shadow-xl">
+      {[
+        { title: "AI Model Management", icon: Brain, description: "Model selection, fine-tuning, and orchestration capabilities" },
+        { title: "Multi-Modal & Omnichannel", icon: Globe, description: "Voice, chat, email, and messaging channel support" },
+        { title: "Personalized Experiences", icon: Heart, description: "Context-aware personalization and customer journey mapping" },
+        { title: "Agentic Framework", icon: Bot, description: "Autonomous AI agents with planning and execution capabilities" },
+        { title: "Application Dev Tools", icon: Code, description: "Low-code/no-code builders and developer SDKs" },
+        { title: "Pre-Built Components", icon: Layers, description: "Ready-to-use templates, flows, and integrations" },
+        { title: "Application Testing", icon: FlaskConical, description: "Automated testing, simulation, and quality assurance" },
+        { title: "AI Observability & Admin", icon: Activity, description: "Monitoring, analytics, and administrative controls" },
+        { title: "Guardrails & Security", icon: Shield, description: "Data protection, compliance, and safety measures" },
+        { title: "Human + AI Handoffs", icon: Users, description: "Seamless escalation and agent collaboration" },
+        { title: "Lifecycle Management", icon: RefreshCw, description: "Version control, deployment, and CI/CD pipelines" },
+      ].map((item, index) => (
+        <motion.div
+          key={item.title}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
+          className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg hover:border-[#5A3BFE]/30 transition-all duration-300 group"
+        >
+          <div className="flex items-start gap-3">
+            <div className="bg-[#5A3BFE]/10 rounded-lg p-2 group-hover:bg-[#5A3BFE]/20 transition-colors">
+              <item.icon className="w-5 h-5 text-[#5A3BFE]" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-semibold text-[#281C46] text-sm mb-1">{item.title}</h3>
+              <p className="text-xs text-[#281C46]/60 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+          <div className="mt-3 flex items-center gap-2">
+            <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+              <div className="h-full bg-[#F8D57E] rounded-full w-0 group-hover:w-full transition-all duration-500" />
+            </div>
+            <span className="text-[10px] text-[#281C46]/40 font-medium">DEMO</span>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+
+    {/* Footer Note */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.8 }}
+      className="mt-4 bg-[#F8D57E]/20 rounded-xl px-6 py-4 flex items-center justify-between"
+    >
+      <div className="flex items-center gap-3">
+        <div className="bg-[#F8D57E] rounded-full p-2">
+          <Play className="w-5 h-5 text-[#281C46]" />
+        </div>
+        <div>
+          <p className="text-[#281C46] font-semibold">Live Platform Demonstration</p>
+          <p className="text-[#281C46]/60 text-sm">Interactive walkthrough of all criteria areas</p>
+        </div>
+      </div>
+      <div className="flex items-center gap-2 bg-[#281C46] text-white px-4 py-2 rounded-lg">
+        <Clock className="w-4 h-4 text-[#F8D57E]" />
+        <span className="font-medium">90 min allocated</span>
+      </div>
+    </motion.div>
+  </div>
+)
+
+// Slide 11: Section Title - Platform Architecture
+const PlatformArchitectureSectionSlide = () => (
+  <div className="flex flex-col items-center justify-center h-full text-center px-12 relative overflow-hidden">
+    {/* Background decorative elements */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.06 }}
+      transition={{ duration: 1.2 }}
+      className="absolute inset-0 pointer-events-none"
+    >
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#5A3BFE] rounded-full blur-[120px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#F8D57E] rounded-full blur-[100px]" />
+    </motion.div>
+
+    {/* Section Badge */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="mb-8"
+    >
+      <div className="inline-flex items-center bg-[#5A3BFE]/8 text-[#5A3BFE] px-5 py-2.5 rounded-full border border-[#5A3BFE]/15">
+        <span className="text-sm font-semibold tracking-wide">Section 2.1</span>
+      </div>
+    </motion.div>
+
+    {/* Icon */}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+      className="mb-8"
+    >
+      <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-2xl shadow-lg shadow-[#5A3BFE]/25">
         <Layers className="w-10 h-10 text-white" />
       </div>
     </motion.div>
 
     {/* Section Title */}
     <motion.h1
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
-      className="text-4xl md:text-5xl font-bold text-black mb-4"
+      transition={{ duration: 0.5, delay: 0.25 }}
+      className="text-4xl md:text-5xl font-bold text-[#1a1a2e] leading-tight"
     >
       Platform Architecture &
       <br />
@@ -1609,29 +2550,28 @@ const PlatformArchitectureSectionSlide = () => (
     <motion.div
       initial={{ scaleX: 0 }}
       animate={{ scaleX: 1 }}
-      transition={{ duration: 0.8, delay: 0.5 }}
-      className="w-24 h-1 bg-[#F8D57E] rounded-full my-6"
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="w-20 h-1 bg-gradient-to-r from-[#F8D57E] to-[#f5c84d] rounded-full mt-8 mb-8"
     />
 
     {/* Time Badge */}
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.7 }}
-      className="flex items-center gap-2"
+      transition={{ duration: 0.5, delay: 0.55 }}
     >
-      <div className="inline-flex items-center bg-[#281C46] text-white px-5 py-2.5 rounded-full shadow-lg">
-        <Clock className="w-5 h-5 mr-2" />
-        <span className="font-semibold">30 Minutes</span>
+      <div className="inline-flex items-center bg-[#281C46] text-white px-6 py-3 rounded-full shadow-lg shadow-[#281C46]/20">
+        <Clock className="w-5 h-5 mr-2.5 text-[#F8D57E]" />
+        <span className="font-semibold tracking-wide">30 Minutes</span>
       </div>
     </motion.div>
 
     {/* Subtitle */}
     <motion.p
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.9 }}
-      className="mt-8 text-lg text-[#281C46]/70 max-w-xl"
+      transition={{ duration: 0.5, delay: 0.7 }}
+      className="mt-10 text-lg text-[#281C46]/60 max-w-lg leading-relaxed"
     >
       Technical foundation and architecture overview to set context for the live demonstration
     </motion.p>
@@ -1640,124 +2580,124 @@ const PlatformArchitectureSectionSlide = () => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: 1.1 }}
-      className="absolute bottom-12 flex gap-2"
+      transition={{ duration: 0.5, delay: 0.85 }}
+      className="absolute bottom-10 flex gap-3"
     >
       <div className="w-2 h-2 rounded-full bg-[#5A3BFE]" />
       <div className="w-2 h-2 rounded-full bg-[#F8D57E]" />
-      <div className="w-2 h-2 rounded-full bg-[#281C46]" />
+      <div className="w-2 h-2 rounded-full bg-[#281C46]/40" />
     </motion.div>
   </div>
 )
 
 // AI Model Management Slide
 const AIModelManagementSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-14 py-8">
     {/* Header */}
     <motion.div
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      transition={{ duration: 0.4 }}
+      className="flex items-center mb-8"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Brain className="w-8 h-8 text-white" />
+      <div className="bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-xl p-3.5 mr-5 shadow-lg shadow-[#5A3BFE]/20">
+        <Brain className="w-7 h-7 text-white" />
       </div>
       <div>
-        <h2 className="text-4xl font-bold text-black">AI Model Management</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Composite AI Architecture with Dynamic Model Orchestration</p>
+        <h2 className="text-3xl font-bold text-[#1a1a2e] tracking-tight">AI Model Management</h2>
+        <p className="text-[#281C46]/60 text-base mt-1.5">Composite AI Architecture with Dynamic Model Orchestration</p>
       </div>
     </motion.div>
 
     {/* Main Content - Two Column Layout */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
+    <div className="grid grid-cols-2 gap-7 flex-1">
       {/* Left Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* Orchestrator LLM - Hero Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-xl flex-1"
         >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Network className="w-6 h-6 mr-3 text-[#F8D57E]" />
+          <h3 className="text-lg font-bold text-white flex items-center mb-4">
+            <Network className="w-5 h-5 mr-3 text-[#F8D57E]" />
             Orchestrator LLM (Agent AI)
           </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
+          <p className="text-white/90 text-sm leading-relaxed mb-5">
             A departure from monolithic model dependency toward a sophisticated <span className="text-[#F8D57E] font-semibold">"Composite AI"</span> architecture. The Orchestrator functions as a dynamic routing layer rather than a simple text-generation engine.
           </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/80 text-sm mb-3 font-medium">Multi-Model Strategy:</p>
-            <div className="space-y-2">
+          <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+            <p className="text-white/70 text-xs mb-3 font-semibold uppercase tracking-wide">Multi-Model Strategy</p>
+            <div className="space-y-3">
               <div className="flex items-start">
-                <Zap className="w-4 h-4 text-[#F8D57E] mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-white/90 text-sm"><span className="font-semibold text-[#F8D57E]">Speed-optimized models</span> for high-volume routine tasks (password resets, status checks)</span>
+                <Zap className="w-4 h-4 text-[#F8D57E] mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-white/90 text-sm leading-relaxed"><span className="font-semibold text-[#F8D57E]">Speed-optimized models</span> for high-volume routine tasks (password resets, status checks)</span>
               </div>
               <div className="flex items-start">
-                <Brain className="w-4 h-4 text-[#F8D57E] mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-white/90 text-sm"><span className="font-semibold text-[#F8D57E]">Reasoning models</span> (GPT-4, Claude 3.5) for complex multi-turn disambiguation</span>
+                <Brain className="w-4 h-4 text-[#F8D57E] mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-white/90 text-sm leading-relaxed"><span className="font-semibold text-[#F8D57E]">Reasoning models</span> (GPT-4, Claude 3.5) for complex multi-turn disambiguation</span>
               </div>
             </div>
           </div>
-          <p className="text-white/70 text-sm italic mt-4">
+          <p className="text-white/60 text-xs italic mt-4">
             Dynamic switching balances agent capability with operational cost — invisible to end-users.
           </p>
         </motion.div>
 
         {/* BYO-LLM Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
         >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <Cloud className="w-5 h-5 mr-2" />
+          <h4 className="font-bold text-[#281C46] text-base flex items-center mb-3">
+            <Cloud className="w-5 h-5 mr-2.5" />
             Bring Your Own LLM (BYO-LLM)
           </h4>
-          <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
+          <p className="text-[#281C46]/80 text-sm leading-relaxed mb-4">
             A <span className="font-semibold">governed wrapper</span> for proprietary models — not passive integration. Customers can integrate models from Azure OpenAI, AWS Bedrock, or private clouds.
           </p>
           <div className="flex flex-wrap gap-2">
-            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1 rounded-full font-medium">PII Redaction</span>
-            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1 rounded-full font-medium">Rate Limiting</span>
-            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1 rounded-full font-medium">Safety Guardrails</span>
-            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1 rounded-full font-medium">Sovereign Infrastructure</span>
+            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">PII Redaction</span>
+            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">Rate Limiting</span>
+            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">Safety Guardrails</span>
+            <span className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">Sovereign Infrastructure</span>
           </div>
         </motion.div>
       </div>
 
       {/* Right Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* Testing & Validation Card */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-5 shadow-sm"
+          transition={{ duration: 0.4, delay: 0.15 }}
+          className="bg-white border border-[#5A3BFE]/15 rounded-2xl p-5 shadow-sm"
         >
           <div className="flex items-start">
-            <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 mr-4">
+            <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 mr-4 flex-shrink-0">
               <FlaskConical className="w-5 h-5 text-[#5A3BFE]" />
             </div>
-            <div>
-              <h4 className="font-bold text-black text-lg">Model Testing & Validation</h4>
-              <p className="text-[#281C46]/70 text-sm leading-relaxed mt-2">
+            <div className="flex-1">
+              <h4 className="font-bold text-[#1a1a2e] text-base">Model Testing & Validation</h4>
+              <p className="text-[#281C46]/60 text-sm leading-relaxed mt-2">
                 Trust established through rigorous validation with automated <span className="font-semibold text-[#5A3BFE]">Utterance Report</span> mechanism.
               </p>
-              <div className="mt-3 space-y-2">
+              <div className="mt-4 space-y-2.5">
                 <div className="flex items-start">
-                  <CheckCircle2 className="w-4 h-4 text-[#5A3BFE] mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-[#281C46]/80 text-sm">Tests against validation datasets (provided or auto-generated)</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#5A3BFE] mr-2.5 mt-0.5 flex-shrink-0" />
+                  <span className="text-[#281C46]/70 text-sm">Tests against validation datasets (provided or auto-generated)</span>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="w-4 h-4 text-[#5A3BFE] mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-[#281C46]/80 text-sm">Detects overfitting & undercutting risks</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#5A3BFE] mr-2.5 mt-0.5 flex-shrink-0" />
+                  <span className="text-[#281C46]/70 text-sm">Detects overfitting & undercutting risks</span>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="w-4 h-4 text-[#5A3BFE] mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-[#281C46]/80 text-sm"><span className="font-semibold">Agentic Simulation</span> validates behavioral integrity before deployment</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#5A3BFE] mr-2.5 mt-0.5 flex-shrink-0" />
+                  <span className="text-[#281C46]/70 text-sm"><span className="font-semibold">Agentic Simulation</span> validates behavioral integrity before deployment</span>
                 </div>
               </div>
             </div>
@@ -1766,43 +2706,43 @@ const AIModelManagementSlide = () => (
 
         {/* Deterministic + Generative Card */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
+          transition={{ duration: 0.4, delay: 0.25 }}
+          className="bg-[#281C46] rounded-2xl p-5 shadow-xl flex-1"
         >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <RefreshCw className="w-5 h-5 mr-2 text-[#F8D57E]" />
+          <h4 className="font-bold text-white text-base flex items-center mb-3">
+            <RefreshCw className="w-5 h-5 mr-2.5 text-[#F8D57E]" />
             Hybrid: Deterministic + Generative
           </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
+          <p className="text-white/85 text-sm leading-relaxed mb-5">
             Seamless orchestration — no binary choice between <span className="text-[#F8D57E] font-semibold">Rules-Based</span> and <span className="text-[#F8D57E] font-semibold">GenAI</span>. The Query Execution Planner dynamically switches modes within a single interaction.
           </p>
-          <div className="bg-white/10 rounded-xl p-4">
+          <div className="bg-white/8 rounded-xl p-4">
             <div className="flex items-center justify-between">
               <div className="text-center flex-1">
-                <div className="bg-red-500/20 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
+                <div className="bg-red-500/20 rounded-lg p-2.5 mb-2 mx-auto w-fit">
                   <Lock className="w-5 h-5 text-red-400" />
                 </div>
-                <span className="text-white/80 text-xs font-medium">Compliance<br/>Locked</span>
+                <span className="text-white/70 text-xs font-medium">Compliance<br/>Locked</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-[#F8D57E] mx-2" />
+              <ArrowRight className="w-5 h-5 text-[#F8D57E]/60 mx-3" />
               <div className="text-center flex-1">
-                <div className="bg-green-500/20 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
+                <div className="bg-green-500/20 rounded-lg p-2.5 mb-2 mx-auto w-fit">
                   <CheckCircle2 className="w-5 h-5 text-green-400" />
                 </div>
-                <span className="text-white/80 text-xs font-medium">Verified</span>
+                <span className="text-white/70 text-xs font-medium">Verified</span>
               </div>
-              <ArrowRight className="w-5 h-5 text-[#F8D57E] mx-2" />
+              <ArrowRight className="w-5 h-5 text-[#F8D57E]/60 mx-3" />
               <div className="text-center flex-1">
-                <div className="bg-[#5A3BFE]/40 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
+                <div className="bg-[#5A3BFE]/40 rounded-lg p-2.5 mb-2 mx-auto w-fit">
                   <Sparkles className="w-5 h-5 text-[#F8D57E]" />
                 </div>
-                <span className="text-white/80 text-xs font-medium">GenAI<br/>Released</span>
+                <span className="text-white/70 text-xs font-medium">GenAI<br/>Released</span>
               </div>
             </div>
           </div>
-          <p className="text-white/70 text-sm italic mt-4">
+          <p className="text-white/50 text-xs italic mt-4">
             Example: Legal disclaimer (deterministic) → Q&A advisory (generative) in one conversation.
           </p>
         </motion.div>
@@ -1811,14 +2751,16 @@ const AIModelManagementSlide = () => (
 
     {/* Bottom Key Insight */}
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      transition={{ duration: 0.4, delay: 0.35 }}
+      className="mt-7 bg-gradient-to-r from-[#5A3BFE]/8 to-[#F8D57E]/15 rounded-2xl px-6 py-4 flex items-center gap-5 border border-[#5A3BFE]/10"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> No single LLM is optimal for every task — Yellow.ai's Composite AI dynamically routes queries to the right model, balancing cost, latency, and reasoning capabilities.
+      <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 flex-shrink-0">
+        <Lightbulb className="w-5 h-5 text-[#5A3BFE]" />
+      </div>
+      <p className="text-[#281C46]/80 text-sm leading-relaxed">
+        <span className="font-bold text-[#281C46]">Key Differentiator:</span> No single LLM is optimal for every task — Yellow.ai's Composite AI dynamically routes queries to the right model, balancing cost, latency, and reasoning capabilities.
       </p>
     </motion.div>
   </div>
@@ -1826,61 +2768,61 @@ const AIModelManagementSlide = () => (
 
 // Multi-Modal and Omnichannel Support Slide
 const MultiModalOmnichannelSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-14 py-8">
     {/* Header */}
     <motion.div
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      transition={{ duration: 0.4 }}
+      className="flex items-center mb-8"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Globe className="w-8 h-8 text-white" />
+      <div className="bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-xl p-3.5 mr-5 shadow-lg shadow-[#5A3BFE]/20">
+        <Globe className="w-7 h-7 text-white" />
       </div>
       <div>
-        <h2 className="text-4xl font-bold text-black">Multi-Modal & Omnichannel Support</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Agentic Omnichannel Orchestration with State Continuity</p>
+        <h2 className="text-3xl font-bold text-[#1a1a2e] tracking-tight">Multi-Modal & Omnichannel Support</h2>
+        <p className="text-[#281C46]/60 text-base mt-1.5">Agentic Omnichannel Orchestration with State Continuity</p>
       </div>
     </motion.div>
 
     {/* Main Content - Two Column Layout */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
+    <div className="grid grid-cols-2 gap-7 flex-1">
       {/* Left Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* Channel Consistency Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg"
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-xl"
         >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Layers className="w-6 h-6 mr-3 text-[#F8D57E]" />
+          <h3 className="text-lg font-bold text-white flex items-center mb-4">
+            <Layers className="w-5 h-5 mr-3 text-[#F8D57E]" />
             Write Once, Deploy Everywhere
           </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
+          <p className="text-white/90 text-sm leading-relaxed mb-5">
             Support for <span className="text-[#F8D57E] font-semibold">35+ interaction channels</span> with decoupled conversational logic from channel-specific presentation. A single Agent definition deploys across all endpoints.
           </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/80 text-sm mb-3 font-medium">Same "Menu Selection" renders as:</p>
-            <div className="grid grid-cols-3 gap-3">
+          <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+            <p className="text-white/70 text-xs mb-3 font-semibold uppercase tracking-wide">Same "Menu Selection" renders as</p>
+            <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg p-2 mb-2">
+                <div className="bg-white/15 rounded-lg p-2.5 mb-2">
                   <MessageSquare className="w-5 h-5 text-white mx-auto" />
                 </div>
-                <span className="text-white/80 text-xs">Clickable Carousel<br/><span className="text-[#F8D57E]">Web Chat</span></span>
+                <span className="text-white/80 text-xs leading-tight block">Clickable Carousel<br/><span className="text-[#F8D57E] font-medium">Web Chat</span></span>
               </div>
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg p-2 mb-2">
+                <div className="bg-white/15 rounded-lg p-2.5 mb-2">
                   <Smartphone className="w-5 h-5 text-white mx-auto" />
                 </div>
-                <span className="text-white/80 text-xs">Numbered List<br/><span className="text-[#F8D57E]">WhatsApp</span></span>
+                <span className="text-white/80 text-xs leading-tight block">Numbered List<br/><span className="text-[#F8D57E] font-medium">WhatsApp</span></span>
               </div>
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg p-2 mb-2">
+                <div className="bg-white/15 rounded-lg p-2.5 mb-2">
                   <Phone className="w-5 h-5 text-white mx-auto" />
                 </div>
-                <span className="text-white/80 text-xs">TTS Prompt<br/><span className="text-[#F8D57E]">Voice</span></span>
+                <span className="text-white/80 text-xs leading-tight block">TTS Prompt<br/><span className="text-[#F8D57E] font-medium">Voice</span></span>
               </div>
             </div>
           </div>
@@ -1888,115 +2830,109 @@ const MultiModalOmnichannelSlide = () => (
 
         {/* Deployment Stats Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md flex-1"
         >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <BarChart3 className="w-5 h-5 mr-2" />
+          <h4 className="font-bold text-[#281C46] text-base flex items-center mb-3">
+            <BarChart3 className="w-5 h-5 mr-2.5" />
             Omnichannel Deployment Scale
           </h4>
-          <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
+          <p className="text-[#281C46]/80 text-sm leading-relaxed mb-4">
             Enterprise clients interact with customers on <span className="font-semibold">3+ channels simultaneously</span> with cross-channel state awareness.
           </p>
-          <div className="flex items-center gap-4">
-            <div className="bg-[#281C46]/10 rounded-xl px-4 py-2 text-center">
+          <div className="grid grid-cols-3 gap-3">
+            <div className="bg-[#281C46]/10 rounded-xl px-3 py-3 text-center">
               <span className="text-2xl font-bold text-[#281C46]">35+</span>
-              <p className="text-[#281C46]/70 text-xs">Channels</p>
+              <p className="text-[#281C46]/60 text-xs mt-0.5">Channels</p>
             </div>
-            <div className="bg-[#281C46]/10 rounded-xl px-4 py-2 text-center">
+            <div className="bg-[#281C46]/10 rounded-xl px-3 py-3 text-center">
               <span className="text-2xl font-bold text-[#281C46]">M+</span>
-              <p className="text-[#281C46]/70 text-xs">Concurrent Sessions</p>
+              <p className="text-[#281C46]/60 text-xs mt-0.5">Concurrent Sessions</p>
             </div>
-            <div className="bg-[#281C46]/10 rounded-xl px-4 py-2 text-center flex-1">
-              <span className="text-sm font-bold text-[#281C46]">Voice + WhatsApp + App</span>
-              <p className="text-[#281C46]/70 text-xs">Largest Deployment</p>
+            <div className="bg-[#281C46]/10 rounded-xl px-3 py-3 text-center">
+              <span className="text-xs font-bold text-[#281C46] leading-tight block">Voice + WhatsApp<br/>+ App</span>
+              <p className="text-[#281C46]/60 text-xs mt-1">Largest Deployment</p>
             </div>
           </div>
         </motion.div>
       </div>
 
       {/* Right Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* Interruption-Aware Card */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
+          transition={{ duration: 0.4, delay: 0.15 }}
+          className="bg-[#281C46] rounded-2xl p-5 shadow-xl flex-1"
         >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <RefreshCw className="w-5 h-5 mr-2 text-[#F8D57E]" />
+          <h4 className="font-bold text-white text-base flex items-center mb-3">
+            <RefreshCw className="w-5 h-5 mr-2.5 text-[#F8D57E]" />
             Interruption-Aware Duplex Orchestration
           </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
+          <p className="text-white/85 text-sm leading-relaxed mb-5">
             Simultaneous multi-modal interactions — interrupt a voice call with a digital interaction while maintaining full context via <span className="text-[#F8D57E] font-semibold">User360 graph</span>.
           </p>
           
           {/* Scenario Flow */}
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/80 text-xs mb-3 font-medium">Real-Time Cross-Modal Scenario:</p>
-            <div className="space-y-3">
-              <div className="flex items-start">
-                <div className="bg-[#5A3BFE]/40 rounded-full p-1.5 mr-3 mt-0.5">
+          <div className="bg-white/8 rounded-xl p-4">
+            <p className="text-white/60 text-xs mb-3 font-semibold uppercase tracking-wide">Real-Time Cross-Modal Scenario</p>
+            <div className="space-y-2.5">
+              <div className="flex items-center">
+                <div className="bg-[#5A3BFE]/40 rounded-full p-1.5 mr-3 flex-shrink-0">
                   <Phone className="w-3 h-3 text-white" />
                 </div>
-                <div>
-                  <span className="text-white/90 text-sm">User on voice call discussing billing dispute</span>
-                </div>
+                <span className="text-white/90 text-sm">User on voice call discussing billing dispute</span>
               </div>
               <div className="flex items-center pl-3">
-                <div className="w-0.5 h-4 bg-[#F8D57E]/50 mr-5"></div>
+                <div className="w-0.5 h-3 bg-[#F8D57E]/40 ml-1.5"></div>
               </div>
-              <div className="flex items-start">
-                <div className="bg-[#F8D57E]/40 rounded-full p-1.5 mr-3 mt-0.5">
+              <div className="flex items-center">
+                <div className="bg-[#F8D57E]/40 rounded-full p-1.5 mr-3 flex-shrink-0">
                   <Smartphone className="w-3 h-3 text-white" />
                 </div>
-                <div>
-                  <span className="text-white/90 text-sm">Agent sends secure link via SMS for visual interface</span>
-                </div>
+                <span className="text-white/90 text-sm">Agent sends secure link via SMS for visual interface</span>
               </div>
               <div className="flex items-center pl-3">
-                <div className="w-0.5 h-4 bg-[#F8D57E]/50 mr-5"></div>
+                <div className="w-0.5 h-3 bg-[#F8D57E]/40 ml-1.5"></div>
               </div>
-              <div className="flex items-start">
-                <div className="bg-green-500/40 rounded-full p-1.5 mr-3 mt-0.5">
+              <div className="flex items-center">
+                <div className="bg-green-500/40 rounded-full p-1.5 mr-3 flex-shrink-0">
                   <CheckCircle2 className="w-3 h-3 text-white" />
                 </div>
-                <div>
-                  <span className="text-white/90 text-sm">"I see you've selected the charge from January 12th..."</span>
-                </div>
+                <span className="text-white/90 text-sm">"I see you've selected the charge from January 12th..."</span>
               </div>
             </div>
           </div>
-          <p className="text-white/70 text-sm italic mt-4">
+          <p className="text-white/50 text-xs italic mt-4">
             Transforms disjointed multi-channel into cohesive multimodal sessions.
           </p>
         </motion.div>
 
         {/* Supported Channels Card */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-5 shadow-sm"
+          transition={{ duration: 0.4, delay: 0.25 }}
+          className="bg-white border border-[#5A3BFE]/15 rounded-2xl p-5 shadow-sm"
         >
-          <h4 className="font-bold text-black text-lg mb-3">Supported Channels</h4>
-          <div className="flex flex-wrap gap-2">
+          <h4 className="font-bold text-[#1a1a2e] text-base mb-4">Supported Channels</h4>
+          <div className="grid grid-cols-4 gap-2">
             {[
               { icon: MessageSquare, label: "Web Chat" },
               { icon: Smartphone, label: "Mobile App" },
-              { icon: Phone, label: "Voice (PSTN/VoIP)" },
+              { icon: Phone, label: "Voice" },
               { icon: MessageCircle, label: "WhatsApp" },
               { icon: Mail, label: "Email" },
-              { icon: Instagram, label: "Social Media" },
+              { icon: Instagram, label: "Social" },
               { icon: Bell, label: "SMS" },
-              { icon: Building2, label: "Enterprise MSG" },
-            ].map((channel, index) => (
-              <div key={channel.label} className="flex items-center bg-gray-50 rounded-lg px-3 py-1.5">
-                <channel.icon className="w-4 h-4 text-[#5A3BFE] mr-2" />
-                <span className="text-[#281C46] text-sm">{channel.label}</span>
+              { icon: Building2, label: "Enterprise" },
+            ].map((channel) => (
+              <div key={channel.label} className="flex items-center bg-gray-50/80 rounded-lg px-2.5 py-2">
+                <channel.icon className="w-4 h-4 text-[#5A3BFE] mr-2 flex-shrink-0" />
+                <span className="text-[#281C46]/80 text-xs font-medium">{channel.label}</span>
               </div>
             ))}
           </div>
@@ -2006,14 +2942,16 @@ const MultiModalOmnichannelSlide = () => (
 
     {/* Bottom Key Insight */}
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      transition={{ duration: 0.4, delay: 0.35 }}
+      className="mt-7 bg-gradient-to-r from-[#5A3BFE]/8 to-[#F8D57E]/15 rounded-2xl px-6 py-4 flex items-center gap-5 border border-[#5A3BFE]/10"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Beyond "multi-channel presence" — Yellow.ai delivers true state continuity and interaction logic across channels, enabling seamless asynchronous and synchronous multi-modality.
+      <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 flex-shrink-0">
+        <Lightbulb className="w-5 h-5 text-[#5A3BFE]" />
+      </div>
+      <p className="text-[#281C46]/80 text-sm leading-relaxed">
+        <span className="font-bold text-[#281C46]">Key Differentiator:</span> Beyond "multi-channel presence" — Yellow.ai delivers true state continuity and interaction logic across channels, enabling seamless asynchronous and synchronous multi-modality.
       </p>
     </motion.div>
   </div>
@@ -2021,85 +2959,85 @@ const MultiModalOmnichannelSlide = () => (
 
 // Personalized Customer Experiences Slide
 const PersonalizedExperiencesSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-14 py-8">
     {/* Header */}
     <motion.div
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      transition={{ duration: 0.4 }}
+      className="flex items-center mb-8"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Heart className="w-8 h-8 text-white" />
+      <div className="bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-xl p-3.5 mr-5 shadow-lg shadow-[#5A3BFE]/20">
+        <Heart className="w-7 h-7 text-white" />
       </div>
       <div>
-        <h2 className="text-4xl font-bold text-black">Personalized Customer Experiences</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">User360 Architecture — Beyond Simple Variable Substitution</p>
+        <h2 className="text-3xl font-bold text-[#1a1a2e] tracking-tight">Personalized Customer Experiences</h2>
+        <p className="text-[#281C46]/60 text-base mt-1.5">User360 Architecture — Beyond Simple Variable Substitution</p>
       </div>
     </motion.div>
 
     {/* Main Content - Two Column Layout */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
+    <div className="grid grid-cols-2 gap-7 flex-1">
       {/* Left Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* User Graph Hero Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-xl flex-1"
         >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Users className="w-6 h-6 mr-3 text-[#F8D57E]" />
+          <h3 className="text-lg font-bold text-white flex items-center mb-4">
+            <Users className="w-5 h-5 mr-3 text-[#F8D57E]" />
             User Graph vs. Session Context
           </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
+          <p className="text-white/90 text-sm leading-relaxed mb-5">
             Most platforms maintain <span className="text-white/60">Session Context</span> — memory that lasts only as long as the chat window. Yellow.ai's <span className="text-[#F8D57E] font-semibold">User Graph is persistent</span>.
           </p>
-          <div className="bg-white/10 rounded-xl p-4 mb-4">
-            <p className="text-white/80 text-sm mb-3 font-medium">Episodic Memory enables:</p>
-            <div className="space-y-2">
+          <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm mb-4">
+            <p className="text-white/70 text-xs mb-3 font-semibold uppercase tracking-wide">Episodic Memory enables</p>
+            <div className="space-y-3">
               <div className="flex items-start">
-                <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-white/90 text-sm">Aggregates every interaction across all channels</span>
+                <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-white/90 text-sm leading-relaxed">Aggregates every interaction across all channels</span>
               </div>
               <div className="flex items-start">
-                <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-white/90 text-sm">Creates longitudinal view of customer relationship</span>
+                <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-white/90 text-sm leading-relaxed">Creates longitudinal view of customer relationship</span>
               </div>
               <div className="flex items-start">
-                <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-white/90 text-sm">Enables <span className="text-[#F8D57E] font-semibold">"Historical Intimacy"</span> in conversations</span>
+                <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-white/90 text-sm leading-relaxed">Enables <span className="text-[#F8D57E] font-semibold">"Historical Intimacy"</span> in conversations</span>
               </div>
             </div>
           </div>
-          <p className="text-white/70 text-sm italic">
+          <p className="text-white/60 text-xs italic">
             Shifts user experience from transactional to relational.
           </p>
         </motion.div>
 
         {/* Historical Intimacy Example */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
         >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <MessageSquare className="w-5 h-5 mr-2" />
+          <h4 className="font-bold text-[#281C46] text-base flex items-center mb-4">
+            <MessageSquare className="w-5 h-5 mr-2.5" />
             Historical Intimacy in Action
           </h4>
-          <div className="bg-[#281C46]/10 rounded-xl p-4">
+          <div className="bg-[#281C46]/8 rounded-xl p-4">
             <div className="space-y-3">
               <div className="flex items-start">
-                <div className="bg-[#281C46]/20 rounded-full p-1.5 mr-3 mt-0.5 flex-shrink-0">
-                  <Bot className="w-3 h-3 text-[#281C46]" />
+                <div className="bg-[#281C46]/15 rounded-full p-1.5 mr-3 mt-0.5 flex-shrink-0">
+                  <Bot className="w-3.5 h-3.5 text-[#281C46]" />
                 </div>
-                <div className="bg-white rounded-lg px-3 py-2 shadow-sm">
+                <div className="bg-white rounded-lg px-4 py-2.5 shadow-sm flex-1">
                   <p className="text-[#281C46] text-sm italic">"Hi John, are you calling about the payment issue from Tuesday?"</p>
                 </div>
               </div>
-              <p className="text-[#281C46]/70 text-xs pl-9">
+              <p className="text-[#281C46]/60 text-xs pl-10 leading-relaxed">
                 Agent references User Graph: call 3 days ago, failed payment, frustration detected via sentiment analysis
               </p>
             </div>
@@ -2108,88 +3046,88 @@ const PersonalizedExperiencesSlide = () => (
       </div>
 
       {/* Right Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* Runtime Synchronization Card */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
+          transition={{ duration: 0.4, delay: 0.15 }}
+          className="bg-[#281C46] rounded-2xl p-5 shadow-xl flex-1"
         >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <RefreshCw className="w-5 h-5 mr-2 text-[#F8D57E]" />
+          <h4 className="font-bold text-white text-base flex items-center mb-3">
+            <RefreshCw className="w-5 h-5 mr-2.5 text-[#F8D57E]" />
             Runtime Data Synchronization
           </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
+          <p className="text-white/85 text-sm leading-relaxed mb-5">
             The User Graph is a <span className="text-[#F8D57E] font-semibold">dynamic CDP component</span> — not a static database. Bidirectional sync keeps enterprise records current.
           </p>
           
           {/* Sync Flow Diagram */}
-          <div className="bg-white/10 rounded-xl p-4">
-            <div className="flex items-center justify-between mb-4">
+          <div className="bg-white/8 rounded-xl p-4">
+            <div className="flex items-center justify-between mb-3">
               <div className="text-center flex-1">
-                <div className="bg-[#5A3BFE]/40 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
-                  <Store className="w-5 h-5 text-white" />
+                <div className="bg-[#5A3BFE]/40 rounded-lg p-2 mb-2 mx-auto w-fit">
+                  <Store className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-white/80 text-xs font-medium">External Systems</span>
-                <p className="text-white/60 text-[10px]">Salesforce, SAP, Core Banking</p>
+                <span className="text-white/80 text-xs font-medium block">External Systems</span>
+                <p className="text-white/50 text-[10px]">Salesforce, SAP</p>
               </div>
-              <div className="flex flex-col items-center mx-2">
-                <ArrowRight className="w-4 h-4 text-[#F8D57E]" />
-                <span className="text-[#F8D57E] text-[10px] my-1">Priming</span>
-                <ArrowRight className="w-4 h-4 text-[#F8D57E] rotate-180" />
-                <span className="text-[#F8D57E] text-[10px] mt-1">Write-back</span>
-              </div>
-              <div className="text-center flex-1">
-                <div className="bg-[#F8D57E]/40 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-white/80 text-xs font-medium">User Graph</span>
-                <p className="text-white/60 text-[10px]">User360 CDP</p>
-              </div>
-              <div className="flex flex-col items-center mx-2">
-                <ArrowRight className="w-4 h-4 text-[#F8D57E]" />
+              <div className="flex flex-col items-center mx-3">
+                <ArrowRight className="w-3.5 h-3.5 text-[#F8D57E]/70" />
+                <span className="text-[#F8D57E]/80 text-[9px] my-0.5">Priming</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#F8D57E]/70 rotate-180" />
+                <span className="text-[#F8D57E]/80 text-[9px] mt-0.5">Write-back</span>
               </div>
               <div className="text-center flex-1">
-                <div className="bg-green-500/40 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
-                  <Bot className="w-5 h-5 text-white" />
+                <div className="bg-[#F8D57E]/40 rounded-lg p-2 mb-2 mx-auto w-fit">
+                  <Users className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-white/80 text-xs font-medium">AI Agent</span>
-                <p className="text-white/60 text-[10px]">Context Window</p>
+                <span className="text-white/80 text-xs font-medium block">User Graph</span>
+                <p className="text-white/50 text-[10px]">User360 CDP</p>
+              </div>
+              <div className="flex flex-col items-center mx-3">
+                <ArrowRight className="w-3.5 h-3.5 text-[#F8D57E]/70" />
+              </div>
+              <div className="text-center flex-1">
+                <div className="bg-green-500/40 rounded-lg p-2 mb-2 mx-auto w-fit">
+                  <Bot className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-white/80 text-xs font-medium block">AI Agent</span>
+                <p className="text-white/50 text-[10px]">Context Window</p>
               </div>
             </div>
           </div>
           
-          <div className="mt-4 space-y-2">
+          <div className="mt-5 space-y-2.5">
             <div className="flex items-start">
-              <Zap className="w-4 h-4 text-[#F8D57E] mr-2 mt-0.5 flex-shrink-0" />
-              <span className="text-white/90 text-sm"><span className="font-semibold text-[#F8D57E]">Priming:</span> Injects user data before first token generation</span>
+              <Zap className="w-4 h-4 text-[#F8D57E] mr-3 mt-0.5 flex-shrink-0" />
+              <span className="text-white/90 text-sm leading-relaxed"><span className="font-semibold text-[#F8D57E]">Priming:</span> Injects user data before first token generation</span>
             </div>
             <div className="flex items-start">
-              <Zap className="w-4 h-4 text-[#F8D57E] mr-2 mt-0.5 flex-shrink-0" />
-              <span className="text-white/90 text-sm"><span className="font-semibold text-[#F8D57E]">Write-back:</span> New info (e.g., address change) syncs to CRM</span>
+              <Zap className="w-4 h-4 text-[#F8D57E] mr-3 mt-0.5 flex-shrink-0" />
+              <span className="text-white/90 text-sm leading-relaxed"><span className="font-semibold text-[#F8D57E]">Write-back:</span> New info (e.g., address change) syncs to CRM</span>
             </div>
           </div>
         </motion.div>
 
         {/* Comparison Card */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-5 shadow-sm"
+          transition={{ duration: 0.4, delay: 0.25 }}
+          className="bg-white border border-[#5A3BFE]/15 rounded-2xl p-5 shadow-sm"
         >
-          <h4 className="font-bold text-black text-lg mb-3">Personalization Redefined</h4>
+          <h4 className="font-bold text-[#1a1a2e] text-base mb-4">Personalization Redefined</h4>
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gray-100 rounded-xl p-3">
-              <p className="text-[#281C46]/50 text-xs font-medium mb-2 line-through">Traditional</p>
-              <p className="text-[#281C46]/60 text-sm">"Hello, [Name]"</p>
-              <p className="text-[#281C46]/40 text-xs mt-1">Simple variable substitution</p>
+            <div className="bg-gray-50 rounded-xl p-4">
+              <p className="text-[#281C46]/40 text-xs font-medium mb-2 line-through">Traditional</p>
+              <p className="text-[#281C46]/50 text-sm">"Hello, [Name]"</p>
+              <p className="text-[#281C46]/40 text-xs mt-2">Simple variable substitution</p>
             </div>
-            <div className="bg-[#5A3BFE]/10 rounded-xl p-3 border border-[#5A3BFE]/30">
-              <p className="text-[#5A3BFE] text-xs font-medium mb-2">User360</p>
+            <div className="bg-[#5A3BFE]/8 rounded-xl p-4 border border-[#5A3BFE]/20">
+              <p className="text-[#5A3BFE] text-xs font-semibold mb-2">User360</p>
               <p className="text-[#281C46] text-sm font-medium">"Hi John, about Tuesday..."</p>
-              <p className="text-[#281C46]/60 text-xs mt-1">Contextual, relational memory</p>
+              <p className="text-[#281C46]/60 text-xs mt-2">Contextual, relational memory</p>
             </div>
           </div>
         </motion.div>
@@ -2198,14 +3136,16 @@ const PersonalizedExperiencesSlide = () => (
 
     {/* Bottom Key Insight */}
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      transition={{ duration: 0.4, delay: 0.35 }}
+      className="mt-7 bg-gradient-to-r from-[#5A3BFE]/8 to-[#F8D57E]/15 rounded-2xl px-6 py-4 flex items-center gap-5 border border-[#5A3BFE]/10"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> User360's Episodic Memory transforms interactions from transactional to relational — the AI remembers context across all channels and time, with bidirectional sync to enterprise systems.
+      <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 flex-shrink-0">
+        <Lightbulb className="w-5 h-5 text-[#5A3BFE]" />
+      </div>
+      <p className="text-[#281C46]/80 text-sm leading-relaxed">
+        <span className="font-bold text-[#281C46]">Key Differentiator:</span> User360's Episodic Memory transforms interactions from transactional to relational — the AI remembers context across all channels and time, with bidirectional sync to enterprise systems.
       </p>
     </motion.div>
   </div>
@@ -2213,46 +3153,46 @@ const PersonalizedExperiencesSlide = () => (
 
 // Agentic Framework Slide
 const AgenticFrameworkSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-14 py-8">
     {/* Header */}
     <motion.div
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      transition={{ duration: 0.4 }}
+      className="flex items-center mb-8"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Workflow className="w-8 h-8 text-white" />
+      <div className="bg-gradient-to-br from-[#5A3BFE] to-[#4530d4] rounded-xl p-3.5 mr-5 shadow-lg shadow-[#5A3BFE]/20">
+        <Workflow className="w-7 h-7 text-white" />
       </div>
       <div>
-        <h2 className="text-4xl font-bold text-black">Agentic Framework</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">From Flow-Based Design to Goal-Based Execution</p>
+        <h2 className="text-3xl font-bold text-[#1a1a2e] tracking-tight">Agentic Framework</h2>
+        <p className="text-[#281C46]/60 text-base mt-1.5">From Flow-Based Design to Goal-Based Execution</p>
       </div>
     </motion.div>
 
     {/* Main Content - Two Column Layout */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
+    <div className="grid grid-cols-2 gap-7 flex-1">
       {/* Left Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* Objectives & Generative Plans Hero Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg"
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-xl"
         >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Target className="w-6 h-6 mr-3 text-[#F8D57E]" />
+          <h3 className="text-lg font-bold text-white flex items-center mb-4">
+            <Target className="w-5 h-5 mr-3 text-[#F8D57E]" />
             Objectives, Roles & Generative Plans
           </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
+          <p className="text-white/90 text-sm leading-relaxed mb-5">
             Developers define <span className="text-[#F8D57E] font-semibold">Objectives</span> and <span className="text-[#F8D57E] font-semibold">Roles</span> — not every conversation turn. The Orchestrator LLM dynamically constructs multi-step plans at runtime.
           </p>
           
           {/* Example Plan */}
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/80 text-sm mb-3 font-medium">User: "I need to fix my router" → Generated Plan:</p>
-            <div className="space-y-2">
+          <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+            <p className="text-white/70 text-xs mb-3 font-semibold uppercase tracking-wide">User: "I need to fix my router" → Generated Plan</p>
+            <div className="space-y-2.5">
               {[
                 { step: "1", action: "Verify User Identity", tool: "CRM Lookup" },
                 { step: "2", action: "Check Device Status", tool: "Network Diagnostic API" },
@@ -2260,124 +3200,124 @@ const AgenticFrameworkSlide = () => (
                 { step: "4", action: "Schedule Technician", tool: "Calendar API" },
               ].map((item) => (
                 <div key={item.step} className="flex items-center">
-                  <span className="bg-[#F8D57E] text-[#281C46] text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center mr-2">{item.step}</span>
+                  <span className="bg-[#F8D57E] text-[#281C46] text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center mr-3 flex-shrink-0">{item.step}</span>
                   <span className="text-white/90 text-sm flex-1">{item.action}</span>
-                  <span className="bg-white/20 text-white/80 text-xs px-2 py-0.5 rounded">{item.tool}</span>
+                  <span className="bg-white/15 text-white/80 text-xs px-2.5 py-1 rounded-md font-medium">{item.tool}</span>
                 </div>
               ))}
             </div>
           </div>
-          <p className="text-white/70 text-sm italic mt-4">
+          <p className="text-white/60 text-xs italic mt-4">
             Plans adapt dynamically — outage detected? Skip to "Notify User" instead.
           </p>
         </motion.div>
 
         {/* Tools & Standards Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md flex-1"
         >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <Zap className="w-5 h-5 mr-2" />
+          <h4 className="font-bold text-[#281C46] text-base flex items-center mb-3">
+            <Zap className="w-5 h-5 mr-2.5" />
             Tools, Resources & Standards
           </h4>
-          <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
+          <p className="text-[#281C46]/80 text-sm leading-relaxed mb-4">
             APIs, database lookups, and logic are <span className="font-semibold">Tools</span> the agent invokes. Supports emerging interoperability standards:
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="bg-[#281C46] text-white text-xs px-3 py-1.5 rounded-full font-medium">Model Context Protocol (MCP)</span>
             <span className="bg-[#281C46] text-white text-xs px-3 py-1.5 rounded-full font-medium">Agent-to-Agent (A2A)</span>
-            <span className="bg-[#281C46]/20 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">Salesforce Agent</span>
-            <span className="bg-[#281C46]/20 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">SAP Agent</span>
+            <span className="bg-[#281C46]/15 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">Salesforce Agent</span>
+            <span className="bg-[#281C46]/15 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">SAP Agent</span>
           </div>
         </motion.div>
       </div>
 
       {/* Right Column */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-6">
         {/* Multi-Agent Mesh Card */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
+          transition={{ duration: 0.4, delay: 0.15 }}
+          className="bg-[#281C46] rounded-2xl p-5 shadow-xl flex-1"
         >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Network className="w-5 h-5 mr-2 text-[#F8D57E]" />
+          <h4 className="font-bold text-white text-base flex items-center mb-3">
+            <Network className="w-5 h-5 mr-2.5 text-[#F8D57E]" />
             Multi-Agent Mesh Architecture
           </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
+          <p className="text-white/85 text-sm leading-relaxed mb-5">
             Instead of a monolithic "Super Bot" (prone to hallucination), deploy a <span className="text-[#F8D57E] font-semibold">fleet of specialized agents</span> overseen by a Governance Layer.
           </p>
           
           {/* Mesh Visualization */}
-          <div className="bg-white/10 rounded-xl p-4">
+          <div className="bg-white/8 rounded-xl p-4">
             <div className="flex items-center justify-center mb-4">
               <div className="text-center">
-                <div className="bg-[#F8D57E] rounded-xl px-4 py-2 mb-2">
+                <div className="bg-[#F8D57E] rounded-xl px-5 py-2.5 mb-2 shadow-md">
                   <Shield className="w-5 h-5 text-[#281C46] mx-auto" />
                 </div>
-                <span className="text-[#F8D57E] text-xs font-semibold">Guardian Agent</span>
-                <p className="text-white/60 text-[10px]">Traffic Controller</p>
+                <span className="text-[#F8D57E] text-xs font-semibold block">Super Agent</span>
+                <p className="text-white/50 text-[10px]">Traffic Controller</p>
               </div>
             </div>
-            <div className="flex items-center justify-between">
-              <ArrowRight className="w-4 h-4 text-white/40 rotate-[135deg]" />
-              <ArrowRight className="w-4 h-4 text-white/40 rotate-90" />
-              <ArrowRight className="w-4 h-4 text-white/40 rotate-45" />
+            <div className="flex items-center justify-center gap-8 mb-2">
+              <ArrowRight className="w-4 h-4 text-white/30 rotate-[135deg]" />
+              <ArrowRight className="w-4 h-4 text-white/30 rotate-90" />
+              <ArrowRight className="w-4 h-4 text-white/30 rotate-45" />
             </div>
-            <div className="grid grid-cols-3 gap-2 mt-2">
+            <div className="grid grid-cols-3 gap-3 mt-2">
               {[
                 { icon: DollarSign, name: "Billing", color: "bg-blue-500/30" },
                 { icon: Headphones, name: "Tech Triage", color: "bg-green-500/30" },
                 { icon: TrendingUp, name: "Sales", color: "bg-purple-500/30" },
               ].map((agent) => (
                 <div key={agent.name} className="text-center">
-                  <div className={`${agent.color} rounded-lg p-2 mb-1`}>
+                  <div className={`${agent.color} rounded-lg p-2.5 mb-1.5`}>
                     <agent.icon className="w-4 h-4 text-white mx-auto" />
                   </div>
-                  <span className="text-white/80 text-xs">{agent.name}</span>
+                  <span className="text-white/70 text-xs font-medium">{agent.name}</span>
                 </div>
               ))}
             </div>
           </div>
-          <p className="text-white/70 text-sm italic mt-4">
+          <p className="text-white/50 text-xs italic mt-4">
             Each agent: smaller, specialized, highly accurate within its domain.
           </p>
         </motion.div>
 
         {/* Flow vs Goal Comparison */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 16 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-5 shadow-sm"
+          transition={{ duration: 0.4, delay: 0.25 }}
+          className="bg-white border border-[#5A3BFE]/15 rounded-2xl p-5 shadow-sm"
         >
-          <h4 className="font-bold text-black text-lg mb-3">The 2026 Paradigm Shift</h4>
+          <h4 className="font-bold text-[#1a1a2e] text-base mb-4">The 2026 Paradigm Shift</h4>
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gray-100 rounded-xl p-3">
-              <p className="text-[#281C46]/50 text-xs font-medium mb-2 line-through">Flow-Based</p>
-              <div className="flex items-center gap-1 mb-2">
-                <div className="w-6 h-6 bg-gray-300 rounded flex items-center justify-center text-[10px]">A</div>
-                <ArrowRight className="w-3 h-3 text-gray-400" />
-                <div className="w-6 h-6 bg-gray-300 rounded flex items-center justify-center text-[10px]">B</div>
-                <ArrowRight className="w-3 h-3 text-gray-400" />
-                <div className="w-6 h-6 bg-gray-300 rounded flex items-center justify-center text-[10px]">C</div>
+            <div className="bg-gray-50 rounded-xl p-4">
+              <p className="text-[#281C46]/40 text-xs font-medium mb-3 line-through">Flow-Based</p>
+              <div className="flex items-center gap-1.5 mb-3">
+                <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center text-[10px] text-gray-500 font-medium">A</div>
+                <ArrowRight className="w-3 h-3 text-gray-300" />
+                <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center text-[10px] text-gray-500 font-medium">B</div>
+                <ArrowRight className="w-3 h-3 text-gray-300" />
+                <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center text-[10px] text-gray-500 font-medium">C</div>
               </div>
-              <p className="text-[#281C46]/50 text-xs">Rigid decision trees</p>
+              <p className="text-[#281C46]/40 text-xs">Rigid decision trees</p>
             </div>
-            <div className="bg-[#5A3BFE]/10 rounded-xl p-3 border border-[#5A3BFE]/30">
-              <p className="text-[#5A3BFE] text-xs font-medium mb-2">Goal-Based</p>
-              <div className="flex items-center gap-1 mb-2">
-                <div className="w-6 h-6 bg-[#5A3BFE] rounded-full flex items-center justify-center">
+            <div className="bg-[#5A3BFE]/8 rounded-xl p-4 border border-[#5A3BFE]/20">
+              <p className="text-[#5A3BFE] text-xs font-semibold mb-3">Goal-Based</p>
+              <div className="flex items-center gap-1.5 mb-3">
+                <div className="w-6 h-6 bg-[#5A3BFE] rounded-full flex items-center justify-center shadow-sm">
                   <Target className="w-3 h-3 text-white" />
                 </div>
-                <div className="flex-1 h-0.5 bg-[#5A3BFE]/30 relative">
+                <div className="flex-1 h-0.5 bg-[#5A3BFE]/20 relative">
                   <Sparkles className="w-3 h-3 text-[#F8D57E] absolute -top-1 left-1/2 -translate-x-1/2" />
                 </div>
-                <div className="w-6 h-6 bg-[#F8D57E] rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#F8D57E] rounded-full flex items-center justify-center shadow-sm">
                   <CheckCircle2 className="w-3 h-3 text-[#281C46]" />
                 </div>
               </div>
@@ -2390,14 +3330,16 @@ const AgenticFrameworkSlide = () => (
 
     {/* Bottom Key Insight */}
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      transition={{ duration: 0.4, delay: 0.35 }}
+      className="mt-7 bg-gradient-to-r from-[#5A3BFE]/8 to-[#F8D57E]/15 rounded-2xl px-6 py-4 flex items-center gap-5 border border-[#5A3BFE]/10"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Goal-based execution with Generative Plan Development handles non-linear journeys that break rigid decision trees — agents adapt in real-time as conditions change.
+      <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 flex-shrink-0">
+        <Lightbulb className="w-5 h-5 text-[#5A3BFE]" />
+      </div>
+      <p className="text-[#281C46]/80 text-sm leading-relaxed">
+        <span className="font-bold text-[#281C46]">Key Differentiator:</span> Goal-based execution with Generative Plan Development handles non-linear journeys that break rigid decision trees — agents adapt in real-time as conditions change.
       </p>
     </motion.div>
   </div>
@@ -2434,22 +3376,22 @@ const AppDevToolsSlide = () => (
           className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg"
         >
           <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Bot className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            AI Agent Builder (No-Code/Low-Code)
+            <Sparkles className="w-6 h-6 mr-3 text-[#F8D57E]" />
+            Nexus: The Architect (Text-to-Flow)
           </h3>
           <p className="text-white/90 leading-relaxed mb-4">
-            <span className="text-[#F8D57E] font-semibold">Agentic Generation</span> — build agents using natural language prompts. Democratizes AI development for subject matter experts.
+            <span className="text-[#F8D57E] font-semibold">Natural Language First</span> — Nexus synthesizes logic, creates variables, and maps branches. The system figures it out without explicit scaffolding.
           </p>
           
           {/* Example Prompt */}
           <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/60 text-xs mb-2 font-medium">Natural Language Prompt:</p>
+            <p className="text-white/60 text-xs mb-2 font-medium">Text-to-Flow Orchestration:</p>
             <div className="bg-[#281C46] rounded-lg px-4 py-3 border border-white/20">
-              <p className="text-white/90 text-sm italic">"Build an agent that helps customers track flights and book upgrades"</p>
+              <p className="text-white/90 text-sm italic">"Build a flight cancellation flow with a $50 fee"</p>
             </div>
             <div className="flex items-center mt-3">
               <ArrowRight className="w-4 h-4 text-[#F8D57E] mr-2" />
-              <span className="text-white/80 text-sm">Auto-generates intents, flows, and tool definitions</span>
+              <span className="text-white/80 text-sm">Nexus generates complete flow + GenUI components</span>
             </div>
           </div>
           <div className="mt-4 flex items-center">
@@ -2470,7 +3412,7 @@ const AppDevToolsSlide = () => (
             Pro-Code Access
           </h4>
           <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
-            Write custom logic in <span className="font-semibold">Python</span> or <span className="font-semibold">Node.js</span>, exposed as reusable visual nodes in the flow builder.
+            Write custom logic in <span className="font-semibold">Node.js</span>, exposed as reusable visual nodes in the flow builder. Supports <span className="font-semibold">low-code</span>, <span className="font-semibold">no-code</span>, and <span className="font-semibold">pro-code</span> based on the choice of the enterprise and developer.
           </p>
           <div className="bg-[#281C46]/10 rounded-xl p-3">
             <p className="text-[#281C46]/70 text-xs mb-2 font-medium">Collaborative Workflow:</p>
@@ -2547,8 +3489,10 @@ const AppDevToolsSlide = () => (
             {[
               { tool: "AI Agent Builder", user: "Business Users / SMEs", function: "No-code agent creation via NL prompts", color: "bg-[#5A3BFE]" },
               { tool: "Flow Builder", user: "Analysts / Developers", function: "Visual conversation design", color: "bg-[#F8D57E]" },
-              { tool: "Pro-Code IDE", user: "Developers", function: "Python/Node.js custom logic", color: "bg-[#281C46]" },
+              { tool: "Pro-Code IDE", user: "Developers", function: "Node.js custom logic", color: "bg-[#281C46]" },
               { tool: "Integration Studio", user: "Developers", function: "API connections & data mapping", color: "bg-green-500" },
+              { tool: "Engage Agents", user: "Business Users / Marketers", function: "Campaign & engagement automation", color: "bg-purple-500" },
+              { tool: "Inbox Agents", user: "Support Teams / Agents", function: "Unified inbox & ticket management", color: "bg-orange-500" },
             ].map((item) => (
               <div key={item.tool} className="flex items-center bg-gray-50 rounded-lg p-2.5">
                 <div className={`${item.color} w-2 h-8 rounded-full mr-3`}></div>
@@ -2657,6 +3601,36 @@ const ResourceOrchestrationSlide = () => (
             Enables non-linear execution: pause Payment → execute Address Change → resume Payment
           </p>
         </motion.div>
+
+        {/* Super Agent Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="bg-gradient-to-br from-[#281C46] to-[#5A3BFE] rounded-2xl p-5 shadow-lg"
+        >
+          <h4 className="font-bold text-white text-lg flex items-center mb-3">
+            <Shield className="w-5 h-5 mr-2 text-[#F8D57E]" />
+            Super Agent — The Orchestration Boss
+          </h4>
+          <p className="text-white/90 text-sm leading-relaxed mb-3">
+            The <span className="text-[#F8D57E] font-semibold">Super Agent</span> acts as the central manager, overseeing all agent activities and ensuring task completion.
+          </p>
+          <div className="space-y-2">
+            <div className="flex items-center">
+              <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+              <span className="text-white/80 text-sm">Manages and delegates work to specialized agents</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+              <span className="text-white/80 text-sm">Monitors task progress and completion status</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
+              <span className="text-white/80 text-sm">Reassigns agents until tasks are successfully completed</span>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Right Column */}
@@ -2741,156 +3715,224 @@ const ResourceOrchestrationSlide = () => (
 
 // Pre-Built Application Components Slide
 const PreBuiltComponentsSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-10 py-6">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex items-center mb-4"
     >
       <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Store className="w-8 h-8 text-white" />
+        <Sparkles className="w-7 h-7 text-white" />
       </div>
       <div>
-        <h2 className="text-4xl font-bold text-black">Pre-Built Application Components</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Solving the Cold Start Problem — Go Live in Under One Week</p>
+        <h2 className="text-3xl font-bold text-black">Pre-Built Application Components</h2>
+        <p className="text-[#281C46]/70 text-base mt-1">From Boilerplate to Intelligent Scaffolding — The Nexus Paradigm</p>
       </div>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Zero-Setup Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Zap className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            Zero-Setup Automation
-          </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            Ingest existing knowledge artifacts to <span className="text-[#F8D57E] font-semibold">instantly enable</span> agent capabilities — no manual flow design required.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/80 text-sm mb-3 font-medium">Supported Artifacts:</p>
-            <div className="flex flex-wrap gap-2">
-              {["PDFs", "Policy Docs", "Websites", "FAQs", "Knowledge Base"].map((item) => (
-                <span key={item} className="bg-[#F8D57E]/20 text-[#F8D57E] text-xs px-3 py-1 rounded-full">{item}</span>
-              ))}
-            </div>
+    {/* Paradigm Shift Banner */}
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+      className="bg-gradient-to-r from-[#281C46] to-[#5A3BFE] rounded-xl px-5 py-3 mb-4"
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2">
+            <Code2 className="w-4 h-4 text-white/60" />
+            <span className="text-white/60 text-sm line-through">Boilerplate Code</span>
           </div>
-          <div className="mt-4 flex items-center">
-            <Clock className="w-4 h-4 text-[#F8D57E] mr-2" />
-            <span className="text-white/80 text-sm">Answer Level 1 queries from <span className="text-[#F8D57E] font-semibold">Day 1</span></span>
+          <ArrowRight className="w-4 h-4 text-[#F8D57E]" />
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-[#F8D57E]" />
+            <span className="text-[#F8D57E] font-semibold text-sm">AI-Assisted Development</span>
           </div>
-        </motion.div>
-
-        {/* Time Savings Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <Rocket className="w-5 h-5 mr-2" />
-            Time to Value
-          </h4>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-[#281C46] rounded-xl p-4 text-center">
-              <span className="text-3xl font-bold text-[#F8D57E]">&lt;1</span>
-              <p className="text-white text-sm">Week to automate</p>
-              <p className="text-white/60 text-xs">10% of service requests</p>
-            </div>
-            <div className="bg-[#281C46]/10 rounded-xl p-4 text-center">
-              <span className="text-3xl font-bold text-[#281C46]">150+</span>
-              <p className="text-[#281C46]/80 text-sm">Pre-built</p>
-              <p className="text-[#281C46]/60 text-xs">Integrations</p>
-            </div>
+          <ArrowRight className="w-4 h-4 text-[#F8D57E]" />
+          <div className="flex items-center gap-2">
+            <Brain className="w-4 h-4 text-white" />
+            <span className="text-white font-bold text-sm">Nexus: Business-Intelligent Scaffolding</span>
           </div>
-        </motion.div>
+        </div>
       </div>
+    </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Integration Library Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-5 shadow-sm"
-        >
-          <h4 className="font-bold text-black text-lg mb-3">Integration & Domain Libraries</h4>
-          <div className="space-y-3">
-            <div>
-              <p className="text-[#281C46]/60 text-xs font-medium mb-2">Enterprise Integrations</p>
-              <div className="flex flex-wrap gap-2">
-                {["Salesforce", "Zendesk", "ServiceNow", "SAP", "Shopify", "Oracle"].map((item) => (
-                  <span key={item} className="bg-[#5A3BFE]/10 text-[#5A3BFE] text-xs px-2 py-1 rounded">{item}</span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <p className="text-[#281C46]/60 text-xs font-medium mb-2">Pre-Trained Domain Models</p>
-              <div className="flex flex-wrap gap-2">
-                {["Banking", "Retail", "Healthcare", "HR", "Insurance"].map((item) => (
-                  <span key={item} className="bg-[#F8D57E]/50 text-[#281C46] text-xs px-2 py-1 rounded">{item}</span>
-                ))}
-              </div>
-            </div>
+    {/* Main Content - Three Columns */}
+    <div className="grid grid-cols-3 gap-4 flex-1">
+      {/* Column 1 - The Old Way */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-[#281C46]/5 border border-[#281C46]/10 rounded-2xl p-4"
+      >
+        <div className="flex items-center gap-2 mb-3">
+          <div className="bg-[#281C46]/20 rounded-lg p-1.5">
+            <FileCode className="w-4 h-4 text-[#281C46]/60" />
           </div>
-          <p className="text-[#281C46]/60 text-xs mt-3 italic">
-            Domain models understand industry vocabulary (e.g., "claim" differs in Insurance vs. HR)
-          </p>
-        </motion.div>
+          <h3 className="font-bold text-[#281C46]/60 text-sm">The Old Way</h3>
+        </div>
+        <p className="text-[#281C46]/50 text-xs mb-3 italic">Templates & Marketplaces</p>
+        <div className="space-y-2">
+          <div className="flex items-start gap-2">
+            <X className="w-3.5 h-3.5 text-red-400 mt-0.5 flex-shrink-0" />
+            <span className="text-[#281C46]/70 text-xs">Browse marketplace for templates</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <X className="w-3.5 h-3.5 text-red-400 mt-0.5 flex-shrink-0" />
+            <span className="text-[#281C46]/70 text-xs">Manually adapt to your use case</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <X className="w-3.5 h-3.5 text-red-400 mt-0.5 flex-shrink-0" />
+            <span className="text-[#281C46]/70 text-xs">One-size-fits-all approach</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <X className="w-3.5 h-3.5 text-red-400 mt-0.5 flex-shrink-0" />
+            <span className="text-[#281C46]/70 text-xs">No business context awareness</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <X className="w-3.5 h-3.5 text-red-400 mt-0.5 flex-shrink-0" />
+            <span className="text-[#281C46]/70 text-xs">Weeks of customization work</span>
+          </div>
+        </div>
+      </motion.div>
 
-        {/* Customization Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <FlaskConical className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Customization Without Breaking Upgrades
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            Extend pre-built logic without breaking the upgrade path. Components remain <span className="text-[#F8D57E] font-semibold">fully supported</span> after customization.
-          </p>
-          <div className="space-y-2">
-            <div className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-              <span className="text-white/80 text-sm">Extend without forking</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-              <span className="text-white/80 text-sm">Automatic updates preserved</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-              <span className="text-white/80 text-sm">Version-controlled customizations</span>
-            </div>
+      {/* Column 2 - Nexus Intelligent Scaffolding */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-4 shadow-lg"
+      >
+        <div className="flex items-center gap-2 mb-3">
+          <div className="bg-[#F8D57E] rounded-lg p-1.5">
+            <Brain className="w-4 h-4 text-[#281C46]" />
           </div>
-        </motion.div>
-      </div>
+          <h3 className="font-bold text-white text-sm">Nexus: Intelligent Scaffolding</h3>
+        </div>
+        <p className="text-[#F8D57E] text-xs mb-3 font-medium">Build from scratch — fast & smart</p>
+        <div className="space-y-2">
+          <div className="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-green-400 mt-0.5 flex-shrink-0" />
+            <span className="text-white/90 text-xs">Analyzes YOUR business data first</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-green-400 mt-0.5 flex-shrink-0" />
+            <span className="text-white/90 text-xs">Recommends use cases by ROI impact</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-green-400 mt-0.5 flex-shrink-0" />
+            <span className="text-white/90 text-xs">Generates flows tailored to your context</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-green-400 mt-0.5 flex-shrink-0" />
+            <span className="text-white/90 text-xs">Zero manual configuration needed</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <CheckCircle2 className="w-3.5 h-3.5 text-green-400 mt-0.5 flex-shrink-0" />
+            <span className="text-white/90 text-xs">Production-ready in days, not weeks</span>
+          </div>
+        </div>
+        <div className="mt-3 bg-white/10 rounded-lg p-2">
+          <p className="text-[#F8D57E] text-[10px] font-semibold text-center">Like Cursor for code — but for enterprise agents</p>
+        </div>
+      </motion.div>
+
+      {/* Column 3 - Use Case Recommendation */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-4 shadow-sm"
+      >
+        <div className="flex items-center gap-2 mb-3">
+          <div className="bg-[#5A3BFE] rounded-lg p-1.5">
+            <Target className="w-4 h-4 text-white" />
+          </div>
+          <h3 className="font-bold text-black text-sm">Use Case Recommendation</h3>
+        </div>
+        <p className="text-[#5A3BFE] text-xs mb-3 font-medium">Data-driven automation roadmap</p>
+        <div className="space-y-2.5">
+          <div className="bg-[#5A3BFE]/5 rounded-lg p-2">
+            <p className="text-[#281C46] text-xs font-semibold flex items-center gap-1.5">
+              <BarChart3 className="w-3 h-3 text-[#5A3BFE]" />
+              Automation Heatmaps
+            </p>
+            <p className="text-[#281C46]/60 text-[10px] mt-1">Identify quick wins vs strategic investments</p>
+          </div>
+          <div className="bg-[#F8D57E]/20 rounded-lg p-2">
+            <p className="text-[#281C46] text-xs font-semibold flex items-center gap-1.5">
+              <TrendingUp className="w-3 h-3 text-[#5A3BFE]" />
+              ROI Projections
+            </p>
+            <p className="text-[#281C46]/60 text-[10px] mt-1">Estimated deflection before building</p>
+          </div>
+          <div className="bg-[#5A3BFE]/5 rounded-lg p-2">
+            <p className="text-[#281C46] text-xs font-semibold flex items-center gap-1.5">
+              <Layers className="w-3 h-3 text-[#5A3BFE]" />
+              Priority Ranking
+            </p>
+            <p className="text-[#281C46]/60 text-[10px] mt-1">Based on ticket volume & complexity</p>
+          </div>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Section - How It Works */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="mt-4 bg-[#F8D57E] rounded-2xl p-4"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Zero-Setup Automation + 150+ pre-built integrations solves the Cold Start problem — automate 10% of service requests in under one week.
+      <h4 className="font-bold text-[#281C46] text-sm mb-3 flex items-center gap-2">
+        <Zap className="w-4 h-4" />
+        Nexus Scaffolding Process
+      </h4>
+      <div className="grid grid-cols-4 gap-3">
+        <div className="bg-[#281C46] rounded-xl p-3 text-center">
+          <div className="bg-[#F8D57E] rounded-full w-6 h-6 flex items-center justify-center mx-auto mb-2">
+            <span className="text-[#281C46] text-xs font-bold">1</span>
+          </div>
+          <p className="text-white text-xs font-semibold">Ingest Data</p>
+          <p className="text-white/60 text-[10px] mt-1">Tickets, logs, docs</p>
+        </div>
+        <div className="bg-[#281C46] rounded-xl p-3 text-center">
+          <div className="bg-[#F8D57E] rounded-full w-6 h-6 flex items-center justify-center mx-auto mb-2">
+            <span className="text-[#281C46] text-xs font-bold">2</span>
+          </div>
+          <p className="text-white text-xs font-semibold">Analyze Patterns</p>
+          <p className="text-white/60 text-[10px] mt-1">Find automation opportunities</p>
+        </div>
+        <div className="bg-[#281C46] rounded-xl p-3 text-center">
+          <div className="bg-[#F8D57E] rounded-full w-6 h-6 flex items-center justify-center mx-auto mb-2">
+            <span className="text-[#281C46] text-xs font-bold">3</span>
+          </div>
+          <p className="text-white text-xs font-semibold">Recommend</p>
+          <p className="text-white/60 text-[10px] mt-1">Prioritized use cases</p>
+        </div>
+        <div className="bg-[#281C46] rounded-xl p-3 text-center">
+          <div className="bg-[#F8D57E] rounded-full w-6 h-6 flex items-center justify-center mx-auto mb-2">
+            <span className="text-[#281C46] text-xs font-bold">4</span>
+          </div>
+          <p className="text-white text-xs font-semibold">Generate Agent</p>
+          <p className="text-white/60 text-[10px] mt-1">Production-ready flows</p>
+        </div>
+      </div>
+    </motion.div>
+
+    {/* Key Insight */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      className="mt-3 flex items-center gap-3 px-2"
+    >
+      <Lightbulb className="w-5 h-5 text-[#5A3BFE] flex-shrink-0" />
+      <p className="text-[#281C46] text-sm">
+        <span className="font-bold">Key Insight:</span> Just as developers moved from boilerplate to AI-assisted coding, Nexus enables <span className="text-[#5A3BFE] font-semibold">business-intelligent scaffolding from scratch</span> — faster than adapting templates.
       </p>
     </motion.div>
   </div>
@@ -2898,112 +3940,153 @@ const PreBuiltComponentsSlide = () => (
 
 // Application Testing Tools Slide
 const AppTestingToolsSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-8 py-6">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex items-center mb-4"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <FlaskConical className="w-8 h-8 text-white" />
+      <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+        <FlaskConical className="w-7 h-7 text-white" />
       </div>
       <div>
-        <h2 className="text-4xl font-bold text-black">Application Testing Tools</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Agentic Simulation for the GenAI Era</p>
+        <h2 className="text-3xl font-bold text-black">Automated Agentic Testing</h2>
+        <p className="text-[#281C46]/70 text-base mt-1">Machines Testing Machines — Solving the Scenario Explosion Problem</p>
       </div>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* The Gym Card */}
+    {/* Main Content - Three Column Layout */}
+    <div className="grid grid-cols-3 gap-4 flex-1">
+      {/* Left Column - Four Pillars */}
+      <div className="flex flex-col gap-3">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
+          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-4 shadow-lg"
         >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Target className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            "The Gym" Simulation Environment
+          <h3 className="text-base font-bold text-white flex items-center mb-3">
+            <Target className="w-5 h-5 mr-2 text-[#F8D57E]" />
+            Four Pillars of Testing
           </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            Traditional regression testing fails with probabilistic LLM outputs. <span className="text-[#F8D57E] font-semibold">Agentic Simulation</span> validates the entire customer journey.
-          </p>
-          <div className="space-y-3">
-            <div className="bg-white/10 rounded-xl p-3">
-              <div className="flex items-center mb-2">
-                <Users className="w-4 h-4 text-[#F8D57E] mr-2" />
-                <span className="text-white font-medium text-sm">Simulated Users</span>
-              </div>
-              <p className="text-white/70 text-xs">AI personas with specific goals and emotional states</p>
-              <p className="text-white/50 text-xs italic mt-1">"I am an angry customer trying to return a broken item"</p>
+          <div className="space-y-1.5">
+            <div className="bg-white/10 rounded-lg p-1.5">
+              <p className="text-[#F8D57E] text-xs font-semibold">KB Testing</p>
+              <p className="text-white/70 text-[10px]">RAG retrieval verification</p>
             </div>
-            <div className="bg-white/10 rounded-xl p-3">
-              <div className="flex items-center mb-2">
-                <Store className="w-4 h-4 text-[#F8D57E] mr-2" />
-                <span className="text-white font-medium text-sm">Simulated Backends</span>
-              </div>
-              <p className="text-white/70 text-xs">Mock API responses to validate payloads without live transactions</p>
+            <div className="bg-white/10 rounded-lg p-1.5">
+              <p className="text-[#F8D57E] text-xs font-semibold">Copilot Sessions</p>
+              <p className="text-white/70 text-[10px]">Regression of known paths</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-1.5">
+              <p className="text-[#F8D57E] text-xs font-semibold">Scenario Simulation</p>
+              <p className="text-white/70 text-[10px]">Goal-based autonomous testing</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-1.5">
+              <p className="text-[#F8D57E] text-xs font-semibold">Automated Regression</p>
+              <p className="text-white/70 text-[10px]">Systemic stability checks</p>
             </div>
           </div>
         </motion.div>
-      </div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Automated Regression Card */}
+        {/* Nexus QA */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+          className="bg-[#F8D57E] rounded-2xl p-4 shadow-md flex-1"
         >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <RefreshCw className="w-5 h-5 mr-2" />
-            Automated Regression & Synthetic Data
+          <h4 className="font-bold text-[#281C46] text-sm flex items-center mb-2">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Nexus: QA Engineer & Red Team
           </h4>
-          <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
-            Analyzes historical conversation logs to generate synthetic test cases representing real-world usage patterns.
+          <p className="text-[#281C46]/80 text-xs leading-relaxed mb-2">
+            Define personas — Nexus auto-generates conversations, provides results, and suggests fixes.
           </p>
-          <div className="bg-[#281C46]/10 rounded-xl p-3">
-            <p className="text-[#281C46] text-sm font-medium mb-2">"Golden Conversation Set"</p>
-            <p className="text-[#281C46]/70 text-xs">Used for regression testing on every agent update — ensures new knowledge doesn't degrade existing performance</p>
-          </div>
-        </motion.div>
-
-        {/* Validation Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <CheckCircle2 className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            What Gets Validated
-          </h4>
-          <div className="space-y-3">
-            {[
-              { label: "Reasoning Logic", desc: "Agent makes correct decisions" },
-              { label: "Tool Usage", desc: "Correct APIs called with right payloads" },
-              { label: "Behavioral Integrity", desc: "Consistent responses across scenarios" },
-              { label: "Edge Cases", desc: "Handles unexpected inputs gracefully" },
-            ].map((item) => (
-              <div key={item.label} className="flex items-start">
-                <CheckCircle2 className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                <div>
-                  <span className="text-white text-sm font-medium">{item.label}</span>
-                  <p className="text-white/60 text-xs">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="bg-[#281C46]/10 rounded-lg p-2">
+            <p className="text-[#281C46] text-xs font-medium">Adversary Personas</p>
+            <p className="text-[#281C46]/60 text-[10px]">Prompt injection & guardrail testing</p>
           </div>
         </motion.div>
       </div>
+
+      {/* Middle Column - Scenario Testing Image */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="flex flex-col gap-3"
+      >
+        <div className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-3 shadow-sm flex-1">
+          <h4 className="font-bold text-black text-sm mb-2 flex items-center">
+            <Users className="w-4 h-4 mr-2 text-[#5A3BFE]" />
+            Scenario-Based Simulation
+          </h4>
+          <div className="rounded-xl overflow-hidden border border-gray-200 mb-2">
+            <img 
+              src="/scenario-based-testing.png" 
+              alt="Scenario-based testing interface" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <p className="text-[#281C46]/70 text-[10px]">
+            Simulated Users with goals & personas interact with target bot — validates dynamic, non-deterministic flows
+          </p>
+        </div>
+
+        {/* Metrics */}
+        <div className="bg-[#281C46] rounded-2xl p-3 shadow-lg">
+          <h4 className="font-bold text-white text-sm mb-2">Key Metrics</h4>
+          <div className="grid grid-cols-2 gap-2">
+            <div className="bg-white/10 rounded-lg p-2 text-center">
+              <p className="text-[#F8D57E] text-lg font-bold">100+</p>
+              <p className="text-white/60 text-[10px]">Test cases recommended</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-2 text-center">
+              <p className="text-[#F8D57E] text-lg font-bold">75</p>
+              <p className="text-white/60 text-[10px]">Empathy score target</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Right Column - Reports Image */}
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="flex flex-col gap-3"
+      >
+        <div className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-3 shadow-sm flex-1">
+          <h4 className="font-bold text-black text-sm mb-2 flex items-center">
+            <FileText className="w-4 h-4 mr-2 text-[#5A3BFE]" />
+            Detailed Test Reports
+          </h4>
+          <div className="rounded-xl overflow-hidden border border-gray-200 mb-2">
+            <img 
+              src="/detailed test reports.png" 
+              alt="Detailed test reports" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <p className="text-[#281C46]/70 text-[10px]">
+            Accuracy, Empathy Scores, AI Reasoning traces — debug why agents fail
+          </p>
+        </div>
+
+        {/* CI/CD Integration */}
+        <div className="bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl p-3">
+          <h4 className="font-bold text-[#281C46] text-sm mb-2 flex items-center">
+            <Workflow className="w-4 h-4 mr-2 text-[#5A3BFE]" />
+            CI/CD Integration
+          </h4>
+          <p className="text-[#281C46]/70 text-[10px]">
+            Plug into Jenkins/GitLab/GitHub Actions — deploy only when Accuracy &gt; 90% & Empathy &gt; 75%
+          </p>
+        </div>
+      </motion.div>
     </div>
 
     {/* Bottom Key Insight */}
@@ -3011,11 +4094,11 @@ const AppTestingToolsSlide = () => (
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-4 bg-[#281C46] rounded-2xl px-5 py-3 flex items-center gap-4"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> "The Gym" validates agent reasoning and tool usage in a sandbox — providing confidence to deploy autonomous agents without risking live systems.
+      <Lightbulb className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white text-sm">
+        <span className="font-bold text-[#F8D57E]">Big Differentiator:</span> Manual testing is mathematically impossible for GenAI — "Agentic Testing" uses AI to test AI, providing statistical confidence across thousands of scenarios.
       </p>
     </motion.div>
   </div>
@@ -3023,126 +4106,153 @@ const AppTestingToolsSlide = () => (
 
 // AI Observability and Administration Slide
 const AIObservabilitySlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-5"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <BarChart3 className="w-8 h-8 text-white" />
-      </div>
-      <div>
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <BarChart3 className="w-7 h-7 text-white" />
+        </div>
         <h2 className="text-4xl font-bold text-black">AI Observability & Administration</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Chain of Thought Visibility with Self-Healing Capabilities</p>
       </div>
+      <p className="text-[#281C46] text-lg font-medium">Powered by <span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Nexus</span> — The Proactive Analyst & Self-Healing Mechanic</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Chain of Thought Card */}
+    {/* Main Content - 2 Row Layout */}
+    <div className="max-w-6xl mx-auto w-full space-y-4">
+      {/* Top Row - Nexus as Central Brain */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-r from-[#281C46] via-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="bg-[#F8D57E] rounded-xl p-3">
+              <Brain className="w-8 h-8 text-[#281C46]" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white">Nexus: The Unified Observability Brain</h3>
+              <p className="text-white/70 text-sm">Full context of every conversation, workflow, and data point</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            {[
+              { label: "Eyes", desc: "Analyze patterns" },
+              { label: "Hands", desc: "Fix issues" },
+              { label: "Authority", desc: "Act autonomously" },
+            ].map((pillar) => (
+              <div key={pillar.label} className="bg-white/10 rounded-lg px-4 py-2 text-center">
+                <span className="text-[#F8D57E] font-bold text-sm">{pillar.label}</span>
+                <p className="text-white/60 text-xs">{pillar.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom Row - 3 Columns */}
+      <div className="grid grid-cols-3 gap-4">
+        {/* Column 1 - Chain of Thought */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Brain className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            Chain of Thought (CoT) Visibility
-          </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            Overcome the "Black Box" nature of AI. View the Orchestrator's complete decision-making trace:
-          </p>
-          <div className="space-y-2">
-            {[
-              "Which user intent was detected",
-              "Which tools were considered",
-              "Why a specific tool was selected",
-              "Which KB chunks were retrieved",
-            ].map((item, index) => (
-              <div key={item} className="flex items-center bg-white/10 rounded-lg px-3 py-2">
-                <span className="bg-[#F8D57E] text-[#281C46] text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center mr-2">{index + 1}</span>
-                <span className="text-white/90 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-white/70 text-sm italic mt-4">
-            Essential for debugging and compliance auditing.
-          </p>
-        </motion.div>
-      </div>
-
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Insights Dashboard Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+          className="bg-white border-2 border-[#5A3BFE]/20 rounded-2xl p-4 shadow-sm"
         >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <PieChart className="w-5 h-5 mr-2" />
-            Insights Dashboard
-          </h4>
-          <div className="grid grid-cols-3 gap-2 mb-3">
-            {["Deflection Rate", "Goal Completion", "CSAT Score"].map((kpi) => (
-              <div key={kpi} className="bg-[#281C46]/10 rounded-lg p-2 text-center">
-                <p className="text-[#281C46] text-xs font-medium">{kpi}</p>
+          <div className="flex items-center gap-2 mb-3">
+            <div className="bg-[#5A3BFE]/10 rounded-lg p-2">
+              <Activity className="w-5 h-5 text-[#5A3BFE]" />
+            </div>
+            <h3 className="text-base font-bold text-black">Chain of Thought Visibility</h3>
+          </div>
+          <div className="space-y-1.5">
+            {["Intent detection reasoning", "Tool selection logic", "KB chunks retrieved", "Response generation path"].map((item, index) => (
+              <div key={item} className="flex items-center bg-gray-50 rounded-lg px-3 py-1.5">
+                <span className="bg-[#5A3BFE] text-white text-xs font-bold w-4 h-4 rounded-full flex items-center justify-center mr-2 text-[10px]">{index + 1}</span>
+                <span className="text-[#281C46]/80 text-xs">{item}</span>
               </div>
             ))}
           </div>
-          <p className="text-[#281C46]/80 text-sm">
-            <span className="font-semibold">Analyze feature:</span> Clusters uncategorized queries to identify emerging topics
-          </p>
+          <p className="text-[#281C46]/50 text-xs mt-3">Full transparency for debugging & compliance</p>
         </motion.div>
 
-        {/* Self-Healing Card */}
+        {/* Column 2 - Automated Root Cause Analysis */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="bg-[#F8D57E] rounded-2xl p-4 shadow-md"
         >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <RefreshCw className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Self-Healing Loop
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            System identifies "Unknown Intents" and suggests improvements automatically.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-white/80 text-sm">Unknown Query Detected</span>
-              <ArrowRight className="w-4 h-4 text-[#F8D57E]" />
-              <span className="text-white/80 text-sm">Suggest KB Article</span>
+          <div className="flex items-center gap-2 mb-3">
+            <div className="bg-[#281C46] rounded-lg p-2">
+              <Target className="w-5 h-5 text-[#F8D57E]" />
             </div>
-            <div className="border-t border-white/20 pt-3">
-              <div className="flex items-center">
-                <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                <span className="text-white/80 text-sm"><span className="text-[#F8D57E] font-semibold">Smart Sync:</span> Auto-updates when source docs change</span>
+            <h3 className="text-base font-bold text-[#281C46]">Automated Root Cause Analysis</h3>
+          </div>
+          <div className="space-y-2">
+            <div className="bg-[#281C46]/10 rounded-lg p-3">
+              <p className="text-[#281C46] text-xs font-semibold mb-1">When performance dips, Nexus:</p>
+              <div className="space-y-1">
+                {["Identifies broken nodes automatically", "Detects token expirations & API failures", "Pinpoints logic errors in flows"].map((item) => (
+                  <div key={item} className="flex items-center">
+                    <CheckCircle2 className="w-3 h-3 text-[#281C46] mr-1.5 flex-shrink-0" />
+                    <span className="text-[#281C46]/80 text-xs">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
+          <p className="text-[#281C46]/60 text-xs mt-3">No manual log diving required</p>
+        </motion.div>
+
+        {/* Column 3 - Self-Healing Mechanic */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-4 shadow-lg"
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <div className="bg-white/20 rounded-lg p-2">
+              <RefreshCw className="w-5 h-5 text-white" />
+            </div>
+            <h3 className="text-base font-bold text-white">Self-Healing Mechanic</h3>
+          </div>
+          <div className="space-y-1.5">
+            {[
+              { trigger: "Broken Node", action: "Auto-fix & notify" },
+              { trigger: "Low Confidence", action: "Flag for review" },
+              { trigger: "Unknown Query", action: "Suggest KB update" },
+              { trigger: "Doc Changed", action: "Auto-sync flows" },
+            ].map((item) => (
+              <div key={item.trigger} className="flex items-center justify-between bg-white/10 rounded-lg px-3 py-1.5">
+                <span className="text-white/80 text-xs">{item.trigger}</span>
+                <span className="text-[#F8D57E] text-xs font-semibold">{item.action}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-white/50 text-xs mt-3">Implements fixes autonomously for approval</p>
         </motion.div>
       </div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-4 bg-[#281C46] rounded-2xl px-6 py-3 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Full Chain of Thought visibility + Self-Healing loop ensures continuous improvement while maintaining complete transparency for compliance.
+      <Sparkles className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Nexus Advantage:</span> Continuous evolution with zero manual tuning — the AI monitors, diagnoses, and heals itself
       </p>
     </motion.div>
   </div>
@@ -3150,130 +4260,121 @@ const AIObservabilitySlide = () => (
 
 // Guardrails and Customer Data Security Slide
 const GuardrailsSecuritySlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-6"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Shield className="w-8 h-8 text-white" />
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <Shield className="w-7 h-7 text-white" />
+        </div>
+        <h2 className="text-4xl font-bold text-black">Guardrails & Data Security</h2>
       </div>
-      <div>
-        <h2 className="text-4xl font-bold text-black">Guardrails & Customer Data Security</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Multi-Agent Governance with Enterprise-Grade Protection</p>
-      </div>
+      <p className="text-[#281C46] text-lg font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Super Agent</span> Governance with <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">Enterprise-Grade</span> Protection</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Guardian Agent Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <ShieldAlert className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            The Guardian Agent (Governance Layer)
-          </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            A specialized AI model that <span className="text-[#F8D57E] font-semibold">monitors every input and output</span> of the primary Orchestrator in real-time.
-          </p>
-          <div className="space-y-2">
-            {[
-              { label: "Topic Adherence", desc: "Prevents discussing politics or competitors" },
-              { label: "Tone Policing", desc: "Maintains professionalism under abuse" },
-              { label: "PII Filtering", desc: "Blocks sensitive data leakage" },
-            ].map((item) => (
-              <div key={item.label} className="bg-white/10 rounded-lg px-3 py-2">
-                <span className="text-[#F8D57E] text-sm font-semibold">{item.label}</span>
-                <p className="text-white/70 text-xs">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+    {/* Main Content Grid - 3 Columns */}
+    <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto w-full">
+      {/* Column 1 - Super Agent */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="bg-white/20 rounded-xl p-2.5 w-fit mb-3">
+          <ShieldAlert className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-3">Super Agent</h3>
+        <p className="text-white/80 text-sm mb-3">Real-time monitoring of every input/output</p>
+        <div className="space-y-2">
+          {["Topic Adherence", "Tone Policing", "PII Filtering", "Brand Guidelines"].map((item) => (
+            <div key={item} className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+              <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2" />
+              <span className="text-white/90 text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-white/20">
+          <p className="text-white/70 text-xs">Blocks competitors, politics & sensitive leaks</p>
+        </div>
+      </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Certifications Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <Award className="w-5 h-5 mr-2" />
-            Certifications & Compliance
-          </h4>
+      {/* Column 2 - Certifications */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+      >
+        <div className="bg-[#281C46] rounded-xl p-2.5 w-fit mb-3">
+          <Award className="w-6 h-6 text-[#F8D57E]" />
+        </div>
+        <h3 className="text-lg font-bold text-[#281C46] mb-3">Certifications</h3>
+        <div className="grid grid-cols-2 gap-2">
+          {["ISO 27001", "ISO 27701", "SOC 2 Type II", "HIPAA Ready"].map((cert) => (
+            <div key={cert} className="bg-[#281C46]/10 rounded-lg px-2 py-2 text-center">
+              <span className="text-[#281C46] text-xs font-medium">{cert}</span>
+            </div>
+          ))}
+        </div>
+        <div className="mt-3 pt-2 border-t border-[#281C46]/20">
+          <p className="text-[#281C46]/60 text-[10px] font-medium mb-1.5">Upcoming</p>
           <div className="grid grid-cols-2 gap-2">
-            {[
-              "ISO 27001:2022",
-              "ISO 27701:2019",
-              "ISO 27018:2019",
-              "SOC 2 Type II",
-              "HIPAA (BAA Ready)",
-              "GDPR (Processor)",
-            ].map((cert) => (
-              <div key={cert} className="bg-[#281C46]/10 rounded-lg px-3 py-2 text-center">
-                <span className="text-[#281C46] text-xs font-medium">{cert}</span>
+            {["PCI DSS", "ISO 42001"].map((cert) => (
+              <div key={cert} className="bg-[#281C46]/5 border border-dashed border-[#281C46]/30 rounded-lg px-2 py-1.5 text-center">
+                <span className="text-[#281C46]/70 text-xs font-medium">{cert}</span>
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
+      </motion.div>
 
-        {/* Encryption Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Lock className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Data Protection
-          </h4>
-          <div className="space-y-3">
-            <div className="bg-white/10 rounded-lg p-3">
-              <div className="flex items-center justify-between">
-                <span className="text-white/80 text-sm">In Transit</span>
-                <span className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded">TLS 1.3</span>
-              </div>
-            </div>
-            <div className="bg-white/10 rounded-lg p-3">
-              <div className="flex items-center justify-between">
-                <span className="text-white/80 text-sm">At Rest</span>
-                <span className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded">AES 256</span>
-              </div>
-            </div>
-            <div className="bg-white/10 rounded-lg p-3">
-              <div className="flex items-center">
-                <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2" />
-                <span className="text-white/80 text-sm">Automated PII/PCI Redaction before LLM processing</span>
-              </div>
-            </div>
+      {/* Column 3 - Encryption */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
+          <Lock className="w-6 h-6 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-3">Data Protection</h3>
+        <div className="space-y-2">
+          <div className="flex items-center justify-between bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">In Transit</span>
+            <span className="bg-green-500/20 text-green-600 text-xs px-2 py-1 rounded font-medium">TLS 1.3</span>
           </div>
-        </motion.div>
-      </div>
+          <div className="flex items-center justify-between bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">At Rest</span>
+            <span className="bg-green-500/20 text-green-600 text-xs px-2 py-1 rounded font-medium">AES 256</span>
+          </div>
+          <div className="flex items-center justify-between bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">PII/PCI</span>
+            <span className="bg-green-500/20 text-green-600 text-xs px-2 py-1 rounded font-medium">Auto-Redact</span>
+          </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <p className="text-[#281C46]/60 text-xs">Sensitive data never enters LLM in cleartext</p>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-6 bg-[#281C46] rounded-2xl px-6 py-4 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Guardian Agent provides active real-time monitoring — sensitive data never enters the model's context in cleartext.
+      <Shield className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Key Differentiator:</span> Super Agent provides active real-time monitoring — enterprise-ready from day one
       </p>
     </motion.div>
   </div>
@@ -3281,135 +4382,117 @@ const GuardrailsSecuritySlide = () => (
 
 // Human + AI Interactions and Handoffs Slide
 const HumanAIHandoffsSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-6"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Handshake className="w-8 h-8 text-white" />
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <Handshake className="w-7 h-7 text-white" />
+        </div>
+        <h2 className="text-4xl font-bold text-black">Human + AI Handoffs</h2>
       </div>
-      <div>
-        <h2 className="text-4xl font-bold text-black">Human + AI Interactions & Handoffs</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Symbiotic Human-in-the-Loop with Zero-Repetition Escalation</p>
-      </div>
+      <p className="text-[#281C46] text-lg font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Bot Unblocker</span> + <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">Zero-Repetition</span> Escalation</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Bot Unblocker Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <UserCheck className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            The "Bot Unblocker"
-          </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            For low-confidence predictions, the agent routes queries to a human for <span className="text-[#F8D57E] font-semibold">behind-the-scenes validation</span>.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <div className="bg-[#F8D57E]/20 rounded-full p-1.5 mr-3">
-                  <Bot className="w-4 h-4 text-[#F8D57E]" />
-                </div>
-                <span className="text-white/90 text-sm">Agent uncertain about response</span>
-              </div>
-              <div className="flex items-center pl-6">
-                <ArrowRight className="w-4 h-4 text-[#F8D57E] mr-2" />
-              </div>
-              <div className="flex items-center">
-                <div className="bg-green-500/20 rounded-full p-1.5 mr-3">
-                  <UserCheck className="w-4 h-4 text-green-400" />
-                </div>
-                <span className="text-white/90 text-sm">Human confirms/corrects</span>
-              </div>
-              <div className="flex items-center pl-6">
-                <ArrowRight className="w-4 h-4 text-[#F8D57E] mr-2" />
-              </div>
-              <div className="flex items-center">
-                <div className="bg-[#5A3BFE]/40 rounded-full p-1.5 mr-3">
-                  <Brain className="w-4 h-4 text-white" />
-                </div>
-                <span className="text-white/90 text-sm">RLHF improves future confidence</span>
-              </div>
-            </div>
+    {/* Main Content Grid - 3 Columns */}
+    <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto w-full">
+      {/* Column 1 - Bot Unblocker */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="bg-white/20 rounded-xl p-2.5 w-fit mb-3">
+          <UserCheck className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-3">Bot Unblocker</h3>
+        <p className="text-white/80 text-sm mb-3">Low-confidence → Human validation</p>
+        <div className="space-y-2">
+          <div className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+            <Bot className="w-4 h-4 text-[#F8D57E] mr-2" />
+            <span className="text-white/90 text-sm">Agent uncertain</span>
           </div>
-        </motion.div>
-      </div>
+          <div className="flex items-center justify-center">
+            <ArrowRight className="w-4 h-4 text-[#F8D57E]" />
+          </div>
+          <div className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+            <UserCheck className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-white/90 text-sm">Human confirms</span>
+          </div>
+          <div className="flex items-center justify-center">
+            <ArrowRight className="w-4 h-4 text-[#F8D57E]" />
+          </div>
+          <div className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+            <Brain className="w-4 h-4 text-[#F8D57E] mr-2" />
+            <span className="text-white/90 text-sm">RLHF improves</span>
+          </div>
+        </div>
+      </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Intelligent Escalation Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Headphones className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Intelligent Escalation
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            Not just a queue dump — packages the full <span className="text-[#F8D57E] font-semibold">Context Object</span> for seamless handoff.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/60 text-xs mb-2 font-medium">Context Object includes:</p>
-            <div className="grid grid-cols-2 gap-2">
-              {["Full Transcript", "User Graph History", "Identified Intent", "Current Sentiment"].map((item) => (
-                <div key={item} className="flex items-center">
-                  <CheckCircle2 className="w-3 h-3 text-green-400 mr-2" />
-                  <span className="text-white/80 text-xs">{item}</span>
-                </div>
-              ))}
+      {/* Column 2 - Intelligent Escalation */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+      >
+        <div className="bg-[#281C46] rounded-xl p-2.5 w-fit mb-3">
+          <Headphones className="w-6 h-6 text-[#F8D57E]" />
+        </div>
+        <h3 className="text-lg font-bold text-[#281C46] mb-3">Intelligent Escalation</h3>
+        <p className="text-[#281C46]/80 text-sm mb-3">Full Context Object handoff</p>
+        <div className="space-y-2">
+          {["Full Transcript", "User Graph History", "Identified Intent", "Current Sentiment"].map((item) => (
+            <div key={item} className="flex items-center bg-[#281C46]/10 rounded-lg px-3 py-2">
+              <CheckCircle2 className="w-4 h-4 text-[#281C46] mr-2" />
+              <span className="text-[#281C46] text-sm">{item}</span>
             </div>
-          </div>
-          <div className="mt-4 bg-[#F8D57E]/20 rounded-lg p-3">
-            <p className="text-[#F8D57E] text-sm font-semibold">"Zero-Repetition Handoff"</p>
-            <p className="text-white/70 text-xs">User never has to repeat themselves</p>
-          </div>
-        </motion.div>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-[#281C46]/20">
+          <p className="text-[#281C46]/70 text-xs">User never repeats themselves</p>
+        </div>
+      </motion.div>
 
-        {/* Integration Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg mb-3">Screen Pop Integration</h4>
-          <p className="text-[#281C46]/80 text-sm mb-3">
-            Context delivered via "Screen Pop" to agent's dashboard:
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {["Salesforce", "Zendesk", "Yellow.ai Inbox"].map((platform) => (
-              <span key={platform} className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">{platform}</span>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+      {/* Column 3 - Nexus Support */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
+          <Sparkles className="w-6 h-6 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-3">Nexus Agent Support</h3>
+        <p className="text-[#281C46]/70 text-sm mb-3">Real-time assistance in Yellow.ai Inbox</p>
+        <div className="flex flex-wrap gap-2">
+          {["Coaching Nudges", "Magic Rewrites", "Sentiment Coaching", "Page Context"].map((feature) => (
+            <span key={feature} className="bg-[#5A3BFE]/10 text-[#5A3BFE] text-xs px-3 py-1.5 rounded-full font-medium">{feature}</span>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <p className="text-[#281C46]/60 text-xs">First-class support for human agents</p>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-6 bg-[#281C46] rounded-2xl px-6 py-4 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Bot Unblocker enables RLHF learning while Intelligent Escalation ensures zero-repetition handoffs with full context transfer.
+      <Handshake className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Key Differentiator:</span> Bot Unblocker enables RLHF learning + zero-repetition handoffs with full context
       </p>
     </motion.div>
   </div>
@@ -3417,136 +4500,131 @@ const HumanAIHandoffsSlide = () => (
 
 // Application Lifecycle Management Slide
 const AppLifecycleSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-6"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <RefreshCw className="w-8 h-8 text-white" />
-      </div>
-      <div>
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <RefreshCw className="w-7 h-7 text-white" />
+        </div>
         <h2 className="text-4xl font-bold text-black">Application Lifecycle Management</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Enterprise CI/CD with Granular Promotion & One-Click Rollback</p>
       </div>
+      <p className="text-[#281C46] text-lg font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Granular Promotion</span> with <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">One-Click</span> Rollback</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Environments Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Layers className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            Environment Management
-          </h3>
-          <div className="flex items-center justify-between bg-white/10 rounded-xl p-4">
-            <div className="text-center flex-1">
-              <div className="bg-blue-500/30 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
-                <FlaskConical className="w-5 h-5 text-blue-400" />
-              </div>
-              <span className="text-white/80 text-sm font-medium">Development</span>
-            </div>
-            <ArrowRight className="w-5 h-5 text-[#F8D57E]" />
-            <div className="text-center flex-1">
-              <div className="bg-yellow-500/30 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
-                <Target className="w-5 h-5 text-yellow-400" />
-              </div>
-              <span className="text-white/80 text-sm font-medium">Staging</span>
-            </div>
-            <ArrowRight className="w-5 h-5 text-[#F8D57E]" />
-            <div className="text-center flex-1">
-              <div className="bg-green-500/30 rounded-lg px-3 py-2 mb-2 mx-auto w-fit">
-                <Rocket className="w-5 h-5 text-green-400" />
-              </div>
-              <span className="text-white/80 text-sm font-medium">Production</span>
-            </div>
+    {/* Main Content Grid - 3 Columns */}
+    <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto w-full">
+      {/* Column 1 - Environments */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="bg-white/20 rounded-xl p-2.5 w-fit mb-3">
+          <Layers className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-3">Environment Pipeline</h3>
+        <div className="space-y-2">
+          <div className="flex items-center justify-between bg-blue-500/20 rounded-lg px-3 py-2">
+            <FlaskConical className="w-4 h-4 text-blue-400" />
+            <span className="text-white/90 text-sm">Development</span>
+            <ArrowRight className="w-4 h-4 text-white/40" />
           </div>
-          <p className="text-white/70 text-sm mt-4">
-            Version control for every agent component across all environments.
-          </p>
-        </motion.div>
+          <div className="flex items-center justify-between bg-yellow-500/20 rounded-lg px-3 py-2">
+            <Target className="w-4 h-4 text-yellow-400" />
+            <span className="text-white/90 text-sm">Staging</span>
+            <ArrowRight className="w-4 h-4 text-white/40" />
+          </div>
+          <div className="flex items-center justify-between bg-green-500/20 rounded-lg px-3 py-2">
+            <Rocket className="w-4 h-4 text-green-400" />
+            <span className="text-white/90 text-sm">Production</span>
+            <CheckCircle2 className="w-4 h-4 text-green-400" />
+          </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-white/20">
+          <p className="text-white/70 text-xs">Version control for every component</p>
+        </div>
+      </motion.div>
 
-        {/* Rollback Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md flex-1"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <RefreshCw className="w-5 h-5 mr-2" />
-            One-Click Rollback
-          </h4>
-          <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
-            Instantly revert to a previous stable state if anomalies detected in production.
-          </p>
-          <div className="bg-[#281C46]/10 rounded-xl p-3 flex items-center">
-            <ShieldAlert className="w-5 h-5 text-[#281C46] mr-3" />
-            <span className="text-[#281C46]/80 text-sm">Anomaly detected → Automatic alert → One-click restore</span>
+      {/* Column 2 - Granular Promotion */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+      >
+        <div className="bg-[#281C46] rounded-xl p-2.5 w-fit mb-3">
+          <Workflow className="w-6 h-6 text-[#F8D57E]" />
+        </div>
+        <h3 className="text-lg font-bold text-[#281C46] mb-3">Granular Promotion</h3>
+        <p className="text-[#281C46]/80 text-sm mb-3">Update specific modules only</p>
+        <div className="grid grid-cols-3 gap-2">
+          <div className="bg-green-500/20 rounded-lg p-2 text-center border border-green-500/40">
+            <span className="text-green-700 text-xs font-medium">Returns</span>
+            <p className="text-green-600/70 text-[10px]">Updated</p>
           </div>
-        </motion.div>
-      </div>
+          <div className="bg-[#281C46]/10 rounded-lg p-2 text-center">
+            <span className="text-[#281C46]/60 text-xs">Sales</span>
+            <p className="text-[#281C46]/40 text-[10px]">Same</p>
+          </div>
+          <div className="bg-[#281C46]/10 rounded-lg p-2 text-center">
+            <span className="text-[#281C46]/60 text-xs">Support</span>
+            <p className="text-[#281C46]/40 text-[10px]">Same</p>
+          </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-[#281C46]/20">
+          <p className="text-[#281C46]/70 text-xs">Different teams own different journeys</p>
+        </div>
+      </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Granular Promotion Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Workflow className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Granular Promotion
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            Deployment is not "all-or-nothing." Push updates to <span className="text-[#F8D57E] font-semibold">specific modules</span> without affecting others.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/60 text-xs mb-3 font-medium">Example: Update "Returns" flow independently</p>
-            <div className="grid grid-cols-3 gap-2">
-              <div className="bg-green-500/20 rounded-lg p-2 text-center border border-green-500/30">
-                <span className="text-green-400 text-xs font-medium">Returns</span>
-                <p className="text-white/50 text-[10px]">Updated</p>
-              </div>
-              <div className="bg-white/10 rounded-lg p-2 text-center">
-                <span className="text-white/60 text-xs">Sales</span>
-                <p className="text-white/40 text-[10px]">Unchanged</p>
-              </div>
-              <div className="bg-white/10 rounded-lg p-2 text-center">
-                <span className="text-white/60 text-xs">Support</span>
-                <p className="text-white/40 text-[10px]">Unchanged</p>
-              </div>
-            </div>
+      {/* Column 3 - Rollback */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
+          <RefreshCw className="w-6 h-6 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-3">One-Click Rollback</h3>
+        <p className="text-[#281C46]/70 text-sm mb-3">Instant revert on anomaly detection</p>
+        <div className="space-y-2">
+          <div className="flex items-center justify-between bg-red-500/10 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">Anomaly</span>
+            <span className="text-red-500 text-xs font-medium">Detected</span>
           </div>
-          <p className="text-white/70 text-sm italic mt-4">
-            Essential for large enterprises with different teams owning different journeys.
-          </p>
-        </motion.div>
-      </div>
+          <div className="flex items-center justify-between bg-yellow-500/10 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">Alert</span>
+            <span className="text-yellow-600 text-xs font-medium">Triggered</span>
+          </div>
+          <div className="flex items-center justify-between bg-green-500/10 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">Rollback</span>
+            <span className="text-green-600 text-xs font-medium">One-Click</span>
+          </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <p className="text-[#281C46]/60 text-xs">Instant recovery to stable state</p>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-6 bg-[#281C46] rounded-2xl px-6 py-4 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Granular Promotion enables modular updates without risking stability — combined with One-Click Rollback for instant recovery.
+      <RefreshCw className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Key Differentiator:</span> Modular updates without risking stability + instant rollback for recovery
       </p>
     </motion.div>
   </div>
@@ -3554,125 +4632,117 @@ const AppLifecycleSlide = () => (
 
 // Legacy System Integration Slide
 const LegacyIntegrationSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-6"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Network className="w-8 h-8 text-white" />
-      </div>
-      <div>
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <Network className="w-7 h-7 text-white" />
+        </div>
         <h2 className="text-4xl font-bold text-black">Legacy System Integration</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Connect vs. Collect — Orchestrate Without Becoming System of Record</p>
       </div>
+      <p className="text-[#281C46] text-lg font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Connect</span> vs. Collect — <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">150+</span> Pre-Built Connectors</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Connect vs Collect Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Cloud className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            Connect vs. Collect Philosophy
-          </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            Yellow.ai <span className="text-[#F8D57E] font-semibold">orchestrates existing systems</span> rather than becoming the system of record.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/60 text-xs mb-2 font-medium">Supported Protocols:</p>
-            <div className="flex flex-wrap gap-2">
-              {["REST", "SOAP", "GraphQL"].map((protocol) => (
-                <span key={protocol} className="bg-[#F8D57E]/20 text-[#F8D57E] text-sm px-3 py-1 rounded-full font-medium">{protocol}</span>
-              ))}
+    {/* Main Content Grid - 3 Columns */}
+    <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto w-full">
+      {/* Column 1 - Philosophy */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="bg-white/20 rounded-xl p-2.5 w-fit mb-3">
+          <Cloud className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-3">Connect vs. Collect</h3>
+        <p className="text-white/80 text-sm mb-3">Orchestrate, don't become system of record</p>
+        <div className="space-y-2">
+          {["REST", "SOAP", "GraphQL", "MCP Protocol"].map((protocol) => (
+            <div key={protocol} className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+              <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2" />
+              <span className="text-white/90 text-sm">{protocol}</span>
             </div>
-          </div>
-        </motion.div>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-white/20">
+          <p className="text-white/70 text-xs">Real-time data, no stale copies</p>
+        </div>
+      </motion.div>
 
-        {/* Pre-built Connectors Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md flex-1"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <Store className="w-5 h-5 mr-2" />
-            150+ Pre-Built Connectors
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "ServiceNow", "Workday"].map((system) => (
-              <span key={system} className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">{system}</span>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+      {/* Column 2 - Pre-Built Connectors */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+      >
+        <div className="bg-[#281C46] rounded-xl p-2.5 w-fit mb-3">
+          <Store className="w-6 h-6 text-[#F8D57E]" />
+        </div>
+        <h3 className="text-lg font-bold text-[#281C46] mb-3">150+ Connectors</h3>
+        <div className="flex flex-wrap gap-2">
+          {["SAP", "Oracle", "Salesforce", "ServiceNow", "Workday", "Dynamics"].map((system) => (
+            <span key={system} className="bg-[#281C46]/10 text-[#281C46] text-xs px-3 py-1.5 rounded-full font-medium">{system}</span>
+          ))}
+        </div>
+        <div className="mt-4 bg-[#281C46]/10 rounded-lg p-3">
+          <p className="text-[#281C46]/80 text-xs">Supported Formats:</p>
+          <p className="text-[#281C46] text-sm font-medium">WSDL, Swagger, OpenAPI, CURL</p>
+        </div>
+        <div className="mt-4 pt-3 border-t border-[#281C46]/20">
+          <p className="text-[#281C46]/70 text-xs">Paste API docs → working code</p>
+        </div>
+      </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Custom Backends Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Zap className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Handling Custom Legacy Systems
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            For highly customized systems (20-year-old mainframes with SOAP wrappers):
-          </p>
-          <div className="space-y-3">
-            <div className="bg-white/10 rounded-lg p-3">
-              <p className="text-[#F8D57E] text-sm font-semibold mb-1">Custom API Nodes</p>
-              <p className="text-white/70 text-xs">Import WSDL or Swagger definitions to generate connections</p>
-            </div>
-            <div className="bg-white/10 rounded-lg p-3">
-              <p className="text-[#F8D57E] text-sm font-semibold mb-1">Generative Integration</p>
-              <p className="text-white/70 text-xs">Describe the endpoint or paste a sample request — AI generates boilerplate code</p>
-            </div>
+      {/* Column 3 - Yellow Legacy */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
+          <Zap className="w-6 h-6 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-3">Yellow Legacy Module</h3>
+        <p className="text-[#281C46]/70 text-sm mb-3">For COBOL, older SAP, mainframes</p>
+        <div className="space-y-2">
+          <div className="flex items-center justify-between bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">On-Premise</span>
+            <span className="text-[#5A3BFE] text-xs font-medium">Bridge</span>
           </div>
-        </motion.div>
-
-        {/* Supported Formats Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-white border border-[#5A3BFE]/20 rounded-2xl p-5 shadow-sm"
-        >
-          <h4 className="font-bold text-black text-lg mb-3">Supported Definition Formats</h4>
-          <div className="flex flex-wrap gap-2">
-            {["WSDL", "Swagger", "OpenAPI", "CURL", "Raw API Docs"].map((format) => (
-              <span key={format} className="bg-[#5A3BFE]/10 text-[#5A3BFE] text-sm px-3 py-1.5 rounded-full font-medium">{format}</span>
-            ))}
+          <div className="flex items-center justify-between bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">Direct DB</span>
+            <span className="text-[#5A3BFE] text-xs font-medium">Execution</span>
           </div>
-        </motion.div>
-      </div>
+          <div className="flex items-center justify-between bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">API Gateway</span>
+            <span className="text-[#5A3BFE] text-xs font-medium">To Agent</span>
+          </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <p className="text-[#281C46]/60 text-xs">No modern API? No problem.</p>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-6 bg-[#281C46] rounded-2xl px-6 py-4 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Generative Integration bridges modern AI agents with legacy backends — paste API docs and get working integration code automatically.
+      <Network className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Key Differentiator:</span> Generative Integration — paste API docs, get working code automatically
       </p>
     </motion.div>
   </div>
@@ -3680,125 +4750,206 @@ const LegacyIntegrationSlide = () => (
 
 // Voice and Telephony Support Slide
 const VoiceTelephonySlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-12 py-4 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-4"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Phone className="w-8 h-8 text-white" />
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2 mr-3">
+          <Phone className="w-6 h-6 text-white" />
+        </div>
+        <h2 className="text-3xl font-bold text-black">Voice & Telephony Support</h2>
       </div>
-      <div>
-        <h2 className="text-4xl font-bold text-black">Voice & Telephony Support</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">VoiceX — Full-Duplex Architecture with Sub-Second Latency</p>
-      </div>
+      <p className="text-[#281C46] text-base font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">VoiceX</span> Full-Duplex with <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">&lt;500ms</span> Latency & Secure Transmission</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* VoiceX Card */}
+    {/* Main Content Grid - 2 Rows */}
+    <div className="flex flex-col gap-4 max-w-7xl mx-auto w-full">
+      {/* Row 1 - 4 Columns */}
+      <div className="grid grid-cols-4 gap-4">
+        {/* Column 1 - VoiceX Architecture */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
+          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-xl p-4 shadow-lg"
         >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Mic className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            VoiceX Full-Duplex Architecture
-          </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            Not a text-bot connected to STT — a <span className="text-[#F8D57E] font-semibold">dedicated voice orchestration stack</span> that can listen while speaking.
-          </p>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="bg-white/10 rounded-xl p-3">
-              <p className="text-[#F8D57E] text-sm font-semibold mb-1">Barge-In</p>
-              <p className="text-white/70 text-xs">User says "Stop" → Bot stops instantly</p>
-            </div>
-            <div className="bg-white/10 rounded-xl p-3">
-              <p className="text-[#F8D57E] text-sm font-semibold mb-1">Back-Channeling</p>
-              <p className="text-white/70 text-xs">"Uh-huh," "I see" while user talks</p>
+          <div className="bg-white/20 rounded-lg p-2 w-fit mb-2">
+            <Mic className="w-5 h-5 text-white" />
+          </div>
+          <h3 className="text-base font-bold text-white mb-2">Full-Duplex Architecture</h3>
+          <p className="text-white/80 text-xs mb-2">Listen while speaking — not a text-bot with STT</p>
+          <div className="space-y-1.5">
+            {["Barge-In (Instant)", "Back-Channeling", "Voice Streaming"].map((item) => (
+              <div key={item} className="flex items-center bg-white/10 rounded-lg px-2 py-1.5">
+                <CheckCircle2 className="w-3 h-3 text-[#F8D57E] mr-1.5" />
+                <span className="text-white/90 text-xs">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 pt-2 border-t border-white/20">
+            <div className="flex items-center justify-center">
+              <Clock className="w-3 h-3 text-[#F8D57E] mr-1.5" />
+              <span className="text-[#F8D57E] font-bold text-sm">&lt;500ms</span>
+              <span className="text-white/70 text-xs ml-1.5">Human-like</span>
             </div>
           </div>
-          <div className="mt-4 bg-[#F8D57E]/20 rounded-lg p-3 flex items-center justify-center">
-            <Clock className="w-4 h-4 text-[#F8D57E] mr-2" />
-            <span className="text-[#F8D57E] font-bold">&lt;800ms Latency</span>
-            <span className="text-white/70 text-sm ml-2">— Human-like rhythm</span>
+        </motion.div>
+
+        {/* Column 2 - Security */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="bg-white border-2 border-[#5A3BFE]/30 rounded-xl p-4 shadow-sm"
+        >
+          <div className="bg-[#5A3BFE]/10 rounded-lg p-2 w-fit mb-2">
+            <Shield className="w-5 h-5 text-[#5A3BFE]" />
+          </div>
+          <h3 className="text-base font-bold text-black mb-2">Secure Voice Transmission</h3>
+          <p className="text-[#281C46]/70 text-xs mb-2">End-to-end encrypted audio</p>
+          <div className="space-y-1.5">
+            <div className="flex items-center bg-[#5A3BFE]/5 rounded-lg px-2 py-1.5">
+              <Lock className="w-3 h-3 text-[#5A3BFE] mr-1.5" />
+              <span className="text-[#281C46] text-xs font-medium">TLS / SRTP</span>
+            </div>
+            <div className="flex items-center bg-[#5A3BFE]/5 rounded-lg px-2 py-1.5">
+              <Lock className="w-3 h-3 text-[#5A3BFE] mr-1.5" />
+              <span className="text-[#281C46] text-xs font-medium">Secure WebSocket (WSS)</span>
+            </div>
+            <div className="flex items-center bg-[#5A3BFE]/5 rounded-lg px-2 py-1.5">
+              <Shield className="w-3 h-3 text-[#5A3BFE] mr-1.5" />
+              <span className="text-[#281C46] text-xs font-medium">IP Whitelisting</span>
+            </div>
+          </div>
+          <div className="mt-3 pt-2 border-t border-gray-100">
+            <p className="text-[#281C46]/60 text-xs">STT/TTS over HTTPS/WSS</p>
+          </div>
+        </motion.div>
+
+        {/* Column 3 - Outbound Calls */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="bg-[#F8D57E] rounded-xl p-4 shadow-md"
+        >
+          <div className="bg-[#281C46] rounded-lg p-2 w-fit mb-2">
+            <PhoneOutgoing className="w-5 h-5 text-[#F8D57E]" />
+          </div>
+          <h3 className="text-base font-bold text-[#281C46] mb-2">Outbound Call Initiation</h3>
+          <p className="text-[#281C46]/80 text-xs mb-2">Proactive customer engagement</p>
+          <div className="space-y-1.5">
+            <div className="flex items-center bg-[#281C46]/10 rounded-lg px-2 py-1.5">
+              <Code className="w-3 h-3 text-[#281C46] mr-1.5" />
+              <span className="text-[#281C46] text-xs font-medium">Enqueue API</span>
+            </div>
+            <div className="flex items-center bg-[#281C46]/10 rounded-lg px-2 py-1.5">
+              <Code className="w-3 h-3 text-[#281C46] mr-1.5" />
+              <span className="text-[#281C46] text-xs font-medium">Create Call API</span>
+            </div>
+            <div className="flex items-center bg-[#281C46]/10 rounded-lg px-2 py-1.5">
+              <Zap className="w-3 h-3 text-[#281C46] mr-1.5" />
+              <span className="text-[#281C46] text-xs font-medium">Event-Triggered Calls</span>
+            </div>
+          </div>
+          <div className="mt-3 pt-2 border-t border-[#281C46]/20">
+            <p className="text-[#281C46]/70 text-xs">Automated outreach campaigns</p>
+          </div>
+        </motion.div>
+
+        {/* Column 4 - Cross-Channel */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="bg-gradient-to-br from-[#281C46] to-[#5A3BFE] rounded-xl p-4 shadow-lg"
+        >
+          <div className="bg-white/20 rounded-lg p-2 w-fit mb-2">
+            <ArrowLeftRight className="w-5 h-5 text-white" />
+          </div>
+          <h3 className="text-base font-bold text-white mb-2">Cross-Channel Orchestration</h3>
+          <p className="text-white/80 text-xs mb-2">Simultaneous multi-channel interactions</p>
+          <div className="space-y-1.5">
+            <div className="flex items-center bg-white/10 rounded-lg px-2 py-1.5">
+              <Phone className="w-3 h-3 text-[#F8D57E] mr-1.5" />
+              <span className="text-white/90 text-xs">Voice + Digital Interrupt</span>
+            </div>
+            <div className="flex items-center bg-white/10 rounded-lg px-2 py-1.5">
+              <MessageSquare className="w-3 h-3 text-[#F8D57E] mr-1.5" />
+              <span className="text-white/90 text-xs">Click-to-Call from Chat</span>
+            </div>
+            <div className="flex items-center bg-white/10 rounded-lg px-2 py-1.5">
+              <Users className="w-3 h-3 text-[#F8D57E] mr-1.5" />
+              <span className="text-white/90 text-xs">Context Preserved</span>
+            </div>
+          </div>
+          <div className="mt-3 pt-2 border-t border-white/20">
+            <p className="text-white/70 text-xs">User360 unified context</p>
           </div>
         </motion.div>
       </div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Sentiment-Adaptive Card */}
+      {/* Row 2 - Infrastructure Image + Telephony Providers */}
+      <div className="grid grid-cols-3 gap-4">
+        {/* Infrastructure Diagram */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="col-span-2 bg-white border-2 border-[#5A3BFE]/20 rounded-xl p-4 shadow-sm"
         >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <Heart className="w-5 h-5 mr-2" />
-            Sentiment-Adaptive Latency
-          </h4>
-          <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
-            Dynamically adjusts speed and pitch based on user emotion:
-          </p>
-          <div className="grid grid-cols-2 gap-2">
-            <div className="bg-[#281C46]/10 rounded-lg p-2 text-center">
-              <span className="text-red-500 text-lg">😠</span>
-              <p className="text-[#281C46] text-xs font-medium">Angry/Frustrated</p>
-              <p className="text-[#281C46]/60 text-[10px]">Slower, empathetic tone</p>
-            </div>
-            <div className="bg-[#281C46]/10 rounded-lg p-2 text-center">
-              <span className="text-green-500 text-lg">😊</span>
-              <p className="text-[#281C46] text-xs font-medium">Happy/Neutral</p>
-              <p className="text-[#281C46]/60 text-[10px]">Normal conversational pace</p>
-            </div>
+          <h3 className="text-sm font-bold text-black mb-2 flex items-center">
+            <Server className="w-4 h-4 text-[#5A3BFE] mr-2" />
+            Voice Infrastructure Architecture
+          </h3>
+          <div className="flex justify-center">
+            <img 
+              src="/voice-telephone-arch.png" 
+              alt="Voice Telephony Architecture" 
+              className="max-h-[180px] object-contain rounded-lg"
+            />
           </div>
         </motion.div>
 
-        {/* Telephony Integration Card */}
+        {/* Telephony Providers */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="bg-white border-2 border-[#5A3BFE]/30 rounded-xl p-4 shadow-sm"
         >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Headphones className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Telephony Infrastructure
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            Carrier-grade voice quality with SIP trunking support.
-          </p>
-          <div className="space-y-2">
-            <p className="text-white/60 text-xs font-medium">Integrates with:</p>
-            <div className="flex flex-wrap gap-2">
-              {["Twilio", "Genesys", "Avaya", "PSTN", "VoIP"].map((provider) => (
-                <span key={provider} className="bg-white/10 text-white/80 text-xs px-3 py-1.5 rounded-full">{provider}</span>
-              ))}
-            </div>
+          <div className="bg-[#5A3BFE]/10 rounded-lg p-2 w-fit mb-2">
+            <Headphones className="w-5 h-5 text-[#5A3BFE]" />
+          </div>
+          <h3 className="text-base font-bold text-black mb-2">Telephony Infrastructure</h3>
+          <p className="text-[#281C46]/70 text-xs mb-2">Carrier-grade with SIP trunking</p>
+          <div className="flex flex-wrap gap-1.5">
+            {["Twilio", "Genesys", "Avaya", "PSTN", "VoIP", "WebRTC"].map((provider) => (
+              <span key={provider} className="bg-[#5A3BFE]/10 text-[#5A3BFE] text-xs px-2 py-1 rounded-full font-medium">{provider}</span>
+            ))}
+          </div>
+          <div className="mt-3 pt-2 border-t border-gray-100">
+            <p className="text-[#281C46]/60 text-xs">Bring your own carrier or use Yellow.ai</p>
           </div>
         </motion.div>
       </div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      transition={{ duration: 0.5, delay: 0.8 }}
+      className="mt-4 bg-[#281C46] rounded-xl px-5 py-3 flex items-center justify-center gap-3 max-w-7xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> VoiceX Full-Duplex enables natural interruption handling and back-channeling — with sentiment-adaptive responses for emotionally intelligent conversations.
+      <Shield className="w-4 h-4 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-xs">
+        <span className="text-[#F8D57E]">Security:</span> TLS/SRTP encrypted voice • Secure WebSocket for VSS • IP whitelisting for SIP trunks • All STT/TTS over HTTPS/WSS
       </p>
     </motion.div>
   </div>
@@ -3806,125 +4957,117 @@ const VoiceTelephonySlide = () => (
 
 // Scalability and Reliability Slide
 const ScalabilitySlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-6"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Gauge className="w-8 h-8 text-white" />
-      </div>
-      <div>
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <Gauge className="w-7 h-7 text-white" />
+        </div>
         <h2 className="text-4xl font-bold text-black">Scalability & Reliability</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">99.99% Uptime with Auto-Scaling Kubernetes Architecture</p>
       </div>
+      <p className="text-[#281C46] text-lg font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">99.99%</span> Uptime with <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">Kubernetes</span> Auto-Scaling</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Architecture Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Cloud className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            Cloud-Native Architecture
-          </h3>
-          <div className="space-y-3">
-            <div className="bg-white/10 rounded-xl p-3">
-              <div className="flex items-center mb-2">
-                <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                <span className="text-white font-medium text-sm">Kubernetes Microservices</span>
-              </div>
-              <p className="text-white/70 text-xs">Containerized, independently scalable components</p>
+    {/* Main Content Grid - 3 Columns */}
+    <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto w-full">
+      {/* Column 1 - Architecture */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="bg-white/20 rounded-xl p-2.5 w-fit mb-3">
+          <Cloud className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-3">Cloud-Native</h3>
+        <div className="space-y-2">
+          {["Kubernetes Microservices", "Multi-AZ Deployment", "Burstable Capacity", "Auto-Horizontal Scaling"].map((item) => (
+            <div key={item} className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+              <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2" />
+              <span className="text-white/90 text-sm">{item}</span>
             </div>
-            <div className="bg-white/10 rounded-xl p-3">
-              <div className="flex items-center mb-2">
-                <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                <span className="text-white font-medium text-sm">Multi-AZ Deployment</span>
-              </div>
-              <p className="text-white/70 text-xs">High availability across multiple Availability Zones (AWS)</p>
-            </div>
-            <div className="bg-white/10 rounded-xl p-3">
-              <div className="flex items-center mb-2">
-                <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-                <span className="text-white font-medium text-sm">Burstable Capacity</span>
-              </div>
-              <p className="text-white/70 text-xs">Auto-scale horizontally for demand spikes</p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-white/20">
+          <p className="text-white/70 text-xs">Containerized, independently scalable</p>
+        </div>
+      </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Uptime Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <Trophy className="w-5 h-5 mr-2" />
-            Enterprise SLA
-          </h4>
-          <div className="flex items-center justify-center bg-[#281C46] rounded-xl p-4">
-            <span className="text-5xl font-bold text-[#F8D57E]">99.99%</span>
-            <span className="text-white/80 text-lg ml-3">Uptime Guarantee</span>
+      {/* Column 2 - SLA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+      >
+        <div className="bg-[#281C46] rounded-xl p-2.5 w-fit mb-3">
+          <Trophy className="w-6 h-6 text-[#F8D57E]" />
+        </div>
+        <h3 className="text-lg font-bold text-[#281C46] mb-3">Enterprise SLA</h3>
+        <div className="bg-[#281C46] rounded-xl p-4 text-center mb-3">
+          <span className="text-4xl font-bold text-[#F8D57E]">99.99%</span>
+          <p className="text-white/80 text-sm">Uptime Guarantee</p>
+        </div>
+        <div className="space-y-2">
+          <div className="flex items-center bg-[#281C46]/10 rounded-lg px-3 py-2">
+            <CheckCircle2 className="w-4 h-4 text-[#281C46] mr-2" />
+            <span className="text-[#281C46] text-sm">Contractual SLA</span>
           </div>
-          <p className="text-[#281C46]/70 text-sm mt-3 text-center">
-            For enterprise customers with contractual SLA penalties
-          </p>
-        </motion.div>
+          <div className="flex items-center bg-[#281C46]/10 rounded-lg px-3 py-2">
+            <CheckCircle2 className="w-4 h-4 text-[#281C46] mr-2" />
+            <span className="text-[#281C46] text-sm">Auto Escalation</span>
+          </div>
+        </div>
+      </motion.div>
 
-        {/* Scale Stats Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <BarChart3 className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Scale & Performance
-          </h4>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="bg-white/10 rounded-xl p-3 text-center">
-              <span className="text-2xl font-bold text-[#F8D57E]">B+</span>
-              <p className="text-white/70 text-xs">Conversations/Quarter</p>
-            </div>
-            <div className="bg-white/10 rounded-xl p-3 text-center">
-              <span className="text-2xl font-bold text-[#F8D57E]">F500</span>
-              <p className="text-white/70 text-xs">Global Clients</p>
-            </div>
+      {/* Column 3 - Scale */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
+          <BarChart3 className="w-6 h-6 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-3">Scale & Performance</h3>
+        <div className="grid grid-cols-2 gap-2 mb-3">
+          <div className="bg-[#5A3BFE]/5 rounded-lg p-3 text-center">
+            <span className="text-2xl font-bold text-[#5A3BFE]">1B+</span>
+            <p className="text-[#281C46]/60 text-xs">Conversations/Qtr</p>
           </div>
-          <div className="mt-3 bg-white/10 rounded-lg p-3">
-            <p className="text-white/60 text-xs font-medium mb-1">SLA Management Tools:</p>
-            <p className="text-white/80 text-sm">Real-time monitoring with automatic escalation alerts</p>
+          <div className="bg-[#5A3BFE]/5 rounded-lg p-3 text-center">
+            <span className="text-2xl font-bold text-[#5A3BFE]">650+</span>
+            <p className="text-[#281C46]/60 text-xs">Global Clients</p>
           </div>
-        </motion.div>
-      </div>
+        </div>
+        <div className="flex items-center bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+          <Activity className="w-4 h-4 text-[#5A3BFE] mr-2" />
+          <span className="text-[#281C46]/80 text-sm">Real-time monitoring</span>
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <p className="text-[#281C46]/60 text-xs">Handles demand spikes automatically</p>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-6 bg-[#281C46] rounded-2xl px-6 py-4 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Kubernetes-based microservices with multi-AZ deployment ensures 99.99% uptime and handles billions of conversations quarterly.
+      <Gauge className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Key Differentiator:</span> Kubernetes microservices with multi-AZ deployment — billions of conversations quarterly
       </p>
     </motion.div>
   </div>
@@ -3932,127 +5075,113 @@ const ScalabilitySlide = () => (
 
 // Knowledge Management Slide
 const KnowledgeManagementSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-6"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Lightbulb className="w-8 h-8 text-white" />
-      </div>
-      <div>
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <Brain className="w-7 h-7 text-white" />
+        </div>
         <h2 className="text-4xl font-bold text-black">Knowledge Management</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">Zero-Copy Architecture with Role-Based Access Control</p>
       </div>
+      <p className="text-[#281C46] text-lg font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">Zero-Copy</span> Architecture with <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">RBAC</span></p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Knowledge Hub Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Brain className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            The Knowledge Hub
-          </h3>
-          <p className="text-white/90 leading-relaxed mb-4">
-            Central brain for informational queries using <span className="text-[#F8D57E] font-semibold">Zero-Copy architecture</span> — connects directly to source repositories.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/60 text-xs mb-2 font-medium">Connected Sources:</p>
-            <div className="flex flex-wrap gap-2">
-              {["SharePoint", "Google Drive", "Confluence", "Websites", "PDFs"].map((source) => (
-                <span key={source} className="bg-[#F8D57E]/20 text-[#F8D57E] text-xs px-2 py-1 rounded">{source}</span>
-              ))}
-            </div>
-          </div>
-          <div className="mt-4 flex items-center">
+    {/* Main Content Grid - 3 Columns */}
+    <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto w-full">
+      {/* Column 1 - Knowledge Hub */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="bg-white/20 rounded-xl p-2.5 w-fit mb-3">
+          <Brain className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-3">Knowledge Hub</h3>
+        <p className="text-white/80 text-sm mb-3">Zero-Copy — connects to source directly</p>
+        <div className="flex flex-wrap gap-2">
+          {["SharePoint", "Google Drive", "Confluence", "PDFs", "Websites"].map((source) => (
+            <span key={source} className="bg-white/10 text-white/90 text-xs px-2 py-1 rounded">{source}</span>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-white/20">
+          <div className="flex items-center">
             <CheckCircle2 className="w-4 h-4 text-green-400 mr-2" />
-            <span className="text-white/80 text-sm">Always answers from "Single Source of Truth"</span>
+            <span className="text-white/80 text-xs">Single Source of Truth</span>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* RBAC Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Lock className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Role-Based Access Control (RBAC)
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            The agent <span className="text-[#F8D57E] font-semibold">respects source document permissions</span>. Same agent serves different user groups securely.
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/60 text-xs mb-3 font-medium">Example:</p>
-            <div className="space-y-2">
-              <div className="flex items-center justify-between bg-red-500/20 rounded-lg px-3 py-2">
-                <span className="text-white/80 text-sm">HR Managers Only Doc</span>
-                <span className="text-red-400 text-xs">Restricted</span>
-              </div>
-              <div className="flex items-center">
-                <ArrowRight className="w-4 h-4 text-[#F8D57E] mx-2" />
-              </div>
-              <div className="flex items-center justify-between bg-white/10 rounded-lg px-3 py-2">
-                <span className="text-white/80 text-sm">Standard Employee Query</span>
-                <span className="text-white/50 text-xs">Doc not used</span>
-              </div>
+      {/* Column 2 - RBAC */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+      >
+        <div className="bg-[#281C46] rounded-xl p-2.5 w-fit mb-3">
+          <Lock className="w-6 h-6 text-[#F8D57E]" />
+        </div>
+        <h3 className="text-lg font-bold text-[#281C46] mb-3">Role-Based Access</h3>
+        <p className="text-[#281C46]/80 text-sm mb-3">Respects source document permissions</p>
+        <div className="space-y-2">
+          <div className="flex items-center justify-between bg-red-500/20 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">HR Only Doc</span>
+            <span className="text-red-600 text-xs font-medium">Restricted</span>
+          </div>
+          <div className="flex items-center justify-between bg-green-500/20 rounded-lg px-3 py-2">
+            <span className="text-[#281C46]/80 text-sm">Public FAQ</span>
+            <span className="text-green-600 text-xs font-medium">Accessible</span>
+          </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-[#281C46]/20">
+          <p className="text-[#281C46]/70 text-xs">No data leakage between groups</p>
+        </div>
+      </motion.div>
+
+      {/* Column 3 - Nexus Lifecycle */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
+          <Sparkles className="w-6 h-6 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-3">Nexus Lifecycle</h3>
+        <p className="text-[#281C46]/70 text-sm mb-3">Queries & improves knowledge</p>
+        <div className="space-y-2">
+          {["Auto-sync enterprise systems", "Identifies knowledge gaps", "Suggests improvements"].map((benefit) => (
+            <div key={benefit} className="flex items-center bg-[#5A3BFE]/5 rounded-lg px-3 py-2">
+              <CheckCircle2 className="w-4 h-4 text-[#5A3BFE] mr-2" />
+              <span className="text-[#281C46]/80 text-sm">{benefit}</span>
             </div>
-          </div>
-          <p className="text-white/70 text-sm italic mt-4">
-            No data leakage between user groups.
-          </p>
-        </motion.div>
-
-        {/* Benefits Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg mb-3">Zero-Copy Benefits</h4>
-          <div className="space-y-2">
-            {[
-              "No stale copies — always fresh data",
-              "Source system access controls respected",
-              "No data migration required",
-            ].map((benefit) => (
-              <div key={benefit} className="flex items-center">
-                <CheckCircle2 className="w-4 h-4 text-[#281C46] mr-2" />
-                <span className="text-[#281C46]/80 text-sm">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <p className="text-[#281C46]/60 text-xs">Continuous improvement loop</p>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-6 bg-[#281C46] rounded-2xl px-6 py-4 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Zero-Copy architecture ensures data freshness while RBAC enables secure multi-tenant knowledge access without data leakage.
+      <Brain className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Key Differentiator:</span> Zero-Copy ensures freshness + RBAC enables secure multi-tenant access
       </p>
     </motion.div>
   </div>
@@ -4060,128 +5189,119 @@ const KnowledgeManagementSlide = () => (
 
 // Multi-Language Support Slide
 const MultiLanguageSlide = () => (
-  <div className="flex flex-col h-full px-12 py-8">
+  <div className="flex flex-col h-full px-16 py-6 justify-center">
     {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex items-center mb-6"
+      className="flex flex-col items-center justify-center mb-6"
     >
-      <div className="bg-[#5A3BFE] rounded-xl p-3 mr-4">
-        <Languages className="w-8 h-8 text-white" />
-      </div>
-      <div>
+      <div className="flex items-center mb-2">
+        <div className="bg-[#5A3BFE] rounded-xl p-2.5 mr-4">
+          <Languages className="w-7 h-7 text-white" />
+        </div>
         <h2 className="text-4xl font-bold text-black">Multi-Language Support</h2>
-        <p className="text-[#281C46]/70 text-lg mt-1">135+ Languages with Mid-Conversation Switching</p>
       </div>
+      <p className="text-[#281C46] text-lg font-medium"><span className="bg-[#F8D57E] px-2 py-0.5 rounded font-bold text-[#281C46]">35+</span> Languages with <span className="bg-[#5A3BFE] px-2 py-0.5 rounded font-bold text-white">Voice-to-Voice</span> LLM Switching</p>
     </motion.div>
 
-    {/* Main Content */}
-    <div className="grid grid-cols-2 gap-6 flex-1">
-      {/* Left Column */}
-      <div className="flex flex-col gap-5">
-        {/* Language Support Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-6 shadow-lg flex-1"
-        >
-          <h3 className="text-xl font-bold text-white flex items-center mb-4">
-            <Globe className="w-6 h-6 mr-3 text-[#F8D57E]" />
-            Hybrid Language Approach
-          </h3>
-          <div className="flex items-center justify-center mb-4">
-            <span className="text-5xl font-bold text-[#F8D57E]">135+</span>
-            <span className="text-white/80 text-lg ml-3">Languages Supported</span>
+    {/* Main Content Grid - 3 Columns */}
+    <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto w-full">
+      {/* Column 1 - Hybrid Approach */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="bg-gradient-to-br from-[#5A3BFE] to-[#281C46] rounded-2xl p-5 shadow-lg"
+      >
+        <div className="bg-white/20 rounded-xl p-2.5 w-fit mb-3">
+          <Globe className="w-6 h-6 text-white" />
+        </div>
+        <h3 className="text-lg font-bold text-white mb-3">Hybrid Approach</h3>
+        <div className="bg-white/10 rounded-xl p-4 text-center mb-3">
+          <span className="text-4xl font-bold text-[#F8D57E]">35+</span>
+          <p className="text-white/80 text-sm">Languages</p>
+        </div>
+        <div className="space-y-2">
+          <div className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+            <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2" />
+            <span className="text-white/90 text-sm">Native LLMs</span>
           </div>
-          <div className="space-y-3">
-            <div className="bg-white/10 rounded-xl p-3">
-              <p className="text-[#F8D57E] text-sm font-semibold mb-1">Major Languages</p>
-              <p className="text-white/70 text-xs">Native LLMs trained on specific language corpus</p>
-            </div>
-            <div className="bg-white/10 rounded-xl p-3">
-              <p className="text-[#F8D57E] text-sm font-semibold mb-1">Other Languages</p>
-              <p className="text-white/70 text-xs">Real-time neural translation layer</p>
-            </div>
+          <div className="flex items-center bg-white/10 rounded-lg px-3 py-2">
+            <CheckCircle2 className="w-4 h-4 text-[#F8D57E] mr-2" />
+            <span className="text-white/90 text-sm">Translation Engines</span>
           </div>
-        </motion.div>
-      </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-white/20">
+          <p className="text-white/70 text-xs">Google, Microsoft + native capabilities</p>
+        </div>
+      </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col gap-5">
-        {/* Mid-Conversation Switching Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
-        >
-          <h4 className="font-bold text-[#281C46] text-lg flex items-center mb-3">
-            <RefreshCw className="w-5 h-5 mr-2" />
-            Mid-Conversation Language Switching
-          </h4>
-          <p className="text-[#281C46]/90 text-sm leading-relaxed mb-3">
-            Agent monitors input language in real-time. User switches mid-sentence → Agent switches instantly.
-          </p>
-          <div className="bg-[#281C46]/10 rounded-xl p-3">
-            <div className="space-y-2">
-              <div className="flex items-center">
-                <span className="bg-blue-500/20 text-blue-600 text-xs px-2 py-1 rounded mr-2">EN</span>
-                <span className="text-[#281C46]/80 text-sm">"I need help with my order..."</span>
-              </div>
-              <div className="flex items-center">
-                <span className="bg-orange-500/20 text-orange-600 text-xs px-2 py-1 rounded mr-2">ES</span>
-                <span className="text-[#281C46]/80 text-sm">"...pero prefiero hablar en español"</span>
-              </div>
-              <div className="flex items-center">
-                <ArrowRight className="w-4 h-4 text-[#281C46]/40 mr-2" />
-                <span className="text-[#281C46] text-sm font-medium">Agent responds in Spanish instantly</span>
-              </div>
-            </div>
+      {/* Column 2 - Mid-Conversation */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="bg-[#F8D57E] rounded-2xl p-5 shadow-md"
+      >
+        <div className="bg-[#281C46] rounded-xl p-2.5 w-fit mb-3">
+          <RefreshCw className="w-6 h-6 text-[#F8D57E]" />
+        </div>
+        <h3 className="text-lg font-bold text-[#281C46] mb-3">Mid-Conversation Switch</h3>
+        <p className="text-[#281C46]/80 text-sm mb-3">User switches → Agent adapts instantly</p>
+        <div className="space-y-2">
+          <div className="flex items-center bg-[#281C46]/10 rounded-lg px-3 py-2">
+            <span className="bg-blue-500/30 text-blue-700 text-xs px-2 py-0.5 rounded mr-2">EN</span>
+            <span className="text-[#281C46]/80 text-xs">"I need help..."</span>
           </div>
-        </motion.div>
+          <div className="flex items-center bg-[#281C46]/10 rounded-lg px-3 py-2">
+            <span className="bg-orange-500/30 text-orange-700 text-xs px-2 py-0.5 rounded mr-2">ES</span>
+            <span className="text-[#281C46]/80 text-xs">"...en español"</span>
+          </div>
+          <div className="flex items-center bg-green-500/20 rounded-lg px-3 py-2">
+            <CheckCircle2 className="w-4 h-4 text-green-600 mr-2" />
+            <span className="text-[#281C46] text-xs font-medium">Responds in Spanish</span>
+          </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-[#281C46]/20">
+          <p className="text-[#281C46]/70 text-xs">Real-time language detection</p>
+        </div>
+      </motion.div>
 
-        {/* Low-Resource Languages Card */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="bg-[#281C46] rounded-2xl p-5 shadow-lg flex-1"
-        >
-          <h4 className="font-bold text-white text-lg flex items-center mb-3">
-            <Star className="w-5 h-5 mr-2 text-[#F8D57E]" />
-            Low-Resource Language Excellence
-          </h4>
-          <p className="text-white/90 text-sm leading-relaxed mb-4">
-            Proprietary models for languages underserved by global LLM providers:
-          </p>
-          <div className="bg-white/10 rounded-xl p-4">
-            <p className="text-white/60 text-xs mb-2 font-medium">Specialized Models:</p>
-            <div className="flex flex-wrap gap-2">
-              {["Indic Languages", "Indonesian (Komodo)", "Southeast Asian Dialects", "Regional Variants"].map((lang) => (
-                <span key={lang} className="bg-[#F8D57E]/20 text-[#F8D57E] text-xs px-2 py-1 rounded">{lang}</span>
-              ))}
-            </div>
-          </div>
-          <p className="text-white/70 text-sm italic mt-4">
-            High-quality localized experiences where competitors rely on poor automated translation.
-          </p>
-        </motion.div>
-      </div>
+      {/* Column 3 - Proprietary Models */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="bg-white border-2 border-[#5A3BFE]/30 rounded-2xl p-5 shadow-sm"
+      >
+        <div className="bg-[#5A3BFE]/10 rounded-xl p-2.5 w-fit mb-3">
+          <Star className="w-6 h-6 text-[#5A3BFE]" />
+        </div>
+        <h3 className="text-lg font-bold text-black mb-3">Proprietary Models</h3>
+        <p className="text-[#281C46]/70 text-sm mb-3">LLM-level switching, not translation</p>
+        <div className="flex flex-wrap gap-2">
+          {["Komodo (Bahasa)", "YellowG"].map((lang) => (
+            <span key={lang} className="bg-[#5A3BFE]/10 text-[#5A3BFE] text-xs px-3 py-1.5 rounded-full font-medium">{lang}</span>
+          ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <p className="text-[#281C46]/60 text-xs">Outperforms US-centric competitors in APAC</p>
+        </div>
+      </motion.div>
     </div>
 
-    {/* Bottom Key Insight */}
+    {/* Bottom Summary */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="mt-6 bg-gradient-to-r from-[#5A3BFE]/10 to-[#F8D57E]/20 rounded-2xl px-6 py-4 flex items-center gap-4"
+      className="mt-6 bg-[#281C46] rounded-2xl px-6 py-4 flex items-center justify-center gap-4 max-w-6xl mx-auto w-full"
     >
-      <Lightbulb className="w-6 h-6 text-[#5A3BFE] flex-shrink-0" />
-      <p className="text-[#281C46] font-medium">
-        <span className="font-bold">Key Differentiator:</span> Mid-conversation language switching + proprietary models for low-resource languages (Komodo for Indonesian) outperform US-centric competitors in APAC markets.
+      <Languages className="w-5 h-5 text-[#F8D57E] flex-shrink-0" />
+      <p className="text-white font-medium text-sm">
+        <span className="text-[#F8D57E]">Key Differentiator:</span> Komodo for Indonesian + mid-conversation switching — native understanding beats translation
       </p>
     </motion.div>
   </div>
@@ -4683,7 +5803,7 @@ const SecuritySlide = () => (
     </motion.p>
     <div className="grid grid-cols-2 gap-6 flex-1">
       {[
-        { icon: Shield, title: "Enterprise Security", desc: "SOC 2 Type II, ISO 27001, GDPR compliant with end-to-end encryption" },
+        { icon: Shield, title: "Enterprise Security", desc: "SOC 2 Type II, ISO 27001, ISO 27701 certified with end-to-end encryption" },
         { icon: Lock, title: "Data Privacy", desc: "Data residency options, PII masking, and customer data isolation" },
         { icon: FileKey, title: "Compliance", desc: "HIPAA, PCI-DSS, and industry-specific compliance frameworks" },
         { icon: ShieldAlert, title: "Content Moderation", desc: "Real-time content filtering, hallucination detection, and safety guardrails" },
@@ -5098,6 +6218,67 @@ const CTASlide = () => (
   </div>
 )
 
+// Slide 35: Thank You Slide
+const ThankYouSlide = () => (
+  <div className="flex flex-col items-center justify-center h-full text-center px-8 relative overflow-hidden">
+    {/* Background decorative elements */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.08 }}
+      transition={{ duration: 1 }}
+      className="absolute inset-0 pointer-events-none"
+    >
+      <div className="absolute top-10 right-10 w-96 h-96 bg-[#5A3BFE] rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#F8D57E] rounded-full blur-3xl" />
+    </motion.div>
+
+    {/* Yellow.ai Logo */}
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="mb-8"
+    >
+      <img
+        src="/yellow logo.png"
+        alt="Yellow.ai"
+        className="h-16 w-auto object-contain"
+      />
+    </motion.div>
+
+    {/* Main Title */}
+    <motion.h1
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="text-6xl md:text-7xl font-bold text-black mb-6"
+    >
+      Thank You
+    </motion.h1>
+
+    {/* Subtitle */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="text-2xl text-[#281C46]/80 mb-12"
+    >
+      Q & A
+    </motion.p>
+    
+    <motion.div
+       initial={{ opacity: 0, y: 20 }}
+       animate={{ opacity: 1, y: 0 }}
+       transition={{ duration: 0.6, delay: 0.6 }}
+       className="flex gap-4"
+    >
+        <div className="bg-[#5A3BFE]/5 px-6 py-3 rounded-full text-[#5A3BFE] font-medium">
+            www.yellow.ai
+        </div>
+    </motion.div>
+  </div>
+)
+
 // All slides array
 const slides = [
   WelcomeSlide,
@@ -5128,11 +6309,74 @@ const slides = [
   ScalabilitySlide,
   KnowledgeManagementSlide,
   MultiLanguageSlide,
+  CustomerExperienceSectionSlide,
+  HPVoiceAssistantDemoSlide,
+  ITSMInstallationDemoSlide,
+  AIHumanHandoffDemoSlide,
+  AgentAssist3rdPartyDemoSlide,
+  AdminDeveloperExperienceSectionSlide,
+  AdminDeveloperDemoPlaceholderSlide,
+  ThankYouSlide,
 ]
+
+// Section definitions with time allocations (in minutes)
+const sections = [
+  { name: "Welcome", startSlide: 0, endSlide: 1, allocatedMinutes: 2 },
+  { name: "Strategy & Overview", startSlide: 2, endSlide: 9, allocatedMinutes: 30 },
+  { name: "Platform Architecture", startSlide: 10, endSlide: 11, allocatedMinutes: 30 },
+  { name: "Customer Experience", startSlide: 12, endSlide: 15, allocatedMinutes: 30 },
+  { name: "Admin/Developer Experience", startSlide: 16, endSlide: 27, allocatedMinutes: 90 },
+  { name: "Customer Experience Demo", startSlide: 28, endSlide: 32, allocatedMinutes: 30 },
+  { name: "Admin/Developer Demo", startSlide: 33, endSlide: 34, allocatedMinutes: 90 },
+  { name: "Closing", startSlide: 35, endSlide: 35, allocatedMinutes: 5 },
+]
+
+const getSectionForSlide = (slideIndex: number) => {
+  return sections.find(s => slideIndex >= s.startSlide && slideIndex <= s.endSlide) || sections[0]
+}
 
 export default function PresentationPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [direction, setDirection] = useState(0)
+  const [slideTime, setSlideTime] = useState(0) // Time spent on current slide in seconds
+  const [totalTime, setTotalTime] = useState(0) // Total presentation time in seconds
+  const [sectionTimes, setSectionTimes] = useState<Record<string, number>>({}) // Time spent per section
+
+  // Timer effect - runs every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlideTime(prev => prev + 1)
+      setTotalTime(prev => prev + 1)
+      
+      // Track section time
+      const currentSection = getSectionForSlide(currentSlide)
+      setSectionTimes(prev => ({
+        ...prev,
+        [currentSection.name]: (prev[currentSection.name] || 0) + 1
+      }))
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [currentSlide])
+
+  // Reset slide timer when slide changes
+  useEffect(() => {
+    setSlideTime(0)
+  }, [currentSlide])
+
+  // Format time as MM:SS
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
+  }
+
+  // Get current section info
+  const currentSection = getSectionForSlide(currentSlide)
+  const sectionTimeSpent = sectionTimes[currentSection.name] || 0
+  const sectionAllocatedSeconds = currentSection.allocatedMinutes * 60
+  const sectionTimeRemaining = Math.max(0, sectionAllocatedSeconds - sectionTimeSpent)
+  const isOverTime = sectionTimeSpent > sectionAllocatedSeconds
 
   const goToSlide = useCallback((index: number) => {
     if (index >= 0 && index < slides.length) {
@@ -5214,8 +6458,30 @@ export default function PresentationPage() {
           <span className="text-[#281C46]/70">Conversational AI for Customer Service, Q2 2026</span>
         </div>
 
-        {/* Right - Slide Counter */}
-        <div className="flex items-center gap-4">
+        {/* Right - Section Timer & Slide Counter */}
+        <div className="flex items-center gap-3">
+          {/* Section Info & Timer */}
+          <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${isOverTime ? 'bg-red-50 border border-red-200' : 'bg-[#5A3BFE]/5'}`}>
+            <div className="flex flex-col items-end mr-2">
+              <span className="text-[10px] text-gray-500 leading-tight">{currentSection.name}</span>
+              <span className="text-[10px] text-gray-400 leading-tight">{currentSection.allocatedMinutes} min allocated</span>
+            </div>
+            <div className="h-8 w-px bg-gray-200" />
+            <Clock className={`w-4 h-4 ${isOverTime ? 'text-red-500' : 'text-[#5A3BFE]'}`} />
+            <div className="text-sm font-mono">
+              <span className={`font-semibold ${isOverTime ? 'text-red-500' : 'text-[#5A3BFE]'}`}>
+                {isOverTime ? '-' : ''}{formatTime(isOverTime ? sectionTimeSpent - sectionAllocatedSeconds : sectionTimeRemaining)}
+              </span>
+              <span className="text-gray-300 mx-1">|</span>
+              <span className="text-gray-400 text-xs">{formatTime(sectionTimeSpent)}</span>
+            </div>
+          </div>
+          {/* Total Time */}
+          <div className="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1.5 rounded-lg">
+            <span className="text-xs text-gray-500">Total:</span>
+            <span className="text-sm font-mono text-gray-600 font-medium">{formatTime(totalTime)}</span>
+          </div>
+          {/* Slide Counter */}
           <div className="text-sm">
             <span className="text-[#5A3BFE] font-bold">{currentSlide + 1}</span>
             <span className="text-gray-400"> / {slides.length}</span>

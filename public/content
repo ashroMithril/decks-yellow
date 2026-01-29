@@ -1,0 +1,606 @@
+The Forrester Wave™: Conversational AI Platforms For Customer Service, Q2 2026																									
+Yellow.ai Questionnaire																									
+																									
+"Please provide your responses below, and don't alter the structure of the spreadsheet. Keep in mind there is a limit of 1,500 characters per response. If Forrester instructions prompt for a link, please include links as plain text as opposed to embedding them (use a link shortener if needed).
+ Please provide your product information and customer reference contact information in the second tab of this workbook."																									
+Evaluation Criteria	Criteria Explanation	Additional Response Instructions	Char. Count	"Vendor Response
+ (Responses must be 1,500 char																					
+AI Model Management	"How does the platform enable use of multiple AI models in a single interaction?
+ 
+ What are the vendor's testing and management processes for its validated AI models?
+ 
+ How does the vendor enable its customers to bring their own AI models, what limitations are there for these models vs. the vendor validated ones?
+ 
+ How does the vendor enable a mix of deterministic and generative or agentic customer resources within a single interaction?"	"Present a slide that:
+ 
+ Lists the vendor's validated AI models and describes its validation process and requirements.
+ 
+ 
+ 
+ 
+ Within the administrator/developer demo please show:
+ 
+  * How AI models are added to the platform and any differences in the process between vendor supplied models vs. a model provided by the customer.
+  * How different AI models are accessed during application development and how different AI resources can be assigned to different tasks within a single application, including switching from a deterministic to a non-deterministic interaction."	0	"1.1 AI Model Management
+The foundation of the Yellow.ai platform is a departure from monolithic model dependency toward a sophisticated ""Composite AI"" architecture. The industry has recognized that no single Large Language Model (LLM) is optimized for every enterprise task; cost, latency, and reasoning capabilities vary significantly between models. Yellow.ai addresses this through its proprietary Orchestrator LLM (Agent AI), which functions as a dynamic routing layer rather than a simple text-generation engine.
+
+1.1.1 The Orchestrator LLM and Composite Architecture
+The Orchestrator LLM represents an evolution in intent recognition. In traditional NLP frameworks, developers were required to manually define intents and train distinct utterance sets—a brittle process prone to failure when user queries deviated from the ""happy path."" Yellow.ai’s Agent AI replaces this with a reasoning engine that evaluates the semantic intent and complexity of the user input in real-time.   
+
+This engine utilizes a multi-model strategy. For high-volume, low-complexity tasks—such as password resets or status checks—the Orchestrator routes the query to specialized Small Language Models (SLMs). These models are highly optimized for speed and cost-efficiency, ensuring that enterprises do not incur the latency and expense of a reasoning model for routine interactions. Conversely, for complex, multi-turn reasoning tasks requiring disambiguation or policy synthesis, the Orchestrator routes the interaction to powerful reasoning models (e.g., GPT-4, Claude 3.5, or proprietary domain-specific models). This dynamic switching is invisible to the end-user but critical for enterprise economics, effectively balancing the ""IQ"" of the agent with the operational cost of the resolution.   
+
+1.1.2 Testing and Management of Validated Models
+Trust in AI models is established through rigorous validation. Yellow.ai’s platform includes an automated ""Utterance Report"" mechanism. This tool tests models against a validation dataset that is either provided by the intent trainer or automatically generated via cross-validation from the training data. The system calculates performance metrics on this validation set to identify risks of overfitting (where the model memorizes the training data but fails on new inputs) or undercutting (where the model fails to capture the variance in user phrasing).   
+
+Beyond standard metrics, the platform addresses the non-deterministic nature of GenAI through ""Agentic Simulation"" (discussed in detail in Section 1.8). This ensures that validated models do not merely pass linguistic accuracy tests but also demonstrate behavioral functional integrity—proving they can execute the correct tools and API calls in a simulated environment before deployment.   
+
+1.1.3 Bring Your Own LLM (BYO-LLM) Framework
+Recognizing the diverse regulatory and strategic needs of global enterprises, Yellow.ai supports a flexible ""Bring Your Own Model"" (BYOM) framework. This is not a passive integration but a governed wrapper. Customers can integrate proprietary models hosted in their own private clouds or via third-party providers (e.g., Azure OpenAI, Bedrock). The Yellow.ai platform wraps these models in its standard governance layer, ensuring that even external models adhere to the platform’s PII redaction, rate limiting, and safety guardrails. This capability is particularly vital for the platform's financial services and healthcare clients , who may require model weights to reside strictly within their own sovereign infrastructure.   
+
+1.1.4 Mixing Deterministic and Generative Resources
+A key differentiator in the Yellow.ai architecture is the seamless orchestration of deterministic and generative resources within a single interaction. The platform does not force a binary choice between ""Rules-Based"" and ""GenAI."" Instead, the Orchestrator LLM can dynamically switch modes. For compliance-heavy segments of a conversation (e.g., reading a legal disclaimer), the system locks into a deterministic flow to ensure 100% adherence to the script. Once the compliance step is verified, the system can release the lock, allowing the GenAI engine to handle the subsequent Q&A or advisory portion of the interaction naturally. This hybrid approach, managed by the ""Query Execution Planner"" , ensures that the flexibility of GenAI does not come at the expense of regulatory rigidity where it matters most.   
+
+"																					
+Multi-Modal and Omnichannel Support	"How does the platform enable consistent customer experiences across multiple interaction channels?
+ 
+ How does the platform help organizations take advantage of the specific capabilities of a given communications channel?
+ 
+ What incremental development is required for a single application to work on multiple channels, and how does the vendor's approach maximize application code reuse?
+ 
+ How does the system's support multi-modal interactions that span multiple channels simultaneously?
+ 
+ 
+ 
+ 
+ Forrester defines multi-modal as: an AI system capable of understanding or generating content across different types of media, such as text and images. For customer service a key example use case would be interrupting a voice interaction with a click on a digital interaction."	"Present the following slides:
+ 
+  * For all supported customer interaction channels, identify any required third party components.
+  * The number of production deployments that interact with customers on 3 or more channels, the average size of these deployments, and the largest single omnichannel deployment to date.
+  * The number of multi-modal deployments in production. What is the largest deployment? How many of these include a customer interaction that spans multiple channels at one time?
+ 
+ 
+ 
+ 
+ Within the customer experience demonstration show:
+ 
+  * An internally triggered customer interaction that reaches out to a customer to start an interaction that spans 2 channels simultaneously (e.g. a click on a digital channel interrupts a voice conversation).
+ 
+ 
+ 
+ 
+ In the administrator / developer demonstration show:
+ 
+  * How to build an app for multiple channels to maximize reuse, and take advantage of the strengths of various channels.
+  * How to build an app that interacts on two channels at once (e.g. a click interrupts voice)."	0	"Multi-Modal and Omnichannel Support
+In the Q2 2026 landscape, ""Multi-Channel"" support—simply being present on multiple interfaces—is a commodity. Yellow.ai differentiates through ""Agentic Omnichannel Orchestration"", a capability that ensures state continuity and interaction logic across channels, enabling true asynchronous and synchronous multi-modality.
+
+1.2.1 Consistent Experiences and Channel Specificity
+The platform supports over 135+ distinct interaction channels, ranging from traditional web chat and mobile apps to proprietary enterprise messaging systems, SMS, WhatsApp, and Voice (PSTN/VoIP). To maximize application code reuse, Yellow.ai decouples the core conversational logic from the channel-specific presentation layer. A single ""Agent"" definition contains the business logic (e.g., ""Check Order Status""), while the platform’s channel adapters automatically render the output appropriately for the endpoint.   
+
+For instance, a ""Menu Selection"" node in the flow builder will automatically render as a clickable carousel on Web Chat, a numbered list on WhatsApp, and a Text-to-Speech (TTS) prompt (""Press 1 for..."") on a voice call. This ""Write Once, Deploy Everywhere"" architecture significantly reduces maintenance overhead, as changes to the core logic propagate instantly across all active channels without requiring channel-specific code refactoring.
+
+1.2.2 Simultaneous Multi-Modal Interactions (Interruption-Aware)
+A critical advancement in the 2026 platform is the support for simultaneous multi-modal interactions, specifically the ability to interrupt a voice interaction with a digital one. Yellow.ai describes this as ""Interruption-Aware Duplex Orchestration"".   
+
+Consider a customer service scenario: A user is on a voice call with an AI agent to discuss a billing dispute. The agent, recognizing that reading a complex table of charges via TTS would be poor UX, triggers a ""Digital Assist"" action. The platform sends a secure link via SMS or WhatsApp to the user’s smartphone. As the user opens the link and interacts with the visual interface (e.g., selecting a specific charge to dispute), the Voice Agent is aware of these actions in real-time via the User360 graph. The voice agent can then comment on the user's digital actions (""I see you've selected the charge from January 12th..."") without the user needing to verbalize their selection. This synchronization transforms the interaction from a disjointed multi-channel experience into a cohesive, multimodal session.
+
+1.2.3 Omnichannel Deployment Statistics
+Yellow.ai’s strategic focus on this capability is reflected in its deployment metrics. The platform powers large-scale omnichannel deployments where enterprise clients interact with customers on three or more channels simultaneously. The largest single omnichannel deployment to date supports interactions across Voice, WhatsApp, and Mobile App for a global financial institution, handling millions of concurrent sessions that leverage this cross-channel state awareness."																					
+Personalized Customer Experiences	"How does the platform organize and store customer data to enable personalized experiences?
+ 
+ If this data is synchronized with external systems, how does that synchronization process work?
+ 
+ How is data accessed and used at runtime by the platform's bots?"	"In the administrator / developer demo:
+ 
+  * Show how data that is useful for personalization can be gathered, managed and stored, and how it is accessed and used at runtime."	0	"Personalized Customer Experiences
+The ""Personalization"" criterion is often interpreted as simple variable substitution (e.g., ""Hello, [Name]""). Yellow.ai redefines this through its ""User360"" architecture, also referred to as the ""User Graph"", which provides the AI with ""Episodic Memory.""
+
+1.3.1 The User Graph vs. Session Context
+Most conversational platforms maintain ""Session Context""—memory that lasts only as long as the chat window is open. Yellow.ai’s User Graph is persistent. It aggregates data from every interaction a user has ever had with the brand across all channels, creating a longitudinal view of the customer relationship.   
+
+This ""Episodic Memory"" allows the agent to exhibit ""Historical Intimacy."" If a user contacts support, the agent does not merely ask ""How can I help you?""; it references the User Graph to see that the user called three days ago about a failed payment and expressed frustration (via sentiment analysis). The agent can opens with, ""Hi John, are you calling about the payment issue from Tuesday?"" This capability fundamentally shifts the user experience from transactional to relational.
+
+1.3.2 Data Access and Runtime Synchronization
+The User Graph is not a static database; it is a dynamic Customer Data Platform (CDP) component. At runtime, when an interaction initiates, the platform connects to external systems of record (CRMs like Salesforce, ERPs like SAP, or core banking systems) to fetch the latest attributes. This ""Priming"" process injects relevant user data into the agent's context window before the first token is generated.   
+
+Crucially, the synchronization is bidirectional. As the agent learns new information during the conversation (e.g., the user has moved to a new address), it updates the User Graph. This update can trigger a write-back to the external CRM, ensuring that the enterprise’s central records are kept in sync with the unstructured data gathered by the AI. "																					
+Agentic Framework	"How do developers define agentic plans for the agent and how are they executed?
+ 
+ How do developers define tools, resources, state, and context for the agent, and how are they used at runtime?"	"Present the following slides:
+ 
+  * A diagram slide of the agentic framework.
+  * A slide on how the framework scales in complexity and volume.
+  * A list of the interoperability standards that are supported, and how the vendor fills in the gaps of these standards.
+ 
+ Provide the following slide(s):
+ 
+  * An agentic users slide that breaks down the number of customers using your agentic framework in production, test, and in prototype and a description of your largest agentic deployment.
+  * A slide with 1 - 3 agentic customer reference stories (can be under NDA or anonymized).
+ 
+ 
+ 
+ 
+ In the administrator / developer experience demonstration include:
+ 
+  * How a developer creates objectives and roles for agents.
+  * How a multi-step process is executed, including how state is defined and managed, how the platform can pull data from various sources and use it as context to select agents and define their behavior."	0	"Agentic Framework
+The shift to an ""Agentic Framework"" is the defining characteristic of the 2026 market. Yellow.ai’s platform has moved away from ""Flow-Based"" design (decision trees) to ""Goal-Based"" execution.
+
+1.4.1 Objectives, Roles, and Generative Plans
+In the Yellow.ai Agentic Builder, developers do not script every turn of the conversation. Instead, they define ""Objectives"" (e.g., ""Schedule a Service Appointment"") and ""Roles"" (e.g., ""You are a helpful Service Advisor""). The platform utilizes ""Generative Plan Development"", where the Orchestrator LLM analyzes the user's request and dynamically constructs a multi-step plan to achieve the objective.   
+
+For example, if a user says, ""I need to fix my router,"" the agent generates a plan:
+
+Verify User Identity (Tool: CRM Lookup).
+
+Check Device Status (Tool: Network Diagnostic API).
+
+Troubleshoot via Knowledge Base (Tool: Vector Search).
+
+If unresolved, Schedule Technician (Tool: Calendar API).
+
+This plan is created at runtime. If the ""Check Device Status"" step reveals a localized outage, the agent dynamically alters the plan to ""Notify User of Outage"" instead of proceeding to troubleshooting. This adaptability allows the agent to handle non-linear journeys that would break rigid decision trees.
+
+1.4.2 Tools, Resources, and Standards
+The framework treats APIs, database lookups, and calculation logic as ""Tools"" that the agent can invoke. The Orchestrator LLM is trained to identify which tool is required for a specific step in the generated plan and to extract the necessary parameters from the conversation history to call that tool successfully.   
+
+Yellow.ai supports emerging interoperability standards, including the Model Context Protocol (MCP) and Agent-to-Agent (A2A) communication. This allows Yellow.ai agents to act as nodes in a larger enterprise mesh. A Yellow.ai ""Customer Service Agent"" can communicate directly with a ""Salesforce Agent"" or an ""SAP Procurement Agent"" to execute tasks that cross system boundaries, without requiring a human middleware layer.   
+
+1.4.3 Scaling Complexity: The Multi-Agent Mesh
+To manage the complexity of enterprise operations, the platform employs a ""Multi-Agent Mesh"" architecture. Rather than building a single, monolithic ""Super Bot"" that attempts to know everything (which leads to hallucination and maintenance nightmares), enterprises deploy a fleet of specialized agents (e.g., Billing Agent, Technical Triage Agent, Sales Agent).   
+
+A ""Governance Layer"" (or Guardian Agent) oversees this mesh. It acts as the traffic controller, analyzing the user's intent and routing the session to the appropriate specialist agent. This architecture allows each agent to be smaller, more specialized, and highly accurate within its domain, while the mesh as a whole covers the breadth of enterprise requirements."																					
+Resource Orchestration & Application Execution	"How does the platform ensure successful execution of complex tasks?
+ 
+ How is the work of an agent managed and executed?
+ 
+ How does the platform manage state in complex interactions to ensure proper execution of all required tasks?
+ 
+ How is data stored, accessed, and sequenced?"	"In the customer demonstration, show a complex customer experience with a narrative on the functionality going on ""under the hood"" to enable what is being shown, including:
+ 
+  * How goals become an executed workflow at runtime and how various agents, tools, and application components are managed and used, and how context and state are managed."	0	"Resource Orchestration & Application Execution
+1.5.1 Query Execution Planning and State Management
+Successful execution of complex, multi-step tasks relies on robust state management. Yellow.ai’s ""Query Execution Planner"" constructs prompts by combining four inputs: the User’s current query, the System Instructions (Guardrails), the Retrieved Context (from Knowledge Base or Tools), and the Conversation History.   
+
+The platform manages state across the ""User Graph"" (Long-term) and ""Session Memory"" (Short-term). This ensures that if a user interrupts a multi-step workflow (e.g., ""Wait, before I pay, can I change the shipping address?""), the agent can pause the ""Payment"" flow, execute the ""Address Change"" flow, and then resume the ""Payment"" flow exactly where it left off, creating a non-linear but coherent execution path.   
+
+1.5.2 Zero-Copy RAG and Data Sequencing
+Data access is managed via a ""Zero-Copy"" Retrieval-Augmented Generation (RAG) architecture. The platform’s ""Knowledge Hub"" connects to over 150 distributed data sources (SharePoint, Confluence, Google Drive, Public Websites) via pre-built connectors.   
+
+Unlike traditional systems that require data to be migrated (copied) into the bot platform, Yellow.ai indexes the semantic meaning of the data into a vector database while leaving the source files in their original repositories. At runtime, the agent retrieves the relevant ""chunks"" of information based on vector similarity. The Orchestrator then ""Sequences"" these chunks—determining which piece of information logically answers the user's question first—and synthesizes a response. This ""Zero-Copy"" approach ensures data freshness (no stale copies) and respects the source system's access controls."																					
+Application development tools	"What is the vendor's approach to application development, the intended users of the tools, and how do the tools maximize development efficiency and the quality of the applications that are delivered?
+ 
+ What if any third-party tools are used for building applications?
+ 
+ How do the vendor's tools enable developers and non-developers to work together to build a single application?"	"Present a slide that summarizes all of the vendor's tools, the target user for each tool, and the function of each tool. Please identify any required third-party tools.
+ 
+ 
+ 
+ 
+ In the administrator/developer demonstration:
+ 
+  * A brief walk through of the development toolset
+  * How a bot manages a complex multi-intent customer question.
+  * How to build a multi-language application.
+  * How to build an application that integrates with a legacy back-end system including discovering fields and making data elements available to the application.
+ 
+ 
+ 
+ 
+ For systems with a low code/no code toolset, demonstrate the following in that tool:
+ 
+  * The layout, flow, and scope of function of the tools
+  * Take a number and speak it as an ordinal
+  * Parse through a list of items and pull out specific data from that list (e.g. speak the date, amount, and check number only for checks over $1,000)."	0	"Application Development Tools
+Yellow.ai provides a comprehensive development suite designed to bridge the gap between business users and technical developers.
+
+1.6.1 The AI Agent Builder: No-Code/Low-Code
+The core tool is the ""AI Agent Builder,"" a No-Code/Low-Code environment. It features ""Agentic Generation,"" where users can build agents using natural language prompts. A user simply types, ""Build an agent that helps customers track flights and book upgrades,"" and the platform automatically generates the necessary intents, flows, and tool definitions. This democratizes AI development, allowing subject matter experts (SMEs) to create functional agents without writing code.   
+
+1.6.2 Developer Collaboration and Legacy Integration
+For advanced requirements, the platform offers ""Pro-Code"" access. Developers can write custom logic in Python or Node.js, which is then exposed as a reusable visual node in the flow builder. This enables a collaborative workflow: developers build the complex backend integrations, while business analysts arrange the customer journey.   
+
+The platform specifically addresses the ""Integration Barrier"" with ""Generative Integration."" Developers can paste raw API documentation (Swagger, OpenAPI, or even a CURL command) into the builder, and the system automatically generates the integration code, data mapping, and error handling logic. This capability significantly accelerates the connection to legacy backend systems, which is often the bottleneck in enterprise deployments.   
+"																					
+Pre-Built Application Components	"How aggressively does the vendor approach pre-built application components?
+ 
+ What is the scope of these components? (e.g. back end system integration, pre-built functional modules, pre-defined voices?)
+ 
+ Can developers customize the components when they are put into production and how does customizing components impact their supportability?
+ 
+ How do pre-built components save development time - quantify the time savings you have seen across your customer base.
+ 
+ What are the other benefits of the vendor's approach to pre-built applications?"	"Provide one or more slides that cover the following:
+ 
+  * A count of the full number of pre-built components and highlights the advantages of the 5 most used components.
+  * Who contributes pre-built components (e.g. the vendor, partners, developers, customers) and what percent of the pre-built components come from each source?
+ 
+ 
+ 
+ 
+ In the administrator / developer demonstration please show:
+ 
+  * How pre-built applications are accessed, used, and managed."	0	"Pre-Built Application Components
+Yellow.ai aggressively leverages pre-built components to solve the ""Cold Start"" problem, claiming to reduce the time to automate 10% of service requests to less than one week.   
+
+1.7.1 Zero-Setup Automation
+The primary mechanism for this speed is ""Zero-Setup Automation."" Instead of relying solely on rigid templates, the platform ingests an enterprise’s existing knowledge artifacts (PDFs, Policy Docs, Websites) to instantly enable the agent's informational capabilities. This allows the agent to answer ""Level 1"" support queries from Day 1 without manual flow design.
+
+1.7.2 Integration and Domain Libraries
+The platform includes a library of over 150 pre-built integrations for major enterprise systems (Salesforce, Zendesk, ServiceNow, SAP, Shopify). Additionally, it offers Pre-Trained Domain Models for specific verticals such as Banking, Retail, Healthcare, and HR. These models come pre-loaded with the vocabulary and intent structures unique to those industries (e.g., understanding that ""claim"" means something different in Insurance vs. HR). Importantly, these components are customizable; developers can extend the pre-built logic without breaking the upgrade path. "																					
+Application Testing Tools	"How does the platform allow developers to test customer interactions including conversations and calling of resources and back-end integrations?
+ 
+ How does the platform automate regression and other testing types?
+ 
+ What makes the platform's testing capabilities stand out when compared to other vendor's offerings?"	"In the developer / administrator demonstration please show:
+ 
+  * How the platform tests applications and provides visibility into issues that occur and how the platform generates and runs test cases including the creation of synthetic data."	0	"Application Testing Tools
+In the era of Generative AI, traditional regression testing (matching text output to a static expected string) is insufficient because LLM output is probabilistic. Yellow.ai has introduced ""Agentic Simulation"" to address this.
+
+1.8.1 The ""Gym"" Simulation Environment
+The platform’s testing suite, known as ""The Gym,"" allows developers to simulate the entire customer journey. It creates ""Simulated Users""—AI personas with specific goals (e.g., ""I am an angry customer trying to return a broken item"") and emotional states. The agent interacts with these simulated users in a sandbox environment.   
+
+Crucially, The Gym also simulates the backend. It uses ""Simulated Backends"" to mock API responses. This allows developers to validate that the agent creates the correct API payload (e.g., the correct JSON for the Refund API) without actually executing a transaction on the live ERP system. This ""Simulation"" capability validates the agent's reasoning logic and tool usage, providing the confidence required to deploy autonomous agents.
+
+1.8.2 Automated Regression and Synthetic Data
+For continuous quality assurance, the platform supports ""Automated Test Case Generation."" It analyzes historical conversation logs to generate synthetic test cases that represent real-world usage patterns. These test cases form a ""Golden Conversation Set"" used for regression testing whenever the agent is updated, ensuring that new knowledge or flows do not degrade existing performance."																					
+AI Observability and Administration	"How does the platform expose bot ""thinking""?
+ 
+ How do the vendor's reports and dashboards ensure successful system operation?
+ 
+ What administration tools does the platform provide to make needed changes at runtime?
+ 
+ Does the platform provide ""self-healing"" capabilities and what oversight tools are available to administrators?"	"Provide a slide that includes the following:
+ 
+  * A list of key reports and dashboards that the platform supports.
+  * The platform's approach to customization of reports and dashboards.
+ 
+ 
+ 
+ 
+ In the administrator / developer demonstration please show:
+ 
+  * The runtime platform monitoring and alerting capabilities
+  * A review of key reports and dashboards including how they are customized.
+  * Any tools that expose ""chain of thought"" or other ways insight is provided on what a bot is ""thinking""
+  * If applicable, demonstrate the platform's AI Quality Management capabilities"	0	"AI Observability and Administration
+1.9.1 Chain of Thought (CoT) Visibility
+To overcome the ""Black Box"" nature of AI, Yellow.ai exposes the ""Chain of Thought"" (CoT). Administrators can view a trace of the Orchestrator LLM's decision-making process: which user intent was detected, which tools were considered, why a specific tool was selected, and exactly which ""chunks"" of knowledge were retrieved from the vector database. This transparency is essential for debugging and compliance.   
+
+1.9.2 Insights and Self-Healing
+The ""Insights"" module provides real-time dashboards tracking standard KPIs (Deflection Rate, Goal Completion, CSAT). More importantly, the ""Analyze"" feature uses unsupervised learning to cluster uncategorized user queries, identifying emerging topics or ""Unknown Intents."" This feeds into a ""Self-Healing"" loop: the system suggests new Knowledge Base articles or flow modifications to address these gaps. The ""Smart Sync"" feature ensures that as underlying documents (e.g., a policy PDF on SharePoint) change, the bot’s index is automatically updated, preventing information drift.   
+"																					
+Guardrails and Customer Data Security	"What tools are provided to define guardrails for the AI?
+ 
+ How does the platform identify and report on guardrail violations?
+ 
+ What tools are in place to respond to guardrail violations?
+ 
+ How does the vendor ensure customer data is protected?"	"Present the following slides:
+ 
+  * Identify all of the supported data privacy standards, and any other information on how the vendor's approach to protecting customer data differentiates it from its competitors.
+  * Summarize the vendor's approach to data encryption and other points to highlight on how the vendor protects customer data.
+  * A summary of key customer data protection agreements that the vendor has with its partners and how those agreements ensure customer data is kept private when appropriate.
+ 
+ 
+ 
+ 
+ During the administrator / developer demonstration show:
+ 
+  * The platform's tools for defining and enforcing guardrails including an example of a guardrail alert being executed and the platform's capabilities and tools that are available to respond when an alert happens."	0	"Guardrails and Customer Data Security
+1.10.1 The Guardian Agent (Governance Layer)
+Security in the Agentic era requires active monitoring. Yellow.ai implements a ""Multi-Agent Governance Layer"", often referred to as the ""Guardian Agent."" This is a specialized, smaller AI model that monitors every input and output of the primary Orchestrator. It enforces guardrails such as:
+
+Topic Adherence: Preventing the bot from discussing politics or competitors.
+
+Tone Policing: Ensuring the bot remains professional even if the user is abusive.
+
+PII Filtering: Detecting and blocking the leakage of sensitive data.   
+
+1.10.2 Data Protection and Certifications
+Yellow.ai maintains an enterprise-grade security posture. The platform is ISO 27001:2022, ISO 27701:2019, and ISO 27018:2019 certified. It is SOC 2 Type II attested and HIPAA compliant (willing to sign BAAs). For GDPR compliance, it acts as a Data Processor.   
+
+Data is encrypted in transit using TLS 1.3 and at rest using AES 256. The platform includes automated PII/PCI Redaction tools that mask sensitive entities (credit card numbers, SSNs) before they are processed by the LLM or stored in logs, ensuring that sensitive data never enters the model's context in cleartext."																					
+Human + AI Interactions and Handoffs	"How does the platform provide ""Human in the loop"" capabilities where a human ""bot unblocker"" helps an AI agent properly answer a question or clarify other issues that are limiting the agent's ability to perform a task?
+ 
+ How can the AI change its behavior based on the input from a ""bot unblocker""?
+ 
+ What are the system's tools and capabilities for escalating a customer interaction to a human agent?"	"This criterion encompasses two critical capabilities:
+ 
+  * The ability for bots to access a human ""bot unblocker"" to validate or correct a response.
+  * The ability for the AI agent to intelligently escalate a customer interaction to a human agent, when appropriate.
+ 
+ 
+ 
+ 
+ Present a slide that includes the following information:
+ 
+  * How many customers are using the ""bot unblocker"" tools in production?
+  * How many ""bot unblockers"" are actively using this capability?
+ 
+ 
+ 
+ 
+ In the customer experience demonstration show:
+ 
+  * The escalation of an interaction to a human agent.
+  * The ""bot unblocker's"" tools and desktop.
+ 
+ 
+ 
+ 
+ In the administrator / developer demonstration show:
+ 
+  * How the need to escalate a customer to a human agent is defined and executed.
+  * How the AI agent learns from input from a bot unblocker."	0	"Human + AI Interactions and Handoffs
+1.11.1 The ""Bot Unblocker""
+Yellow.ai supports a symbiotic ""Human-in-the-Loop"" (HITL) model. The ""Bot Unblocker"" is a tool for handling low-confidence predictions. If the agent is unsure of an answer, it can route the specific query to a human agent for validation behind the scenes. The human confirms or corrects the response, and the agent then relays it to the user. Crucially, this interaction is used as training data (Reinforcement Learning from Human Feedback - RLHF), improving the agent's confidence for future similar queries.   
+
+1.11.2 Intelligent Escalation and Context Transfer
+When a full handoff is required, the platform executes ""Intelligent Escalation."" It does not just dump the call into a queue; it packages the full Context Object—including the transcript, the User Graph history, the identified intent, and the user's current sentiment. This data is presented to the human agent via a ""Screen Pop"" in their support dashboard (Salesforce, Zendesk, or Yellow.ai's Inbox). This ensures the user never has to repeat themselves (""Zero-Repetition Handoff"").   
+"																					
+Application Lifecycle Management	"What tools does the platform provide to deploy and manage applications?
+ 
+ How does the platform manage application versioning?
+ 
+ How does the platform manage application promotion and rollback?"	"In the administrator / developer demonstration please show:
+ 
+  * The various tools used for versioning, deploying, and rollback of applications including what components can be selected and managed."	0	"Application Lifecycle Management (ALM)
+1.12.1 Versioning and Rollback
+The platform includes a robust ALM suite designed for enterprise CI/CD workflows. It supports distinct environments (Development, Staging, Production) with version control for every agent component. The ""One-Click Rollback"" feature allows administrators to instantly revert an agent to a previous stable state if a new deployment shows anomalies in production.   
+
+1.12.2 Granular Promotion
+Deployment is not ""all-or-nothing."" The system enables ""Granular Promotion,"" allowing developers to push updates to specific modules (e.g., updating the ""Returns"" flow) without redeploying or risking the stability of the ""Sales"" flow. This modularity is essential for large enterprises where different teams may own different parts of the customer journey."																					
+Legacy System Integration	"How does the platform connect to legacy back-end systems such as CRM or ERP systems, and what integration standards are supported, are third party tools or platforms used?
+ 
+ What is the vendor's approach to pre-built integrations to back end systems?
+ 
+ How does the platform help developers who are connecting to a highly customized back-end system?
+ 
+ What percent of integrations are built and managed by the vendor or an integrator vs. what percent are built by the customer?"		0	"Legacy System Integration
+1.13.1 Connect vs. Collect Strategy
+Yellow.ai adheres to a ""Connect vs. Collect"" integration philosophy. It does not seek to become the system of record; rather, it orchestrates the existing systems. The platform supports standard integration protocols (REST, SOAP, GraphQL) and provides 150+ pre-built connectors for the enterprise stack (SAP, Oracle, Microsoft Dynamics, Salesforce).   
+
+1.13.2 Handling Custom Backends
+For highly customized legacy systems (e.g., a 20-year-old on-premise mainframe with a SOAP wrapper), the platform offers ""Custom API Nodes."" Developers can import the legacy system's definition files (WSDL, Swagger) to generate the connection. The ""Generative Integration"" tool further simplifies this by allowing developers to simply describe the API endpoint or paste a sample request, with the AI generating the necessary boilerplate code to bridge the modern agent with the legacy backend.   
+"																					
+Voice and Telephony Support	"How does the platform provide connectivity for voice interactions (e.g. PSTN, MLPS network)?
+ 
+ What differentiates the voice quality in conversations provided by the vendor?
+ 
+ What technology does the vendor use for speech enablement, including Automated Speech Recognition (ASR), Text to Speech (TTS), and Speech to Text (STT)?
+ 
+ How does the platform secure voice communications?"	"Present slides that cover the following:
+ 
+  * A diagram of the platform's telephony infrastructure.
+  * List all available voice services (e.g. ASR, TTS), and list any third party usage and dependencies.
+  * What % of customers use voice and what % of the vendor's overall traffic is served via voice?
+ 
+ 
+ 
+ 
+ During the customer experience demonstration please:
+ 
+  * Include a voice interaction with a customer that highlights the vendor's approach to providing the highest quality voice interactions.
+  * Explain the telephony connection made on this demo call, and any implications this will have on voice quality."	0	"Voice and Telephony Support
+Voice is a standalone pillar of the Yellow.ai offering, branded as ""VoiceX."" This is not merely a text-bot connected to a speech-to-text engine; it is a dedicated voice orchestration stack.
+
+1.14.1 VoiceX and Full-Duplex Architecture
+The core differentiator of VoiceX is ""Full-Duplex"" capability. Traditional voice bots are ""Simplex"" (half-duplex)—they listen, then process, then speak. They cannot listen while speaking. VoiceX is Full-Duplex. It can process user input while simultaneously generating audio output. This enables ""Barge-In"" (interruption handling)—if a user says ""Stop, I got it,"" the bot stops instantly. It also enables ""Back-Channeling,"" where the bot can make affirmative sounds (""Uh-huh,"" ""I see"") while the user is talking, signaling active listening without interrupting the flow.   
+
+1.14.2 Quality and Latency
+VoiceX is engineered for ""Sub-Second Latency"" (<800ms), creating a conversational rhythm that mimics human telephony. It includes ""Sentiment-Adaptive Latency,"" dynamically adjusting the speed and pitch of the voice based on the user's emotion. If a user is detected as ""Angry"" or ""Frustrated,"" the bot slows down and adopts a more empathetic, calm tone. The infrastructure supports SIP trunking and integrates with major telephony providers (Twilio, Genesys, Avaya), ensuring carrier-grade voice quality.   
+
+"																					
+Scalability and Reliability	"What are the platform's uptime numbers for the past 4 completed quarters?
+ 
+ How does the platform handle unexpected spikes in demand?
+ 
+ How does the platform's architecture ensure high uptime and scale?"	"Present a slide that covers:
+ 
+  * The system architecture and how it enables reliability and scalability.
+  * Any uptime SLAs the vendor provides its customers, including the target uptime and any vendor penalties if SLAs are not met.
+  * The total peak number of simultaneous conversations, and the total number of conversations in the past month at each of your five largest deployments."	0	"Scalability and Reliability
+1.15.1 Architecture and Uptime
+Yellow.ai guarantees 99.99% Uptime for enterprise customers. The platform is built on a Kubernetes-based microservices architecture, deployed across multiple Availability Zones (AZs) in the cloud (AWS preferred). This architecture ensures high availability and fault tolerance. The system is designed to auto-scale horizontally to handle massive spikes in demand (""Burstable Capacity""), supporting billions of conversations quarterly for global Fortune 500 clients.   
+
+1.15.2 SLA Management
+The platform includes built-in SLA Management tools. Administrators can define Service Level Agreements for various metrics (e.g., First Response Time < 30s, Resolution Time < 5 mins). The system monitors these in real-time and triggers alerts or automated escalations if a ticket is approaching an SLA breach, ensuring compliance with contractual obligations. "																					
+Knowledge Management	"How does the platform manage knowledge and documents?
+ 
+ Does the platform include a knowledge management system of its own or depend on 3rd party tools?
+ 
+ How does the platform's knowledge management system connect to and synchronize with external data sources?
+ 
+ How does the platform's knowledge management protect the security of its managed documents?
+ 
+ How many customers use the vendor's knowledge management capabilities, and at what scale?"	"Provide a slide that includes:
+ 
+  * The number of documents managed at the vendor's 3 largest KM deployments.
+ 
+ 
+ 
+ 
+ In the customer experience demonstration:
+ 
+  * Show how documents from the knowledge management can be accessed and used to answer customer questions"	0	"Knowledge Management
+1.16.1 The Knowledge Hub
+The ""Knowledge Hub"" acts as the central brain for informational queries. It utilizes the ""Zero-Copy"" architecture described in Section 1.5. By connecting directly to source repositories (SharePoint, Google Drive, Websites), it ensures that the bot is always answering from the ""Single Source of Truth.""
+
+1.16.2 Security and Access Control
+A critical feature of the Knowledge Hub is its adherence to Role-Based Access Control (RBAC). The agent respects the permissions of the source document. If a document in SharePoint is restricted to ""HR Managers Only,"" the agent will not use that document to generate an answer for a ""Standard Employee"" user. This allows the same agent to serve different user groups securely without data leakage.   
+"																					
+Multi-language support	"How does the platform support multiple languages for customer conversations?
+ 
+ How can the platform change languages in a conversation with a customer?
+ 
+ What third party components are used to deliver the platform's multi-language capabilities?"	"During the customer experience demonstration please show:
+ 
+  * A customer interaction that switches languages. Describe what is happening ""under the hood"" and any differences in this process from voice to digital channels."	0	"Multi-Language Support
+1.17.1 Native and Real-Time Translation
+Yellow.ai supports 135+ languages. The platform uses a hybrid approach: for major languages, it utilizes native LLMs trained on that specific corpus; for others, it employs a real-time neural translation layer. A key capability is ""Mid-Conversation Language Switching."" The agent constantly monitors the language of the user's input. If a user starts in English but switches to Spanish mid-sentence, the agent detects this shift and switches its response language instantly, maintaining the context of the conversation across the language barrier.   
+
+1.17.2 Low-Resource Languages
+Given its strong presence in the APAC region, Yellow.ai has invested in proprietary models for ""Low-Resource Languages"" (e.g., specific Indic or Southeast Asian dialects) that are often underserved by global LLM providers like OpenAI. This allows the platform to offer high-quality, localized experiences in markets where competitors rely on poor-quality automated translation. "																					
+																									
+STRATEGY																									
+Vision	What is the vendor's vision for the solution? How does the vendor see this solution as a visionary leader, forging a new path forward and forcing competitors to adjust in response?	Present one slide that details the vendor's vision for this market.	0	"What is the vendor's vision for the solution? Yellow.ai’s vision is to transition the market from ""Generative"" to ""Agentic AI,"" fundamentally shifting the enterprise automation paradigm from simple conversation to autonomous execution. The company envisions an ""Autonomous Enterprise"" where AI agents do not merely answer questions but actively plan, reason, and execute complex cross-functional workflows (e.g., a Sales Agent autonomously coordinating with a Supply Chain Agent). This vision is anchored in a ""Voice-First"" future, where high-latency legacy IVR systems are replaced by VoiceX—a proprietary, human-like voice AI capable of handling interruptions and executing tasks in real-time.
+
+How does the vendor see this solution as a visionary leader, forging a new path forward and forcing competitors to adjust in response? Yellow.ai positions itself as a ""Challenger"" that forces the market to compete on outcome-based autonomy rather than feature parity.
+
+Redefining Latency Standards: By developing proprietary ""Voice-to-Voice"" LLMs that bypass traditional Speech-to-Text architectures, Yellow.ai is setting a new industry standard for sub-second latency, forcing competitors to overhaul their legacy telephony stacks.
+
+Solving the Cold Start: With the introduction of ""Agentic Discovery,"" the vendor is shifting market expectations from ""months of implementation"" to ""zero-setup."" This forces competitors to move away from heavy professional services models toward automated, data-driven agent generation.
+"																					
+Innovation	"How does the vendor demonstrate its commitment to and investment in innovation (specifically, innovation within the platform itself)?
+ 
+ How does the vendor use innovation to deliver on its vision?
+ 
+ What is the single most innovative change, introduction, or improvement that the vendor has made in the past two years?"	Present a slide that outlines the vendor's unique approach to innovation.	0	"How does the vendor demonstrate its commitment to and investment in innovation (specifically, innovation within the platform itself)? Yellow.ai demonstrates this through significant financial and structural resource allocation:
+
+R&D Investment: In 2024, the company invested approximately $9 million in R&D, representing 18% of total company costs. Notably, 58% of this budget (approx. $5.22 million) was dedicated to pure Conversational AI research rather than routine product maintenance.
+
+Human Capital: The innovation engine consists of a 411-person team within the CAIP Business Unit. Research scientists are embedded directly within Engineering and Data Science teams to accelerate the transfer of academic breakthroughs into production features.
+
+How does the vendor use innovation to deliver on its vision? Innovation is applied surgically to create a defensive moat and enable autonomy:
+
+Sovereign & Domain Models (Komodo/YellowG): To deliver on its global vision, Yellow.ai pre-trained its own Komodo model (7B parameters) specifically for Indonesian regional languages. This allows the vendor to outperform generic US-centric models in its key Southeast Asian markets.
+
+Agentic Architecture: The development of Agentic RAG (Retrieval-Augmented Generation) with semantic chunking and multi-step reasoning enables the platform to handle the complex, non-linear workflows required for the ""Autonomous Enterprise"" vision.
+
+What is the single most innovative change, introduction, or improvement that the vendor has made in the past two years? The most significant innovation is the shift to a Proprietary Agentic AI Architecture underpinned by the Komodo and YellowG LLMs. Moving beyond the industry standard of simply wrapping GPT-4 APIs, Yellow.ai built and fine-tuned its own models for specific enterprise domains and regional languages. This architecture enables the ""Agentic Discovery"" tool, which autonomously ingests historical data to build agents, effectively solving the ""cold start"" problem that has historically stalled AI adoption."																					
+Roadmap	"How do the vendor's roadmap and development plans support its vision?
+ 
+ What is the vendor's R&D budget, what % of this product's annual revenue does that R&D budget represent?
+ 
+ What percentage of roadmap items have been delivered on the timeline initially presented over the most recently completed 4 quarters?
+ 
+ How does the vendor gather roadmap input from its customers (e.g., a customer advisory board)?
+ 
+ How does the vendor balance customer input vs. what it sees in the market when making roadmap decisions?"	"Present the following slides:
+ 
+  * One slide that covers the most important functionality enhancements from the past 12 - 24 months. Briefly talk through the most significant of those enhancements
+  * One slide that covers the roadmap for the next 12 - 24 months with timeframes. Briefly talk through the most significant of those enhancements"	0	"How do the vendor's roadmap and development plans support its vision? The roadmap is structured to evolve the platform from ""Interaction"" to ""Orchestration"":
+
+Immediate Term (0-6 Months): Focuses on VoiceX stability and Agentic Discovery to reduce ""Time to Value,"" supporting the vision of frictionless adoption.
+
+Medium Term (6-12 Months): Introduces ""Invisible Agents"" (background automation for IT/Support) and the Model Context Protocol (MCP) marketplace, supporting the vision of deep enterprise integration.
+
+Long Term (2026+): Centers on ""AI-AI Collaboration"" and the Enterprise AI Operator, realizing the ultimate vision of a fully autonomous organization.
+
+What is the vendor's R&D budget, what % of this product's annual revenue does that R&D budget represent?
+
+R&D Budget: Approximately $9 million annually.
+
+% of Revenue: As of the Q3 FY'26 forecast, R&D spend represents approximately 23.2% of annual revenue ($8.2M R&D against $35.3M revenue).
+
+What percentage of roadmap items have been delivered on the timeline initially presented over the most recently completed 4 quarters? The specific percentage is not publicly disclosed in the provided documentation. However, the vendor notes that roadmap items follow a ""12-month rollout guidance"" and utilizes a ""tightly-looped"" agile research process to ensure delivery. Major strategic items like VoiceX and Agentic Discovery were delivered on schedule to support the current fiscal strategy.
+
+How does the vendor gather roadmap input from its customers (e.g., a customer advisory board)? Yellow.ai gathers input through a multi-tiered approach:
+
+Voice of Customer (VoC): Regular feedback loops with power users and administrators.
+
+Beta Cohorts: Enterprise ""Ideal Customer Profile"" (ICP) clients are invited to co-develop features and participate in beta testing before General Availability.
+
+Telemetry: The vendor analyzes product usage logs to identify ""drop-off points"" and ""deflection gaps,"" using empirical data to suggest roadmap items.
+
+How does the vendor balance customer input vs. what it sees in the market when making roadmap decisions? Prioritization is determined by a scoring matrix that weighs Customer Impact against Market Relevance and Technical Feasibility. The roadmap is recalibrated quarterly based on actual adoption data and strategic goals (e.g., shifting focus to ""high-value"" Voice features for the North American market), ensuring resources are not drained by non-strategic feature requests."																					
+Partner ecosystem	"What is the approach to developing and maintaining partnerships relevant to this market?
+ 
+ What alliances/awards does the vendor have?
+ 
+ How does the vendor's partnerships give the vendor unique leverage in the market?"	"Present the following slide:
+ 
+  * How the vendor prioritizes various partnership types - include a sample of key strategic partners for the most important partnership types.
+ 
+ Provide the following slide:
+ 
+  * Break down the vendor's revenue sources across direct sales vs. different types of partnerships. Explain the vendor's ideal mix of direct vs. partner revenue and how the company is working to achieve or maintain that mix.
+  * Summarize the vendor's approach to and investment in partner enablement."	0	"What is the approach to developing and maintaining partnerships relevant to this market? Yellow.ai is executing a strategic pivot to Partner-Led Growth, aiming for partners to eventually drive 50-60% of new revenue. The approach involves categorizing partners into Deployment (GSIs like TCS, HCL), Technology (AWS, SAP), and Resellers. Relationships are maintained through deep ""enablement assets"" (150+ pre-built templates) and a ""No-Code Agent Builder"" that allows partners to deploy solutions in under 8 weeks.
+
+What alliances/awards does the vendor have?
+
+Alliances: Strategic ties with HCLTech, Tech Mahindra, TCS, and Teleperformance for deployment; AWS (Preferred Cloud Provider), Microsoft, SAP, and Salesforce for technology; and Innovaccer (Healthcare) and Simpplr (HR) for vertical specialization.
+
+Awards: Recognized as a ""Challenger"" in the 2025 Gartner Magic Quadrant. Winner of the Microsoft Partner of the Year (India) and Top IP Co-Sell Partner awards.
+
+How does the vendor's partnerships give the vendor unique leverage in the market?
+
+Scale without OPEX: Partnerships with GSIs allow Yellow.ai to execute massive global deployments (e.g., Kenvue) without maintaining a large internal professional services workforce.
+
+Vertical Credibility: Alliances with Innovaccer and Simpplr provide immediate compliance readiness in regulated sectors (Healthcare, HR), lowering barriers to entry.
+
+Marketplace Friction Reduction: Presence on AWS, SAP, and Salesforce marketplaces allows enterprise buyers to use committed cloud spend to purchase Yellow.ai, significantly shortening sales cycles."																					
+Pricing flexibility and transparency	"What pricing models are available to customers, and how easy are they to understand and adopt?
+ 
+ How does the pricing approach support the vendor's vision?
+ 
+ How does the vendor's pricing approach align the vendor and customer's needs?
+ 
+ How does the pricing model create friction or ease prospects' concerns in the sales cycle?"	"Present a slide that shows:
+ 
+  * All of the vendor's strategic pricing models and how overages and demand spikes are charged."	0	"What pricing models are available to customers, and how easy are they to understand and adopt? Yellow.ai offers a hybrid model:
+
+Subscription (Platform Fee): Recurring license for platform access (~60% of revenue).
+
+Usage-Based (Consumption): Fees based on ""Resolutions"" or conversations (~33% of revenue).
+
+Adoption: While standard for enterprises, user reviews indicate friction regarding transparency, with smaller prospects finding the ""Contact Us"" / ""Pay-as-you-go"" variability less predictable than simple seat-based pricing.
+
+How does the pricing approach support the vendor's vision? The model charges for ""Resolutions"" rather than just API calls or seats. This aligns with the vision of ""Agentic AI"" by incentivizing the deployment of agents that actually complete tasks (delivering value) rather than just engaging in chat volume. It supports the shift from ""cost savings"" to ""value creation"".
+
+How does the vendor's pricing approach align the vendor and customer's needs?
+
+Alignment: The consumption component ensures Yellow.ai only scales revenue when the customer successfully scales automation volume.
+
+Flexibility: The vendor uses geography-based rate cards (e.g., lower rates for implementation in India vs. ROW) and is willing to re-negotiate at renewal based on actual utilization, ensuring the price matches realized value.
+
+How does the pricing model create friction or ease prospects' concerns in the sales cycle?
+
+Friction: The lack of public, transparent pricing tiers creates friction for mid-market buyers. Competitors like Microsoft often win deals by bundling similar capabilities into existing licenses, creating price pressure.
+
+Ease: The availability of a ""Free"" tier and the ability to purchase via AWS/SAP Marketplaces (using existing committed spend) eases procurement hurdles for large enterprises."																					
+Supporting services and offerings	"What services does the vendor provide to ensure an initial successful deployment?
+ 
+ What percent of deployments are done by partners?
+ 
+ How does the vendor ensure successful partner deployments?
+ 
+ How does the vendor work with its customers to ensure ongoing success?"	"Present a slide that shows:
+ 
+  * How the vendor's deployment model provides unique value to its customers and ensures the vendor and its customers have a true partnership.
+  * How the vendor's support model provides unique value to its customers and ensures the vendor and its customers have a true partnership.
+ 
+ If partner deployments are a significant percent of the vendor's installed base:
+ 
+  * Provide a slide that summarizes the vendor's partner training and support approach."	0	"What services does the vendor provide to ensure an initial successful deployment? Yellow.ai uses a ""Blended Pod"" model rather than individual resources. Services include:
+
+Strategy: Design thinking and persona definition.
+
+Implementation: Configuration of intents, entities, and integrations using the Generic Integration Framework.
+
+Timelines: Simple deployments take <1 week; complex enterprise deployments take 4-8 weeks.
+
+What percent of deployments are done by partners? Approximately 12% of deployments are currently executed by partners (based on the professional services share of revenue). This figure is expected to grow as the GSI pipeline accelerates.
+
+How does the vendor ensure successful partner deployments?
+
+Enablement: Providing partners with 150+ pre-built templates and the ""No-Code Agent Builder"" to standardize delivery quality.
+
+Co-Innovation: Engaging in joint innovation projects with partners (e.g., HCLTech) to ensure they are deeply familiar with the architecture.
+
+Certification: Maintaining a certification program (e.g., ""Conversational AI Professional"") to ensure partner resources meet technical standards.
+
+How does the vendor work with its customers to ensure ongoing success?
+
+Included Customer Success: A ""Customer Success"" layer is included post-go-live without additional commercial cost to monitor retention.
+
+Quarterly Business Reviews (QBRs): Strategic reviews to analyze ""deflection gaps"" and propose new automation opportunities.
+
+Self-Service Tools: Providing customers with the ""Analyze"" dashboard and ""Agentic Co-Pilot"" allows them to independently monitor and optimize bot performance."																					
+																									
+																									
+																									
+																									
+																									
+													
