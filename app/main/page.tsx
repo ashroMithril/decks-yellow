@@ -192,19 +192,11 @@ const IntroductionSlide = () => (
     >
       {/* Yellow.ai Logo */}
       <img 
-        src="/yellow-ai-logo.png" 
+        src="/yellow%20logo.png" 
         alt="Yellow.ai" 
         className="h-16 w-auto object-contain"
       />
       
-      {/* Divider */}
-      <div className="h-16 w-px bg-gray-300" />
-      
-      {/* Forrester Logo - Text Based */}
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold text-[#00694D] tracking-tight">FORRESTER</span>
-        <span className="text-xs text-[#00694D] tracking-widest">RESEARCH</span>
-      </div>
     </motion.div>
 
     {/* Main Title */}
@@ -214,9 +206,9 @@ const IntroductionSlide = () => (
       transition={{ duration: 0.6, delay: 0.3 }}
       className="text-5xl md:text-6xl font-bold text-black mb-6 max-w-4xl leading-tight"
     >
-      Vendor Briefing
+      Transforming Customer Experience
       <br />
-      <span className="text-[#5A3BFE]">Yellow.ai</span>
+      <span className="text-[#5A3BFE]">with Agentic AI</span>
     </motion.h1>
 
     {/* Subtitle */}
@@ -226,7 +218,7 @@ const IntroductionSlide = () => (
       transition={{ duration: 0.6, delay: 0.5 }}
       className="text-xl text-[#281C46]/80 max-w-2xl mb-10"
     >
-      The Forrester Wave™: Conversational AI Platforms for Customer Service
+      Enterprise-Grade Conversational AI Platform for Customer Service Excellence
     </motion.p>
 
     {/* Date Badge */}
@@ -258,7 +250,7 @@ const IntroductionSlide = () => (
           <p className="text-lg text-[#5A3BFE] font-semibold">Chief Product Officer</p>
           <p className="text-[#281C46]/70 flex items-center mt-1">
             <img 
-              src="/yellow-ai-logo.png" 
+              src="/yellow%20logo.png" 
               alt="Yellow.ai" 
               className="h-4 w-auto object-contain mr-2"
             />
@@ -281,7 +273,7 @@ const IntroductionSlide = () => (
   </div>
 )
 
-// Slide 1: Welcome Slide - Forrester Wave
+// Slide 1: Welcome Slide - Platform Overview
 const WelcomeSlide = () => (
   <div className="flex flex-col items-center justify-center h-full text-center px-8 relative overflow-hidden">
     {/* Background decorative elements */}
@@ -303,13 +295,13 @@ const WelcomeSlide = () => (
       className="mb-8"
     >
       <img 
-        src="/yellow-ai-logo.png" 
+        src="/yellow%20logo.png" 
         alt="Yellow.ai" 
         className="h-14 w-auto object-contain"
       />
     </motion.div>
 
-    {/* Forrester Wave Badge */}
+    {/* Platform Badge */}
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -317,7 +309,7 @@ const WelcomeSlide = () => (
       className="mb-8"
     >
       <div className="inline-flex items-center bg-[#281C46] text-white px-6 py-3 rounded-full shadow-lg">
-        <span className="text-lg font-semibold">The Forrester Wave™</span>
+        <span className="text-lg font-semibold">Enterprise AI Platform</span>
       </div>
     </motion.div>
 
@@ -5430,7 +5422,7 @@ const TitleSlide = () => (
       className="mb-8"
     >
       <img 
-        src="/yellow-ai-logo.png" 
+        src="/yellow%20logo.png" 
         alt="Yellow.ai" 
         className="h-20 w-auto object-contain mx-auto"
       />
@@ -6284,7 +6276,7 @@ const CTASlide = () => (
       className="mb-8"
     >
       <img 
-        src="/yellow-ai-logo.png" 
+        src="/yellow%20logo.png" 
         alt="Yellow.ai" 
         className="h-24 w-auto object-contain mx-auto"
       />
@@ -6361,7 +6353,7 @@ const ThankYouSlide = () => (
       className="mb-8"
     >
       <img
-        src="/yellow-ai-logo.png"
+        src="/yellow%20logo.png"
         alt="Yellow.ai"
         className="h-16 w-auto object-contain"
       />
@@ -6568,7 +6560,7 @@ export default function PresentationPage() {
         {/* Yellow.ai Logo - Left */}
         <div className="flex items-center">
           <img 
-            src="/yellow-ai-logo.png" 
+            src="/yellow%20logo.png" 
             alt="Yellow.ai" 
             className="h-8 w-auto object-contain"
           />
@@ -6576,9 +6568,9 @@ export default function PresentationPage() {
 
         {/* Center - Presentation Title */}
         <div className="flex items-center gap-2 text-sm">
-          <span className="text-[#281C46] font-semibold">The Forrester Wave™</span>
+          <span className="text-[#281C46] font-semibold">Yellow.ai</span>
           <span className="text-gray-300 mx-1">|</span>
-          <span className="text-[#281C46]/70">Conversational AI for Customer Service, Q2 2026</span>
+          <span className="text-[#281C46]/70">Enterprise Conversational AI Platform</span>
         </div>
 
         {/* Right - Section Timer & Slide Counter */}

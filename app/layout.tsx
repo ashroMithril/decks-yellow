@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Forrester x Yellow.ai | Executive Briefing',
-  description: 'Transforming Customer Experience with Agentic AI',
+  title: 'Yellow.ai | Presentation Studio',
+  description: 'Create and deliver compelling AI-powered presentations',
   generator: 'Yellow.ai',
   icons: {
     icon: [
