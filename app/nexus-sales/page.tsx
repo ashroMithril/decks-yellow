@@ -626,8 +626,12 @@ const NexusArchitectureSlide = () => (
               <Database className="w-3.5 h-3.5 text-white" />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-green-700">ATLAS</h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-sm font-bold text-green-700">ATLAS</h3>
+                <span className="px-1.5 py-0.5 bg-amber-400 text-[10px] font-bold text-amber-900 rounded">COMING UP</span>
+              </div>
               <p className="text-xs text-[#281C46]/70">Unified Content & Enterprise Knowledge • Connectors (Continuous Sync) • Single Source of Truth</p>
+              <p className="text-[10px] text-amber-700 font-medium mt-1">Coming up: Ambiguous, Up to date, Non-Stale</p>
             </div>
           </div>
         </div>
@@ -647,8 +651,12 @@ const NexusArchitectureSlide = () => (
                 <Workflow className="w-4 h-4 text-[#281C46]" />
               </div>
               <div>
-                <h3 className="text-sm font-bold text-[#281C46]">HARNESS</h3>
+                <div className="flex items-center gap-2">
+                  <h3 className="text-sm font-bold text-[#281C46]">HARNESS</h3>
+                  <span className="px-1.5 py-0.5 bg-amber-400 text-[10px] font-bold text-amber-900 rounded">COMING UP</span>
+                </div>
                 <p className="text-xs text-[#281C46]/70">Agentic Workflow Platform • Schedulers, Connectors, MCPs • Tools & Integrations</p>
+                <p className="text-[10px] text-amber-800 font-medium mt-1">Coming up: Autonomous</p>
               </div>
             </div>
           </div>
@@ -660,7 +668,10 @@ const NexusArchitectureSlide = () => (
                 <Eye className="w-3.5 h-3.5 text-white" />
               </div>
               <div>
-                <h3 className="text-xs font-bold text-[#5A3BFE]">SUPERVISOR</h3>
+                <div className="flex items-center gap-1.5">
+                  <h3 className="text-xs font-bold text-[#5A3BFE]">SUPERVISOR</h3>
+                  <span className="px-1 py-0.5 bg-amber-400 text-[8px] font-bold text-amber-900 rounded">COMING UP</span>
+                </div>
                 <p className="text-xs text-[#281C46]/70">Human-in-the-Loop</p>
               </div>
             </div>
@@ -681,8 +692,12 @@ const NexusArchitectureSlide = () => (
               <Layers className="w-3.5 h-3.5 text-white" />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-red-600">FABRIC</h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-sm font-bold text-red-600">FABRIC</h3>
+                <span className="px-1.5 py-0.5 bg-amber-400 text-[10px] font-bold text-amber-900 rounded">COMING UP</span>
+              </div>
               <p className="text-xs text-[#281C46]/70">Unified Data Management • System of Record with Custom Objects • RBAC, Rules, Workflows & Events</p>
+              <p className="text-[10px] text-amber-700 font-medium mt-1">Coming up: Predictability, Symptoms</p>
             </div>
           </div>
         </div>
@@ -701,10 +716,14 @@ const NexusArchitectureSlide = () => (
               <Shield className="w-4 h-4 text-[#F8D57E]" />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-[#281C46]">ENTERPRISE GOVERNANCE STACK</h3>
+              <div className="flex items-center gap-2">
+                <h3 className="text-sm font-bold text-[#281C46]">ENTERPRISE GOVERNANCE STACK</h3>
+                <span className="px-1.5 py-0.5 bg-amber-400 text-[10px] font-bold text-amber-900 rounded">COMING UP</span>
+              </div>
               <p className="text-xs text-[#281C46]/70">
                 <span className="text-[#5A3BFE] font-semibold">AI Trust Center</span> • SSO • IAM • Audit Logs • Compliance • Security
               </p>
+              <p className="text-[10px] text-amber-700 font-medium mt-1">Coming up: AI governance</p>
             </div>
           </div>
         </div>
@@ -859,19 +878,19 @@ const ThreePillarsSlide = () => (
   </SlideWrapper>
 )
 
-// Slide 5: Multi-Agent Lifecycle
+// Slide 5: Agentic Lifecycle — Personas, Categories & Examples
 const LifecycleSlide = () => (
   <SlideWrapper>
     <div className="absolute inset-0 flex flex-col p-6">
       <SectionHeader 
         icon={Network} 
-        title="The Multi-Agent Lifecycle" 
-        subtitle="Specialized Agentic Personas Manage the Entire Journey"
+        title="Agentic Lifecycle: Personas, Categories & Examples" 
+        subtitle="Specialized agentic personas by phase — with capability categories and real-world examples"
         color="bg-[#5A3BFE]"
       />
 
       <div className="flex-1 grid grid-cols-5 gap-3">
-        {/* The Strategist */}
+        {/* The Strategist — Discovery */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -882,23 +901,30 @@ const LifecycleSlide = () => (
             <Search className="w-5 h-5 text-white" />
           </div>
           <h3 className="text-sm font-bold mb-1">The Strategist</h3>
-          <span className="text-xs text-white/70 uppercase tracking-wide mb-3">Discovery</span>
-          <div className="flex-1">
+          <span className="text-xs text-white/70 uppercase tracking-wide mb-2">Discovery</span>
+          <p className="text-[10px] text-[#F8D57E] font-semibold mb-1.5">Category: Strategy & Planning</p>
+          <div className="flex-1 min-h-0">
             <p className="text-xs text-white/80 mb-2">Constructs a "World Model" of your business</p>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 mb-2">
               {["Automation Heatmaps", "Quick Wins ID", "ROI Modeling"].map((item, i) => (
                 <div key={i} className="bg-white/15 rounded px-2 py-1.5">
                   <span className="text-xs">{item}</span>
                 </div>
               ))}
             </div>
+            <p className="text-[10px] text-white/90 font-medium mt-1">Examples:</p>
+            <ul className="text-[10px] text-white/80 space-y-0.5 list-disc list-inside">
+              <li>Identify top 20% of tickets for automation</li>
+              <li>ROI model for contact center deflection</li>
+              <li>Heatmap: high-volume vs. low-automation areas</li>
+            </ul>
           </div>
           <div className="mt-3 pt-2 border-t border-white/20">
             <span className="text-xs text-[#F8D57E]">Zero guesswork roadmap</span>
           </div>
         </motion.div>
 
-        {/* The Architect */}
+        {/* The Architect — Build */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -909,23 +935,30 @@ const LifecycleSlide = () => (
             <Wrench className="w-5 h-5 text-white" />
           </div>
           <h3 className="text-sm font-bold mb-1">The Architect</h3>
-          <span className="text-xs text-white/70 uppercase tracking-wide mb-3">Build</span>
-          <div className="flex-1">
+          <span className="text-xs text-white/70 uppercase tracking-wide mb-2">Build</span>
+          <p className="text-[10px] text-[#F8D57E] font-semibold mb-1.5">Category: Design & Development</p>
+          <div className="flex-1 min-h-0">
             <p className="text-xs text-white/80 mb-2">Natural Language First construction</p>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 mb-2">
               {["Text-to-Flow", "GenUI Components", "Auto Variables"].map((item, i) => (
                 <div key={i} className="bg-white/15 rounded px-2 py-1.5">
                   <span className="text-xs">{item}</span>
                 </div>
               ))}
             </div>
+            <p className="text-[10px] text-white/90 font-medium mt-1">Examples:</p>
+            <ul className="text-[10px] text-white/80 space-y-0.5 list-disc list-inside">
+              <li>“Refund flow” → full conversation + backend steps</li>
+              <li>Dynamic forms and cards from prompts</li>
+              <li>Auto-detect entities (dates, IDs, amounts)</li>
+            </ul>
           </div>
           <div className="mt-3 pt-2 border-t border-white/20">
             <span className="text-xs text-[#F8D57E]">Minutes to build</span>
           </div>
         </motion.div>
 
-        {/* The QA Engineer */}
+        {/* The QA Engineer — Testing */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -936,23 +969,30 @@ const LifecycleSlide = () => (
             <FlaskConical className="w-5 h-5 text-white" />
           </div>
           <h3 className="text-sm font-bold mb-1">The QA Engineer</h3>
-          <span className="text-xs text-white/70 uppercase tracking-wide mb-3">Testing</span>
-          <div className="flex-1">
+          <span className="text-xs text-white/70 uppercase tracking-wide mb-2">Testing</span>
+          <p className="text-[10px] text-amber-100 font-semibold mb-1.5">Category: Quality & Simulation</p>
+          <div className="flex-1 min-h-0">
             <p className="text-xs text-white/80 mb-2">Simulation & Red Teaming</p>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 mb-2">
               {["1000s Virtual Users", "Adversary Personas", "Golden Sets"].map((item, i) => (
                 <div key={i} className="bg-white/15 rounded px-2 py-1.5">
                   <span className="text-xs">{item}</span>
                 </div>
               ))}
             </div>
+            <p className="text-[10px] text-white/90 font-medium mt-1">Examples:</p>
+            <ul className="text-[10px] text-white/80 space-y-0.5 list-disc list-inside">
+              <li>Load test: 10K concurrent “angry customer” runs</li>
+              <li>Persona: “User who always says no” to stress paths</li>
+              <li>Regression suite: approved answers per intent</li>
+            </ul>
           </div>
           <div className="mt-3 pt-2 border-t border-white/20">
             <span className="text-xs text-white/90">Zero regressions</span>
           </div>
         </motion.div>
 
-        {/* The Mechanic */}
+        {/* The Mechanic — Maintenance */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -963,23 +1003,30 @@ const LifecycleSlide = () => (
             <Settings className="w-5 h-5 text-white" />
           </div>
           <h3 className="text-sm font-bold mb-1">The Mechanic</h3>
-          <span className="text-xs text-white/70 uppercase tracking-wide mb-3">Maintenance</span>
-          <div className="flex-1">
+          <span className="text-xs text-white/70 uppercase tracking-wide mb-2">Maintenance</span>
+          <p className="text-[10px] text-emerald-200 font-semibold mb-1.5">Category: Operations & Self-Healing</p>
+          <div className="flex-1 min-h-0">
             <p className="text-xs text-white/80 mb-2">Self-Healing Logic</p>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 mb-2">
               {["Automated RCA", "Fix Broken Nodes", "Token Handling"].map((item, i) => (
                 <div key={i} className="bg-white/15 rounded px-2 py-1.5">
                   <span className="text-xs">{item}</span>
                 </div>
               ))}
             </div>
+            <p className="text-[10px] text-white/90 font-medium mt-1">Examples:</p>
+            <ul className="text-[10px] text-white/80 space-y-0.5 list-disc list-inside">
+              <li>Root cause: “API timeout” → suggest retry/fallback</li>
+              <li>Repair broken slots or failed integrations</li>
+              <li>Optimize prompt length to stay within limits</li>
+            </ul>
           </div>
           <div className="mt-3 pt-2 border-t border-white/20">
             <span className="text-xs text-emerald-200">Zero manual tuning</span>
           </div>
         </motion.div>
 
-        {/* The Coach */}
+        {/* The Coach — Empathy */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -990,16 +1037,23 @@ const LifecycleSlide = () => (
             <HeartPulse className="w-5 h-5 text-white" />
           </div>
           <h3 className="text-sm font-bold mb-1">The Coach</h3>
-          <span className="text-xs text-white/70 uppercase tracking-wide mb-3">Empathy</span>
-          <div className="flex-1">
+          <span className="text-xs text-white/70 uppercase tracking-wide mb-2">Empathy</span>
+          <p className="text-[10px] text-[#F8D57E] font-semibold mb-1.5">Category: CX & Human Uplift</p>
+          <div className="flex-1 min-h-0">
             <p className="text-xs text-white/80 mb-2">Real-time Sentiment Coaching</p>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 mb-2">
               {["Coaching Nudges", "Magic Rewrites", "Empathy Boost"].map((item, i) => (
                 <div key={i} className="bg-white/15 rounded px-2 py-1.5">
                   <span className="text-xs">{item}</span>
                 </div>
               ))}
             </div>
+            <p className="text-[10px] text-white/90 font-medium mt-1">Examples:</p>
+            <ul className="text-[10px] text-white/80 space-y-0.5 list-disc list-inside">
+              <li>“Customer sounds frustrated — soften tone”</li>
+              <li>Rewrite reply to be clearer and warmer</li>
+              <li>Suggest empathy phrases for sensitive topics</li>
+            </ul>
           </div>
           <div className="mt-3 pt-2 border-t border-white/20">
             <span className="text-xs text-[#F8D57E]">Agent uplift</span>
@@ -1119,7 +1173,126 @@ const ValuePropSlide = () => (
   </SlideWrapper>
 )
 
-// Slide 7: Hero Scenario 1 - Instant Analyst
+// Slide 7: All Hero Use Cases Combined (Overview)
+const AllHeroUseCasesSlide = () => {
+  const useCases = [
+    {
+      icon: BarChart3,
+      title: "Instant Analyst",
+      subtitle: "Metric & Qualitative Analysis",
+      color: "from-[#5A3BFE] to-[#5A3BFE]/90",
+      borderColor: "border-[#5A3BFE]/30",
+      bgLight: "bg-[#5A3BFE]/5",
+      audience: "CX Managers, Analysts, Ops",
+      pain: "Numbers are down — no idea why without reading hundreds of logs.",
+      win: "Instant RCA combining metrics + qualitative intent.",
+      demoUrl: DEMO_VIDEOS.instantAnalyst,
+    },
+    {
+      icon: Rocket,
+      title: "Zero-to-One Architect",
+      subtitle: "Brainstorming to Build",
+      color: "from-[#0668E1] to-[#0668E1]/90",
+      borderColor: "border-[#0668E1]/30",
+      bgLight: "bg-[#0668E1]/5",
+      audience: "Product Owners, Innovation, Founders",
+      pain: "Need a bot but stuck on design — the 'blank slate' problem.",
+      win: "Vague idea → fully functional MVP (incl. KB) in one session.",
+      demoUrl: DEMO_VIDEOS.zeroToOneArchitect,
+    },
+    {
+      icon: Inbox,
+      title: "Support Commander",
+      subtitle: "Inbox & Operations",
+      color: "from-emerald-600 to-emerald-700",
+      borderColor: "border-emerald-500/30",
+      bgLight: "bg-emerald-500/5",
+      audience: "Inbox Admins, Support Leads, Managers",
+      pain: "50 open tickets — which are urgent? Missing angry customers.",
+      win: "Prioritize by sentiment; solve the most critical first.",
+      demoUrl: DEMO_VIDEOS.supportCommander,
+    },
+    {
+      icon: UserSearch,
+      title: "Consumer Intel Engine",
+      subtitle: "Customer Intelligence",
+      color: "from-purple-600 to-purple-700",
+      borderColor: "border-purple-500/30",
+      bgLight: "bg-purple-500/5",
+      audience: "Product Managers, Strategy",
+      pain: "Millions of conversations — don't understand the people behind them.",
+      win: "Segment by device/behavior; shift from bot metrics to CX.",
+      demoUrl: DEMO_VIDEOS.consumerIntel,
+    },
+    {
+      icon: PieChart,
+      title: "Executive Visibility",
+      subtitle: "Real-Time ROI & Trends",
+      color: "from-amber-500 to-amber-600",
+      borderColor: "border-amber-400/30",
+      bgLight: "bg-amber-500/5",
+      audience: "VPs of CX, Ops Directors",
+      pain: "Waiting for weekly manual reports to understand ROI.",
+      win: "Compare resolution rates, charts, and summaries on demand.",
+      demoUrl: DEMO_VIDEOS.executiveVisibility,
+    },
+  ]
+  return (
+  <SlideWrapper>
+    <div className="absolute inset-0 flex flex-col p-6">
+      <SectionHeader
+        icon={Sparkles}
+        title="Hero Use Cases at a Glance"
+        subtitle="Five ways Nexus turns conversation data into action"
+        color="bg-[#5A3BFE]"
+      />
+
+      <div className="flex-1 grid grid-cols-5 gap-3">
+        {useCases.map((uc, i) => {
+          const Icon = uc.icon
+          return (
+            <motion.div
+              key={uc.title}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: i * 0.06 }}
+              className={`rounded-xl border-2 ${uc.borderColor} ${uc.bgLight} overflow-hidden flex flex-col`}
+            >
+              <div className={`bg-gradient-to-r ${uc.color} p-3`}>
+                <div className="flex items-center justify-between">
+                  <Icon className="w-5 h-5 text-white" />
+                  <DemoVideoButton url={uc.demoUrl} label="Demo" />
+                </div>
+                <h3 className="text-sm font-bold text-white mt-2">{uc.title}</h3>
+                <p className="text-xs text-white/85">{uc.subtitle}</p>
+              </div>
+              <div className="p-3 flex-1 flex flex-col gap-2">
+                <div className="text-[10px] font-semibold text-[#281C46]/60 uppercase tracking-wide">{uc.audience}</div>
+                <div className="flex-1 space-y-1.5">
+                  <div>
+                    <span className="text-[10px] font-semibold text-red-500">Pain:</span>
+                    <p className="text-xs text-[#281C46]/80 leading-tight">{uc.pain}</p>
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-semibold text-emerald-600">Win:</span>
+                    <p className="text-xs text-[#281C46]/80 leading-tight">{uc.win}</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )
+        })}
+      </div>
+
+      <div className="mt-3 flex items-center justify-center gap-2 text-xs text-[#281C46]/60">
+        <span>Next: dive into each scenario in detail.</span>
+      </div>
+    </div>
+  </SlideWrapper>
+  )
+}
+
+// Slide 8: Hero Scenario 1 - Instant Analyst
 const HeroScenario1Slide = () => (
   <SlideWrapper>
     <div className="absolute inset-0 flex flex-col p-6">
@@ -1250,7 +1423,7 @@ const HeroScenario1Slide = () => (
   </SlideWrapper>
 )
 
-// Slide 8: Hero Scenario 2 - Zero-to-One Architect  
+// Slide 9: Hero Scenario 2 - Zero-to-One Architect  
 const HeroScenario2Slide = () => (
   <SlideWrapper>
     <div className="absolute inset-0 flex flex-col p-6">
@@ -1393,7 +1566,7 @@ const HeroScenario2Slide = () => (
   </SlideWrapper>
 )
 
-// Slide 9: Hero Scenario 3 - Support Commander
+// Slide 10: Hero Scenario 3 - Support Commander
 const HeroScenario3Slide = () => (
   <SlideWrapper>
     <div className="absolute inset-0 flex flex-col p-6">
@@ -1523,7 +1696,7 @@ const HeroScenario3Slide = () => (
   </SlideWrapper>
 )
 
-// Slide 10: Hero Scenarios 4 & 5 - Consumer Intel & Executive Visibility
+// Slide 11: Hero Scenarios 4 & 5 - Consumer Intel & Executive Visibility
 const HeroScenario4and5Slide = () => (
   <SlideWrapper>
     <div className="absolute inset-0 flex flex-col p-6">
@@ -1651,7 +1824,7 @@ const HeroScenario4and5Slide = () => (
   </SlideWrapper>
 )
 
-// Slide 11: Customer Success Stories (Original)
+// Slide 12: Customer Success Stories (Original)
 const CustomerSuccessSlide = () => (
   <SlideWrapper>
     <div className="absolute inset-0 flex flex-col p-8">
@@ -1897,6 +2070,17 @@ const CompetitiveSlide = () => (
               <div className="text-xs text-white/80">{item.desc}</div>
             </div>
           ))}
+        </motion.div>
+
+        {/* Coming up */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.25 }}
+          className="flex items-center gap-2 px-3 py-2 bg-amber-50 border border-amber-200 rounded-lg"
+        >
+          <span className="px-1.5 py-0.5 bg-amber-400 text-[10px] font-bold text-amber-900 rounded">COMING UP</span>
+          <span className="text-xs text-[#281C46]/80">Copilot Studio: Differentiators</span>
         </motion.div>
       </div>
     </div>
@@ -2516,6 +2700,7 @@ const slides = [
   ThreePillarsSlide,
   LifecycleSlide,
   ValuePropSlide,
+  AllHeroUseCasesSlide,
   HeroScenario1Slide,
   HeroScenario2Slide,
   HeroScenario3Slide,
@@ -2534,8 +2719,9 @@ const slideNames = [
   "Nexus Solution",
   "Architecture",
   "Three Pillars",
-  "Lifecycle",
+  "Agentic Lifecycle",
   "Value & ROI",
+  "Hero Use Cases",
   "Instant Analyst",
   "Zero-to-One",
   "Support Commander",

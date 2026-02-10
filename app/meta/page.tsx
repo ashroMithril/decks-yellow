@@ -553,7 +553,7 @@ const AIStrategySlide = () => (
             {/* Nexus Image */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <img 
-                src="/nexus" 
+                src="/nexus-architecture.png" 
                 alt="Nexus Platform Architecture" 
                 className="w-full h-auto object-contain"
               />

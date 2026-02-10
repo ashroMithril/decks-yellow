@@ -11,6 +11,7 @@ import {
   Building2,
   Users,
   Calendar,
+  Zap,
 } from "lucide-react"
 
 // Presentation card component
@@ -104,6 +105,15 @@ export default function HomePage() {
       icon: Users,
       color: "bg-[#0668E1]",
       tags: ["Partnership", "Meta", "WhatsApp"],
+      date: "February 2026",
+    },
+    {
+      title: "Nexus - Universal Agentic Interface",
+      description: "Introducing Nexus, the industry's first Universal Agentic Interface (UAI) — a unified control plane delivering 'Service as a Software' for autonomous enterprise operations.",
+      href: "/nexus",
+      icon: Zap,
+      color: "bg-[#F59E0B]",
+      tags: ["Nexus", "UAI", "Agentic AI", "Autonomy"],
       date: "February 2026",
     },
   ]
