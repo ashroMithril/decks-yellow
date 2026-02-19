@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from "react"
-import { motion } from "framer-motion"
+import { useState, useCallback } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import {
   Presentation,
   Plus,
@@ -12,7 +13,19 @@ import {
   Users,
   Calendar,
   Zap,
+  X,
+  FileText,
+  Layers,
+  Map,
 } from "lucide-react"
+import type { DeckConfig } from "@/lib/deck-agent"
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "") || "deck"
+}
 
 // Presentation card component
 const PresentationCard = ({
@@ -77,7 +90,66 @@ const PresentationCard = ({
 )
 
 export default function HomePage() {
+  const router = useRouter()
   const [searchQuery, setSearchQuery] = useState("")
+  const [showCreateForm, setShowCreateForm] = useState(false)
+  const [formData, setFormData] = useState<{
+    deckName: string
+    customerOrTitle: string
+    numberOfPages: number
+    detailLevel: "high-level" | "detailed"
+    referenceDecks: ("main" | "roadmap" | "nexus")[]
+    referenceContent: string
+  }>({
+    deckName: "",
+    customerOrTitle: "",
+    numberOfPages: 10,
+    detailLevel: "high-level",
+    referenceDecks: ["main", "roadmap"],
+    referenceContent: "",
+  })
+
+  const handleCreateDeck = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault()
+      const name = formData.deckName.trim() || formData.customerOrTitle.trim() || "Custom Deck"
+      const slug = `${slugify(name)}-${Date.now().toString(36)}`
+      const config: DeckConfig = {
+        deckName: name,
+        customerOrTitle: formData.customerOrTitle.trim() || name,
+        numberOfPages: Math.min(30, Math.max(3, formData.numberOfPages)),
+        detailLevel: formData.detailLevel,
+        referenceDecks: formData.referenceDecks.length ? formData.referenceDecks : ["main", "roadmap"],
+        referenceContent: formData.referenceContent.trim(),
+        createdAt: new Date().toISOString(),
+      }
+      if (typeof window !== "undefined") {
+        try {
+          sessionStorage.setItem(`deckConfig:${slug}`, JSON.stringify(config))
+        } catch (_) {}
+      }
+      setShowCreateForm(false)
+      setFormData({
+        deckName: "",
+        customerOrTitle: "",
+        numberOfPages: 10,
+        detailLevel: "high-level",
+        referenceDecks: ["main", "roadmap"],
+        referenceContent: "",
+      })
+      router.push(`/deck/${slug}/review`)
+    },
+    [formData, router]
+  )
+
+  const toggleRefDeck = (key: "main" | "roadmap" | "nexus") => {
+    setFormData((prev) => ({
+      ...prev,
+      referenceDecks: prev.referenceDecks.includes(key)
+        ? prev.referenceDecks.filter((r) => r !== key)
+        : [...prev.referenceDecks, key],
+    }))
+  }
 
   const presentations = [
     {
@@ -116,6 +188,15 @@ export default function HomePage() {
       tags: ["Nexus", "UAI", "Agentic AI", "Autonomy"],
       date: "February 2026",
     },
+    {
+      title: "Product Roadmap",
+      description: "Yellow.ai product roadmap: Build, Test, Optimise, Extensibility. Current capabilities, multi-LLM, Agentic RAG, Nexus reporting, and roadmap details.",
+      href: "/docusing",
+      icon: Map,
+      color: "bg-[#0668E1]",
+      tags: ["Roadmap", "Product", "Capabilities", "Build · Test · Optimise"],
+      date: "February 2026",
+    },
   ]
 
   const filteredPresentations = presentations.filter(
@@ -139,7 +220,11 @@ export default function HomePage() {
             <div className="h-6 w-px bg-gray-200" />
             <span className="text-sm font-medium text-gray-600">Presentation Studio</span>
           </div>
-          <button className="flex items-center gap-2 bg-[#5A3BFE] text-white px-4 py-2 rounded-lg hover:bg-[#5A3BFE]/90 transition-colors text-sm font-medium">
+          <button
+            type="button"
+            onClick={() => setShowCreateForm(true)}
+            className="flex items-center gap-2 bg-[#5A3BFE] text-white px-4 py-2 rounded-lg hover:bg-[#5A3BFE]/90 transition-colors text-sm font-medium"
+          >
             <Plus className="w-4 h-4" />
             New Presentation
           </button>
@@ -181,15 +266,173 @@ export default function HomePage() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-6 py-4 rounded-2xl border border-gray-200 bg-white shadow-lg shadow-gray-100/50 focus:outline-none focus:ring-2 focus:ring-[#5A3BFE]/20 focus:border-[#5A3BFE] text-gray-800 placeholder:text-gray-400"
             />
-            <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#5A3BFE] text-white px-4 py-2 rounded-xl hover:bg-[#5A3BFE]/90 transition-colors flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setShowCreateForm(true)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#5A3BFE] text-white px-4 py-2 rounded-xl hover:bg-[#5A3BFE]/90 transition-colors flex items-center gap-2"
+            >
               <Sparkles className="w-4 h-4" />
               <span className="text-sm font-medium">Generate</span>
             </button>
           </div>
           <p className="text-center text-sm text-gray-500 mt-3">
-            Use AI to generate new presentations or search existing decks
+            Type &quot;create a new deck&quot; and click Generate, or use the form to build a custom customer presentation
           </p>
         </motion.div>
+
+        {/* Create Deck Modal */}
+        <AnimatePresence>
+          {showCreateForm && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+              onClick={() => setShowCreateForm(false)}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ type: "spring", duration: 0.3 }}
+                className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#5A3BFE]/10 flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-[#5A3BFE]" />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-bold text-[#281C46]">Create custom deck</h2>
+                      <p className="text-sm text-gray-500">For sales & presales — customer-specific presentations</p>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setShowCreateForm(false)}
+                    className="p-2 rounded-lg hover:bg-gray-100 text-gray-500"
+                    aria-label="Close"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                <form onSubmit={handleCreateDeck} className="flex flex-col flex-1 min-h-0 overflow-hidden">
+                  <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5">
+                    <div>
+                      <label className="block text-sm font-semibold text-[#281C46] mb-1.5">Deck / presentation name</label>
+                      <input
+                        type="text"
+                        value={formData.deckName}
+                        onChange={(e) => setFormData((p) => ({ ...p, deckName: e.target.value }))}
+                        placeholder="e.g. Acme Corp — Yellow.ai overview"
+                        className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#5A3BFE]/20 focus:border-[#5A3BFE] text-[#281C46] placeholder:text-gray-400"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-[#281C46] mb-1.5">Customer or audience (optional)</label>
+                      <input
+                        type="text"
+                        value={formData.customerOrTitle}
+                        onChange={(e) => setFormData((p) => ({ ...p, customerOrTitle: e.target.value }))}
+                        placeholder="e.g. Acme Corp, Retail vertical"
+                        className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#5A3BFE]/20 focus:border-[#5A3BFE] text-[#281C46] placeholder:text-gray-400"
+                      />
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-semibold text-[#281C46] mb-1.5">Number of slides</label>
+                        <input
+                          type="number"
+                          min={3}
+                          max={30}
+                          value={formData.numberOfPages}
+                          onChange={(e) => setFormData((p) => ({ ...p, numberOfPages: parseInt(e.target.value, 10) || 10 }))}
+                          className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#5A3BFE]/20 focus:border-[#5A3BFE] text-[#281C46]"
+                        />
+                        <p className="text-xs text-gray-500 mt-1">Between 3 and 30 slides</p>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-[#281C46] mb-1.5">Detail level</label>
+                        <select
+                          value={formData.detailLevel}
+                          onChange={(e) => setFormData((p) => ({ ...p, detailLevel: e.target.value as "high-level" | "detailed" }))}
+                          className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#5A3BFE]/20 focus:border-[#5A3BFE] text-[#281C46]"
+                        >
+                          <option value="high-level">High-level (executive summary, fewer bullets)</option>
+                          <option value="detailed">Detailed (more content per slide, deeper dive)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-[#281C46] mb-1.5">Use designs & content from</label>
+                      <p className="text-xs text-gray-500 mb-2">Pick which existing decks to use as design and content reference.</p>
+                      <div className="flex flex-wrap gap-3">
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={formData.referenceDecks.includes("main")}
+                            onChange={() => toggleRefDeck("main")}
+                            className="rounded border-gray-300 text-[#5A3BFE] focus:ring-[#5A3BFE]"
+                          />
+                          <span className="text-sm text-[#281C46]">Main Deck</span>
+                          <Building2 className="w-4 h-4 text-[#5A3BFE]" />
+                        </label>
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={formData.referenceDecks.includes("roadmap")}
+                            onChange={() => toggleRefDeck("roadmap")}
+                            className="rounded border-gray-300 text-[#5A3BFE] focus:ring-[#5A3BFE]"
+                          />
+                          <span className="text-sm text-[#281C46]">Product Roadmap</span>
+                          <Map className="w-4 h-4 text-[#0668E1]" />
+                        </label>
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={formData.referenceDecks.includes("nexus")}
+                            onChange={() => toggleRefDeck("nexus")}
+                            className="rounded border-gray-300 text-[#5A3BFE] focus:ring-[#5A3BFE]"
+                          />
+                          <span className="text-sm text-[#281C46]">Nexus (UAI)</span>
+                          <Zap className="w-4 h-4 text-[#F59E0B]" />
+                        </label>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-[#281C46] mb-1.5">Reference content (optional)</label>
+                      <p className="text-xs text-gray-500 mb-2">Paste notes, brief, or copy to shape slide content. Use a blank line or &quot;---&quot; to separate sections for different slides.</p>
+                      <textarea
+                        value={formData.referenceContent}
+                        onChange={(e) => setFormData((p) => ({ ...p, referenceContent: e.target.value }))}
+                        placeholder="Paste customer brief, talking points, or key messages here..."
+                        rows={5}
+                        className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#5A3BFE]/20 focus:border-[#5A3BFE] text-[#281C46] placeholder:text-gray-400 resize-y min-h-[100px]"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-100 bg-gray-50/50">
+                    <button
+                      type="button"
+                      onClick={() => setShowCreateForm(false)}
+                      className="px-4 py-2 rounded-xl text-[#281C46] hover:bg-gray-200 transition-colors font-medium"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#5A3BFE] text-white hover:bg-[#5A3BFE]/90 transition-colors font-medium"
+                    >
+                      <Layers className="w-4 h-4" />
+                      Create deck
+                    </button>
+                  </div>
+                </form>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Presentations Grid */}
         <div>
